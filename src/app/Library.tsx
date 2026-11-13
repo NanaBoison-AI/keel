@@ -2,7 +2,7 @@ import { useState } from "react";
 import { Link } from "react-router";
 import { useLiveQuery } from "dexie-react-hooks";
 import { PILLARS } from "../lib/mix";
-import { PILLAR_LABEL, PILLAR_SHORT } from "../lib/pillars";
+import { PILLAR_SHORT } from "../lib/pillars";
 import { db } from "../lib/db";
 import { useLivePacks } from "../lib/hooks";
 import { PillarChip } from "../components/PillarChip";
@@ -95,24 +95,20 @@ export function Library() {
           const value = r ? (r.completedAt ? 1 : (r.cardIndex + 1) / p.cards.length) : 0;
           return (
             <li key={p.id}>
-              <Link
-                to={`/deck/${p.id}`}
-                className="card-surface block active:opacity-80"
-                aria-label={`${p.title}, ${PILLAR_LABEL[p.pillar]}`}
-              >
+              <Link to={`/deck/${p.id}`} className="card-surface block active:opacity-80">
                 <div className="flex flex-wrap items-center gap-2">
                   <PillarChip pillar={p.pillar} />
-                  <span className="font-sans text-xs capitalize text-ink/55 dark:text-paper/55">
+                  <span className="font-sans text-xs capitalize text-ink/70 dark:text-paper/70">
                     {p.type}
                   </span>
                   {p.publicDomain && (
-                    <span className="rounded-full border border-brass/50 px-2 py-0.5 font-sans text-[11px] text-brass dark:text-brass-light">
+                    <span className="rounded-full border border-brass/50 px-2 py-0.5 font-sans text-[11px] text-brass-dark dark:text-brass-light">
                       Public domain
                     </span>
                   )}
                 </div>
                 <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">{p.title}</h3>
-                <p className="font-sans text-xs text-ink/60 dark:text-paper/60">
+                <p className="font-sans text-xs text-ink/70 dark:text-paper/70">
                   {[p.author, p.year && p.year > 0 ? p.year : undefined, `${p.estMinutes} min`]
                     .filter(Boolean)
                     .join(" · ")}

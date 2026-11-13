@@ -23,19 +23,19 @@ function DeckRow({
     <Link to={`/deck/${pack.id}`} className="card-surface block active:opacity-80">
       <div className="flex items-center justify-between gap-3">
         <PillarChip pillar={pack.pillar} />
-        <span className="font-sans text-xs text-ink/60 dark:text-paper/60">
+        <span className="font-sans text-xs text-ink/70 dark:text-paper/70">
           {pack.estMinutes} min
         </span>
       </div>
       <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">{pack.title}</h3>
       {pack.author && (
-        <p className="font-sans text-xs text-ink/60 dark:text-paper/60">{pack.author}</p>
+        <p className="font-sans text-xs text-ink/70 dark:text-paper/70">{pack.author}</p>
       )}
       <p className="mt-1 font-serif text-sm text-ink/75 dark:text-paper/75">
         {note ?? pack.summary}
       </p>
       {progress !== undefined && <Bar value={progress} className="mt-3" />}
-      <span className="mt-3 inline-block font-sans text-sm font-semibold text-brass dark:text-brass-light">
+      <span className="mt-3 inline-block font-sans text-sm font-semibold text-brass-dark dark:text-brass-light">
         {cta} →
       </span>
     </Link>
@@ -43,7 +43,7 @@ function DeckRow({
 }
 
 const H = ({ children }: { children: React.ReactNode }) => (
-  <h2 className="mb-2 mt-6 font-sans text-xs font-semibold uppercase tracking-wider text-ink/55 first:mt-0 dark:text-paper/55">
+  <h2 className="mb-2 mt-6 font-sans text-xs font-semibold uppercase tracking-wider text-ink/70 first:mt-0 dark:text-paper/70">
     {children}
   </h2>
 );
@@ -120,7 +120,7 @@ export function Journey() {
           You've started every deck available. New ones arrive regularly.
         </p>
       )}
-      <p className="mt-6 text-center font-sans text-xs text-ink/50 dark:text-paper/50">
+      <p className="mt-6 text-center font-sans text-xs text-ink/70 dark:text-paper/70">
         Or{" "}
         <Link to="/library" className="underline">
           browse the Library

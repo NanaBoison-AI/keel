@@ -23,7 +23,9 @@ export function TabBar() {
               end={end}
               className={({ isActive }) =>
                 `flex min-h-[56px] flex-col items-center justify-center gap-0.5 font-sans text-[11px] font-medium ${
-                  isActive ? "text-brass dark:text-brass-light" : "text-ink/55 dark:text-paper/55"
+                  isActive
+                    ? "text-brass-dark dark:text-brass-light"
+                    : "text-ink/70 dark:text-paper/70"
                 }`
               }
             >

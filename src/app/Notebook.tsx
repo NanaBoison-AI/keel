@@ -52,7 +52,7 @@ export function Notebook() {
 
       {[...groups.entries()].map(([title, list]) => (
         <section key={title} className="mb-6">
-          <h2 className="mb-2 font-sans text-xs font-semibold uppercase tracking-wider text-ink/55 dark:text-paper/55">
+          <h2 className="mb-2 font-sans text-xs font-semibold uppercase tracking-wider text-ink/70 dark:text-paper/70">
             {title}
           </h2>
           <ul className="space-y-3">
@@ -76,7 +76,7 @@ export function Notebook() {
                       {s.snapshot.quote && (
                         <blockquote className="mt-3 border-l-2 border-brass pl-3 font-serif italic">
                           “{s.snapshot.quote.text}”
-                          <footer className="mt-1 font-sans text-xs not-italic text-ink/60 dark:text-paper/60">
+                          <footer className="mt-1 font-sans text-xs not-italic text-ink/70 dark:text-paper/70">
                             {s.snapshot.quote.attribution}
                           </footer>
                         </blockquote>
@@ -88,7 +88,7 @@ export function Notebook() {
                         />
                       )}
                       {s.snapshot.source?.ref && (
-                        <p className="mt-3 font-sans text-xs text-ink/60 dark:text-paper/60">
+                        <p className="mt-3 font-sans text-xs text-ink/70 dark:text-paper/70">
                           {s.snapshot.source.ref}
                         </p>
                       )}

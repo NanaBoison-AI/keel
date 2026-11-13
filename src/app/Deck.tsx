@@ -170,7 +170,7 @@ export function Deck() {
       onExpand={onExpand}
       onLess={onLess}
       header={
-        <div className="flex items-center justify-between px-5 py-2 font-sans text-xs text-ink/65 dark:text-paper/65">
+        <div className="flex items-center justify-between px-5 py-2 font-sans text-xs text-ink/70 dark:text-paper/70">
           <Link to="/journey" className="flex min-h-[32px] items-center truncate">
             ← {pack.title}
           </Link>

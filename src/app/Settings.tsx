@@ -9,7 +9,7 @@ import { useToast } from "../components/Toast";
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <section className="mb-8">
-    <h2 className="mb-3 font-sans text-xs font-semibold uppercase tracking-wider text-ink/55 dark:text-paper/55">
+    <h2 className="mb-3 font-sans text-xs font-semibold uppercase tracking-wider text-ink/70 dark:text-paper/70">
       {title}
     </h2>
     {children}
@@ -39,7 +39,7 @@ export function Settings() {
     <div className="screen">
       <Link
         to="/"
-        className="mb-4 inline-flex min-h-[44px] items-center font-sans text-sm text-brass dark:text-brass-light"
+        className="mb-4 inline-flex min-h-[44px] items-center font-sans text-sm text-brass-dark dark:text-brass-light"
       >
         ← Back
       </Link>
@@ -54,7 +54,7 @@ export function Settings() {
             <label key={p} className="block">
               <div className="flex justify-between font-sans text-sm">
                 <span>{PILLAR_LABEL[p]}</span>
-                <span className="tabular-nums text-ink/60 dark:text-paper/60">{s.weights[p]}%</span>
+                <span className="tabular-nums text-ink/70 dark:text-paper/70">{s.weights[p]}%</span>
               </div>
               <input
                 type="range"
@@ -89,7 +89,7 @@ export function Settings() {
             className="mt-1 h-8 w-full accent-[#b8893a]"
           />
         </label>
-        <p className="font-serif text-xs text-ink/60 dark:text-paper/60">
+        <p className="font-serif text-xs text-ink/70 dark:text-paper/70">
           Applies to the next day's stack.
         </p>
       </Section>
