@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "world",
+  "type": "standalone",
+  "title": "The World",
+  "pillar": "world",
+  "publicDomain": false,
+  "summary": "How economies, trade and history actually work.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "world-01",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Ten workers can make forty-eight thousand pins a day. One worker, almost none.",
+      "body": "Adam Smith opens *The Wealth of Nations* with a pin factory. A single worker doing every step might make one pin a day. Split the job into about eighteen small steps and ten workers can make some forty-eight thousand. The wealth of nations starts with specialisation, and with people working together without even knowing it.",
+      "source": {
+        "ref": "Smith, *The Wealth of Nations*, Book I, Ch. 1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "world-02",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "You don't get your dinner from the butcher's kindness.",
+      "body": "Smith's famous point: the butcher, the brewer and the baker supply our meals because it serves their interests, not out of benevolence. We appeal to their self-interest, not their humanity. It's not cynicism. It's an explanation of why a complicated economy works without anyone planning it.",
+      "source": {
+        "ref": "Smith, *The Wealth of Nations*, Book I, Ch. 2"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "world-03",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "A bigger market makes room for more specialists.",
+      "body": "Smith argued that specialisation is limited by the size of the market. A village can't support a full-time specialist in everything, but a port city can. That's why trade, roads, rivers and now the internet matter: they enlarge the market and let people specialise. It also explains why isolated places stay poor.",
+      "source": {
+        "ref": "Smith, *The Wealth of Nations*, Book I, Ch. 3"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "world-04",
+      "pillar": "world",
+      "format": "story",
+      "hook": "In 1532, fewer than two hundred Spaniards captured an Inca emperor.",
+      "body": "Jared Diamond opens *Guns, Germs, and Steel* with Francisco Pizarro and the emperor Atahualpa at Cajamarca. Why did a small band beat an empire of millions? His answer: guns, steel, horses and disease, all products of long-term geographic advantages rather than any superiority of the people involved. It's a story about where power really comes from.",
+      "source": {
+        "ref": "Diamond, *Guns, Germs, and Steel*, Ch. 3: Collision at Cajamarca"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "world-05",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "Eurasia's shape gave it a head start, and it had nothing to do with its people.",
+      "body": "Diamond argues that Eurasia stretches east to west, so crops and animals could spread across similar climates. The Americas and Africa run north to south, with climate zones in the way. Faster spread of farming meant earlier cities, writing and technology. His case is that geography, not intelligence, explains much of the global map.",
+      "source": {
+        "ref": "Diamond, *Guns, Germs, and Steel*, Ch. 10: Spacious Skies and Tilted Axes"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

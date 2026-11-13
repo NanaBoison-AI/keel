@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "psychology",
+  "type": "standalone",
+  "title": "Psychology",
+  "pillar": "psychology",
+  "publicDomain": false,
+  "summary": "Emotions, meaning and understanding yourself.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "psychology-01",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Viktor Frankl lost almost everything and still found one freedom left.",
+      "body": "Frankl, a Viennese psychiatrist, survived Nazi camps. He observed that everything can be taken from a person except the freedom to choose their attitude in a given set of circumstances. That doesn't make suffering pleasant. It means that even in terrible situations there's a small space between what happens and how you answer it, and that space is yours.",
+      "source": {
+        "ref": "Frankl, *Man's Search for Meaning*, Part One"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-02",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Frankl believed the drive for meaning matters more than the drive for pleasure.",
+      "body": "His approach, logotherapy, starts from the idea that people are driven mainly by a search for meaning. He pointed to three broad routes: creating or doing something, experiencing something or loving someone, and the stance we take towards unavoidable suffering. If life feels empty, the question isn't 'what do I want?' but 'what is life asking of me?'",
+      "source": {
+        "ref": "Frankl, *Man's Search for Meaning*, Part Two: Logotherapy in a Nutshell"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-03",
+      "pillar": "psychology",
+      "format": "reflection",
+      "hook": "Who or what would you endure hard things for?",
+      "body": "Frankl noticed that prisoners who had something or someone to live for, a task unfinished or a person waiting, seemed better able to bear the unbearable. You don't need a camp to test this. Think about the next hard stretch you're facing. What's the reason on the other side that makes it worth getting through?",
+      "source": {
+        "ref": "Frankl, *Man's Search for Meaning*, Part One"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-04",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "You are not responsible for how other people judge you.",
+      "body": "In the Adlerian approach explained in The Courage to Be Disliked, each problem belongs to someone. How you act is your task. How others react to you is theirs. Trying to control their opinion is a reliable way to be miserable. The idea isn't to stop caring about people, it's to stop doing your life for an audience.",
+      "source": {
+        "ref": "Kishimi & Koga, *The Courage to Be Disliked*, the idea of separating tasks"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-05",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Adler said your past explains less than you think.",
+      "body": "The book argues that we don't act mainly because of past events, but because of the goals we're pursuing now. Someone who says 'I can't speak up because of my childhood' may have a present reason for staying quiet, such as avoiding risk. It's a bracing idea and it can be uncomfortable, but it points to something useful: if the goal is the driver, you can change the goal.",
+      "source": {
+        "ref": "Kishimi & Koga, *The Courage to Be Disliked*, early chapters"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

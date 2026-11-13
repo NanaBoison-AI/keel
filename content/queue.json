@@ -1,0 +1,267 @@
+[
+  {
+    "id": "meditations",
+    "title": "Meditations",
+    "author": "Marcus Aurelius",
+    "year": 180,
+    "pillar": "character",
+    "publicDomain": true,
+    "translation": "George Long (1862)",
+    "status": "done"
+  },
+  {
+    "id": "seven-principles-marriage",
+    "title": "The Seven Principles for Making Marriage Work",
+    "author": "John Gottman & Nan Silver",
+    "year": 1999,
+    "pillar": "family",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "how-to-talk-so-kids-will-listen",
+    "title": "How to Talk So Kids Will Listen & Listen So Kids Will Talk",
+    "author": "Adele Faber & Elaine Mazlish",
+    "year": 1980,
+    "pillar": "family",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "mans-search-for-meaning",
+    "title": "Man's Search for Meaning",
+    "author": "Viktor Frankl",
+    "year": 1946,
+    "pillar": "psychology",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "psychology-of-money",
+    "title": "The Psychology of Money",
+    "author": "Morgan Housel",
+    "year": 2020,
+    "pillar": "money",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "thinking-fast-and-slow",
+    "title": "Thinking, Fast and Slow",
+    "author": "Daniel Kahneman",
+    "year": 2011,
+    "pillar": "mind",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "letters-from-a-stoic",
+    "title": "Letters from a Stoic (Moral Letters to Lucilius)",
+    "author": "Seneca",
+    "year": 65,
+    "pillar": "character",
+    "publicDomain": true,
+    "translation": "Richard Mott Gummere (1917–25)",
+    "status": "queued"
+  },
+  {
+    "id": "whole-brain-child",
+    "title": "The Whole-Brain Child",
+    "author": "Daniel Siegel & Tina Payne Bryson",
+    "year": 2011,
+    "pillar": "family",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "deep-work",
+    "title": "Deep Work",
+    "author": "Cal Newport",
+    "year": 2016,
+    "pillar": "work",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "richest-man-in-babylon",
+    "title": "The Richest Man in Babylon",
+    "author": "George S. Clason",
+    "year": 1926,
+    "pillar": "money",
+    "publicDomain": true,
+    "status": "queued"
+  },
+  {
+    "id": "nonviolent-communication",
+    "title": "Nonviolent Communication",
+    "author": "Marshall Rosenberg",
+    "year": 1999,
+    "pillar": "family",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "as-a-man-thinketh",
+    "title": "As a Man Thinketh",
+    "author": "James Allen",
+    "year": 1903,
+    "pillar": "character",
+    "publicDomain": true,
+    "status": "queued"
+  },
+  {
+    "id": "influence",
+    "title": "Influence: The Psychology of Persuasion",
+    "author": "Robert Cialdini",
+    "year": 1984,
+    "pillar": "mind",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "how-to-win-friends",
+    "title": "How to Win Friends and Influence People",
+    "author": "Dale Carnegie",
+    "year": 1936,
+    "pillar": "family",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "atomic-habits",
+    "title": "Atomic Habits",
+    "author": "James Clear",
+    "year": 2018,
+    "pillar": "work",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "outlive",
+    "title": "Outlive",
+    "author": "Peter Attia",
+    "year": 2023,
+    "pillar": "body",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "courage-to-be-disliked",
+    "title": "The Courage to Be Disliked",
+    "author": "Ichiro Kishimi & Fumitake Koga",
+    "year": 2013,
+    "pillar": "psychology",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "extreme-ownership",
+    "title": "Extreme Ownership",
+    "author": "Jocko Willink & Leif Babin",
+    "year": 2015,
+    "pillar": "character",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "intelligent-investor",
+    "title": "The Intelligent Investor",
+    "author": "Benjamin Graham",
+    "year": 1949,
+    "pillar": "money",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "never-split-the-difference",
+    "title": "Never Split the Difference",
+    "author": "Chris Voss",
+    "year": 2016,
+    "pillar": "work",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "wealth-of-nations",
+    "title": "The Wealth of Nations",
+    "author": "Adam Smith",
+    "year": 1776,
+    "pillar": "world",
+    "publicDomain": true,
+    "status": "queued"
+  },
+  {
+    "id": "effective-executive",
+    "title": "The Effective Executive",
+    "author": "Peter Drucker",
+    "year": 1967,
+    "pillar": "work",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "poor-charlies-almanack",
+    "title": "Poor Charlie's Almanack",
+    "author": "Charles T. Munger (ed. Peter Kaufman)",
+    "year": 2005,
+    "pillar": "mind",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "guns-germs-and-steel",
+    "title": "Guns, Germs, and Steel",
+    "author": "Jared Diamond",
+    "year": 1997,
+    "pillar": "world",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "spark",
+    "title": "Spark",
+    "author": "John Ratey",
+    "year": 2008,
+    "pillar": "body",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "salt-fat-acid-heat",
+    "title": "Salt, Fat, Acid, Heat",
+    "author": "Samin Nosrat",
+    "year": 2017,
+    "pillar": "competence",
+    "publicDomain": false,
+    "status": "queued"
+  },
+  {
+    "id": "enchiridion",
+    "title": "Enchiridion",
+    "author": "Epictetus",
+    "year": 125,
+    "pillar": "character",
+    "publicDomain": true,
+    "translation": "Elizabeth Carter (1758)",
+    "status": "queued"
+  },
+  {
+    "id": "art-of-war",
+    "title": "The Art of War",
+    "author": "Sun Tzu",
+    "year": -500,
+    "pillar": "mind",
+    "publicDomain": true,
+    "translation": "Lionel Giles (1910)",
+    "status": "queued"
+  },
+  {
+    "id": "autobiography-of-franklin",
+    "title": "The Autobiography of Benjamin Franklin",
+    "author": "Benjamin Franklin",
+    "year": 1791,
+    "pillar": "character",
+    "publicDomain": true,
+    "status": "queued"
+  }
+]

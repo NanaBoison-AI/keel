@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "character",
+  "type": "standalone",
+  "title": "Character",
+  "pillar": "character",
+  "publicDomain": false,
+  "summary": "Discipline, ownership and the quiet work of becoming dependable.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "character-01",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Jocko Willink's blunt rule: there are no bad teams, only bad leaders.",
+      "body": "In *Extreme Ownership*, Willink and Babin describe SEAL task unit leaders who learned that when a team underperforms, the leader owns it. Not as blame, but as the only place a leader has power. A man who owns the outcome stops explaining and starts fixing. It works at home, too.",
+      "source": {
+        "ref": "Willink & Babin, *Extreme Ownership*, Ch. 2: No Bad Teams, Only Bad Leaders"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "character-02",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Discipline isn't the opposite of freedom. It's where freedom comes from.",
+      "body": "Willink argues that the more disciplined your routines, the more freedom you buy. The man who trains regularly, keeps a budget and sets his schedule is free to spend money, take on challenges and say yes without chaos. Discipline now is the price of options later.",
+      "source": {
+        "ref": "Willink & Babin, *Extreme Ownership*, Ch. 12: Discipline Equals Freedom"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "character-03",
+      "pillar": "character",
+      "format": "story",
+      "hook": "Benjamin Franklin tried to become perfect, and wrote down every failure.",
+      "body": "In his autobiography Franklin lists thirteen virtues he wanted to build, including temperance, order, resolution and humility. He tracked them in a little book, working on one a week and marking each lapse. He never reached perfection, but he said the effort made him a better and happier man than he'd have been otherwise. The method, not the result, is what to borrow.",
+      "source": {
+        "ref": "Franklin, *Autobiography*, the project of moral perfection"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "character-04",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Epictetus opens with a split that can end a lot of worry.",
+      "body": "Some things are up to us: our opinions, impulses, desires, aversions. Other things are not: our body, property, reputation, office. The Stoic move is to spend your energy only on the first group and meet the second with calm. It's a quick audit you can run on any worry: is this mine to control?",
+      "source": {
+        "ref": "Epictetus, *Enchiridion*, §1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "character-05",
+      "pillar": "character",
+      "format": "challenge",
+      "hook": "Take ownership of one thing you've been blaming on someone else.",
+      "body": "Pick one frustration at work or home where you've been explaining why it's not your fault. Ask: what part could I have done differently? Write one sentence, and take one action on it today. You're not accepting blame for everything, only claiming the part you can change.",
+      "source": {
+        "ref": "Willink & Babin, *Extreme Ownership*, Ch. 1"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

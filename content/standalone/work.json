@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "work",
+  "type": "standalone",
+  "title": "Work & Productivity",
+  "pillar": "work",
+  "publicDomain": false,
+  "summary": "Focus, habits, negotiation and effectiveness.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "work-01",
+      "pillar": "work",
+      "format": "idea",
+      "hook": "Shallow work fills the day. Deep work builds the career.",
+      "body": "Cal Newport defines deep work as focused, distraction-free effort on cognitively demanding tasks, the kind that pushes your skills and is hard to replicate. Shallow work is logistics: email, meetings, messages. Most jobs are mostly shallow. The people who protect even a couple of hours of depth a day pull ahead.",
+      "source": {
+        "ref": "Newport, *Deep Work*, Part 1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "work-02",
+      "pillar": "work",
+      "format": "challenge",
+      "hook": "Block ninety minutes tomorrow and give them a single job.",
+      "body": "Newport's first rule is to work deeply, which means scheduling it. Pick a time, a place, a rule for your phone and one clear goal. Put it in your calendar like a meeting. The first few tries will feel awkward; that's the muscle being built.",
+      "source": {
+        "ref": "Newport, *Deep Work*, Part 2, Rule #1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "work-03",
+      "pillar": "work",
+      "format": "idea",
+      "hook": "Every habit is a loop of four parts, and you can edit each one.",
+      "body": "James Clear breaks a habit into cue, craving, response and reward. To build a good habit, make the cue obvious, the craving attractive, the response easy and the reward satisfying. To break a bad one, flip each: hide the cue, make it unattractive, add friction, and remove the reward.",
+      "source": {
+        "ref": "Clear, *Atomic Habits*, Ch. 3"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "work-04",
+      "pillar": "work",
+      "format": "idea",
+      "hook": "Don't aim to run a marathon. Aim to be a runner.",
+      "body": "Clear argues that lasting change comes from changing who you believe you are. Each time you act in line with that identity, you cast a vote for it. The goal isn't to read a book, it's to become a reader. Small repeated acts become evidence you can believe in.",
+      "source": {
+        "ref": "Clear, *Atomic Habits*, Ch. 2"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "work-05",
+      "pillar": "work",
+      "format": "idea",
+      "hook": "The simplest negotiating move: repeat the last few words they said.",
+      "body": "Chris Voss, a former FBI hostage negotiator, calls it mirroring. Repeat the last few words of what the other person said, in a curious tone, and they usually elaborate. It buys information and time and makes people feel heard. Pair it with labelling their emotion ('it sounds like this is frustrating') and tension falls.",
+      "source": {
+        "ref": "Voss, *Never Split the Difference*, Ch. 2 and Ch. 3"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "work-06",
+      "pillar": "work",
+      "format": "idea",
+      "hook": "Drucker's first question for any executive: where does my time actually go?",
+      "body": "Peter Drucker says effective people don't start with their tasks. They start by recording where their time actually goes, then cutting what doesn't need doing. The result is usually humbling: most of the day is eaten by things that don't matter. Know your time, then consolidate what's left into longer blocks.",
+      "source": {
+        "ref": "Drucker, *The Effective Executive*, Ch. 2: Know Thy Time"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

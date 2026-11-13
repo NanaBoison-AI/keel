@@ -1,0 +1,87 @@
+{
+  "schemaVersion": 1,
+  "id": "competence",
+  "type": "standalone",
+  "title": "Competence",
+  "pillar": "competence",
+  "publicDomain": false,
+  "summary": "Things a capable man can just do: cook, patch, rescue, maintain.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "competence-01",
+      "pillar": "competence",
+      "format": "howto",
+      "hook": "Season your food earlier than you think, and taste as you go.",
+      "body": "Samin Nosrat starts with salt. Salt doesn't just make food salty; it brings out flavour. Season in layers while cooking, rather than only at the end, so it can work into the food. Taste constantly. If it tastes flat, it probably needs more salt, not more ingredients.",
+      "source": {
+        "ref": "Nosrat, *Salt, Fat, Acid, Heat*, Salt"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "competence-02",
+      "pillar": "competence",
+      "format": "howto",
+      "hook": "If a dish tastes heavy or dull, add acid.",
+      "body": "A squeeze of lemon, a splash of vinegar or a spoon of yoghurt can brighten a rich or flat dish. Acid balances fat and sweetness. Add a little, stir, and taste again. It's often the one thing missing when everything else is right.",
+      "source": {
+        "ref": "Nosrat, *Salt, Fat, Acid, Heat*, Acid"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "competence-03",
+      "pillar": "competence",
+      "format": "howto",
+      "hook": "Heavy bleeding: press hard, don't peek.",
+      "body": "Call the emergency number. Cover the wound with a clean cloth or bandage and press firmly with your hands. If blood soaks through, don't remove the cloth; add more on top and keep pressing. Keep pressure until help arrives. This is general first aid guidance in line with the Red Cross; take a certified course for hands-on practice.",
+      "source": {
+        "ref": "American Red Cross first aid guidance (severe bleeding)"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "competence-04",
+      "pillar": "competence",
+      "format": "howto",
+      "hook": "If someone collapses and isn't breathing normally, start hands-only CPR.",
+      "body": "Call the emergency number, or ask someone to. Then push hard and fast in the centre of the chest, at about 100 to 120 pushes a minute, and don't stop until help arrives or an AED is ready. Don't worry about perfection. Doing something is far better than doing nothing. Take a certified course to learn the details.",
+      "source": {
+        "ref": "American Red Cross / American Heart Association guidance (hands-only CPR)"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "competence-05",
+      "pillar": "competence",
+      "format": "howto",
+      "hook": "Find your home's main water shut-off before you need it.",
+      "body": "A burst pipe can flood a house in minutes, and nobody wants to be searching for the valve while water pours out. Find your main shut-off now, usually near where the water line enters the house, and make sure everyone in the home knows where it is. Check that it turns. Ten minutes today saves a disaster later.",
+      "source": {
+        "ref": "Standard household preparedness practice"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "competence-06",
+      "pillar": "competence",
+      "format": "howto",
+      "hook": "Check your tyre pressure monthly, and when the weather turns.",
+      "body": "Under-inflated tyres wear faster, waste fuel and handle worse. Check with a gauge when the tyres are cold, using the pressure on the sticker inside the driver's door, not the number on the tyre's sidewall. Do it monthly and when the temperature changes sharply. It takes five minutes and is one of the cheapest bits of car maintenance there is.",
+      "source": {
+        "ref": "Standard vehicle maintenance practice"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

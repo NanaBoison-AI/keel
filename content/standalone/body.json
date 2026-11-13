@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "body",
+  "type": "standalone",
+  "title": "Body",
+  "pillar": "body",
+  "publicDomain": false,
+  "summary": "Move, build, sleep: the physical base of everything else.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "body-01",
+      "pillar": "body",
+      "format": "fact",
+      "hook": "A school district made kids run before class, and their test scores rose.",
+      "body": "John Ratey's *Spark* describes Naperville, Illinois, where a 'zero hour' PE programme had students exercise before school. Reading scores and some test results improved, and the district's students did well on an international science test. Exercise isn't just for the body: it primes the brain for learning.",
+      "source": {
+        "ref": "Ratey, *Spark*, chapter on learning"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "body-02",
+      "pillar": "body",
+      "format": "idea",
+      "hook": "Exercise works on your mood and focus in a way few things can.",
+      "body": "Ratey explains that movement raises levels of key brain chemicals, including a growth factor called BDNF that supports connections between neurons. He treats exercise as one of the best tools for stress, anxiety, focus and ageing. If your head feels foggy, go for a brisk walk first.",
+      "source": {
+        "ref": "Ratey, *Spark*"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "body-03",
+      "pillar": "body",
+      "format": "idea",
+      "hook": "Peter Attia says to fix the chronic diseases before they arrive.",
+      "body": "In *Outlive*, Attia argues that traditional medicine waits to treat illness once it appears. He wants a 'Medicine 3.0' approach focused on prevention and healthspan, aimed at the four big chronic killers: heart disease, cancer, neurodegenerative disease and metabolic disease. The earlier you work on them, the more years of good living you get.",
+      "source": {
+        "ref": "Attia, *Outlive*, Part I"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "body-04",
+      "pillar": "body",
+      "format": "idea",
+      "hook": "Your cardio fitness is one of the best predictors of how long you'll live.",
+      "body": "Attia emphasises that cardiorespiratory fitness, often measured as VO2 max, is strongly linked to longevity. He recommends building a base with long, easy 'zone 2' sessions and adding some harder intervals. You don't need to be an athlete. Moving from low fitness to average is where the biggest gain lies.",
+      "source": {
+        "ref": "Attia, *Outlive*, Part III"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "body-05",
+      "pillar": "body",
+      "format": "reflection",
+      "hook": "What do you want to be able to do physically at eighty-five?",
+      "body": "Attia suggests planning backwards from what you want your final decades to look like: getting up from the floor, carrying groceries, playing with grandchildren. Then train now for those tasks. Write down three things you want to be able to do. Is today's exercise heading that way?",
+      "source": {
+        "ref": "Attia, *Outlive*, Part III"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

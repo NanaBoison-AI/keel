@@ -1,0 +1,76 @@
+{
+  "schemaVersion": 1,
+  "id": "family",
+  "type": "standalone",
+  "title": "Family & Relationships",
+  "pillar": "family",
+  "publicDomain": false,
+  "summary": "Short ideas on marriage, fatherhood and being listened to.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "family-01",
+      "pillar": "family",
+      "format": "fact",
+      "hook": "Couples who split don't fight more. They fight with contempt.",
+      "body": "John Gottman spent decades watching couples argue. He named four patterns that predict trouble: criticism, contempt, defensiveness and stonewalling. Contempt, which includes sarcasm, eye-rolling and mockery, is the most corrosive of the four, because it says 'I'm better than you'. Disagreement is normal. Disrespect is the thing to catch in yourself.",
+      "deeper": "Each horseman has an antidote. Replace criticism with a complaint about one specific thing. Replace contempt by building a culture of appreciation. Replace defensiveness by taking even partial responsibility. And when you're flooded and about to stonewall, say you need a break, then come back.",
+      "source": {
+        "ref": "Gottman & Silver, *The Seven Principles for Making Marriage Work*, Ch. 2"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "family-02",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "How an argument starts mostly decides how it ends.",
+      "body": "Gottman found that a conversation which opens harshly almost always ends badly. A softened start-up means describing the problem and your feelings without blame, and asking for what you need. 'You never help' invites a fight. 'I'm worn out tonight and I'd love a hand with the dishes' invites a conversation.",
+      "source": {
+        "ref": "Gottman & Silver, *The Seven Principles for Making Marriage Work*, Principle 5: Solve Your Solvable Problems"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "family-03",
+      "pillar": "family",
+      "format": "conversation",
+      "hook": "Ask her something about her inner world you couldn't answer yesterday.",
+      "body": "Gottman's first principle is to build 'love maps': a detailed picture of your partner's world, including worries, hopes, friends and small preferences. Couples who know each other's world handle stress better. Tonight, ask one real question: what's weighing on her this month, or what she's looking forward to. Then just listen.",
+      "source": {
+        "ref": "Gottman & Silver, *The Seven Principles for Making Marriage Work*, Principle 1: Enhance Your Love Maps"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "family-04",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Telling an upset child 'you're fine' makes things louder, not quieter.",
+      "body": "Faber and Mazlish argue that denying a child's feelings ('it's nothing', 'you don't mean that') teaches them to stop trusting their own experience. Naming the feeling works better: 'You're really disappointed. You were looking forward to it.' It feels odd at first and then it works, because the child feels understood and can move on to solving the problem.",
+      "source": {
+        "ref": "Faber & Mazlish, *How to Talk So Kids Will Listen & Listen So Kids Will Talk*, Ch. 1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "family-05",
+      "pillar": "family",
+      "format": "challenge",
+      "hook": "When your child melts down, try to name it before you fix it.",
+      "body": "Siegel and Bryson call it 'name it to tame it'. Putting words to a big feeling helps a child's thinking brain catch up with the emotional one. Today, the next time your child is upset, skip the lecture and say what you see: 'You're furious that we have to leave.' Then wait. Notice how quickly the temperature drops.",
+      "source": {
+        "ref": "Siegel & Bryson, *The Whole-Brain Child*, strategy 'Name It to Tame It'"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}
