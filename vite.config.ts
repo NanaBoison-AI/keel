@@ -3,6 +3,7 @@ import { readFileSync } from "node:fs";
 import { join } from "node:path";
 import { defineConfig, type Plugin } from "vite";
 import react from "@vitejs/plugin-react";
+import { VitePWA } from "vite-plugin-pwa";
 import { loadPacks } from "./scripts/validate-content";
 import { Pack, PACK_FOLDERS, type ContentIndex } from "./schema/content";
 
@@ -54,7 +55,53 @@ function devContent(): Plugin {
 }
 
 export default defineConfig({
-  plugins: [react(), devContent()],
+  plugins: [
+    react(),
+    devContent(),
+    VitePWA({
+      registerType: "autoUpdate",
+      includeAssets: ["icon.svg", "apple-touch-icon.png"],
+      manifest: {
+        name: "Keel",
+        short_name: "Keel",
+        description: "Short, real, well-sourced reading on what makes a man.",
+        start_url: "/",
+        scope: "/",
+        display: "standalone",
+        orientation: "portrait",
+        background_color: "#f6f1e7",
+        theme_color: "#0e1b2c",
+        icons: [
+          { src: "/icon-192.png", sizes: "192x192", type: "image/png" },
+          { src: "/icon-512.png", sizes: "512x512", type: "image/png" },
+          {
+            src: "/icon-maskable-512.png",
+            sizes: "512x512",
+            type: "image/png",
+            purpose: "maskable",
+          },
+        ],
+      },
+      workbox: {
+        globPatterns: ["**/*.{js,css,html,svg,png,woff2}"],
+        navigateFallback: "/index.html",
+        navigateFallbackDenylist: [/^\/content\//],
+        cleanupOutdatedCaches: true,
+        runtimeCaching: [
+          {
+            urlPattern: ({ url }) => url.pathname === "/content/index.json",
+            handler: "NetworkFirst",
+            options: { cacheName: "keel-index", networkTimeoutSeconds: 3 },
+          },
+          {
+            urlPattern: ({ url }) => url.pathname.startsWith("/content/"),
+            handler: "StaleWhileRevalidate",
+            options: { cacheName: "keel-content" },
+          },
+        ],
+      },
+    }),
+  ],
   test: {
     globals: true,
     environment: "jsdom",
