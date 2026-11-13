@@ -2,7 +2,7 @@
   "schemaVersion": 1,
   "id": "mind",
   "type": "standalone",
-  "title": "Mind",
+  "title": "Mind: Quick Reads",
   "pillar": "mind",
   "publicDomain": false,
   "summary": "Mental models and the biases that quietly run your decisions.",

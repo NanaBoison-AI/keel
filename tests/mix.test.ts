@@ -218,3 +218,51 @@ describe("computeAffinity / normalizeWeights", () => {
     expect(PILLARS.reduce((s, p) => s + n[p], 0)).toBe(100);
   });
 });
+
+import { setPillarWeight } from "../src/lib/mix";
+import { suggestDecks } from "../src/lib/suggest";
+
+describe("setPillarWeight", () => {
+  it("keeps the sum at 100 and sets the pillar", () => {
+    const w = setPillarWeight(DEFAULT_WEIGHTS, "money", 40);
+    expect(w.money).toBe(40);
+    expect(PILLARS.reduce((s, p) => s + w[p], 0)).toBe(100);
+    expect(w.family).toBeLessThan(DEFAULT_WEIGHTS.family);
+  });
+  it("handles 100 and 0", () => {
+    const w = setPillarWeight(DEFAULT_WEIGHTS, "mind", 100);
+    expect(w.mind).toBe(100);
+    const z = setPillarWeight(w, "mind", 0);
+    expect(PILLARS.reduce((s, p) => s + z[p], 0)).toBe(100);
+  });
+});
+
+describe("suggestDecks", () => {
+  const books = [
+    mkPack("a", "family", 10, { type: "book" }),
+    mkPack("b", "family", 10, { type: "book" }),
+    mkPack("c", "money", 10, { type: "book" }),
+    mkPack("d", "mind", 10, { type: "book" }),
+    mkPack("s", "body", 10, { type: "standalone" }),
+  ];
+  it("skips started decks and standalone packs, one per pillar first", () => {
+    const r = suggestDecks({
+      packs: books,
+      weights: DEFAULT_WEIGHTS,
+      started: new Set(["a"]),
+      recentPillars: [],
+    });
+    expect(r.map((p) => p.id)).toEqual(expect.arrayContaining(["b", "c", "d"]));
+    expect(r.find((p) => p.id === "s")).toBeUndefined();
+  });
+  it("favours pillars underrepresented in recent reading", () => {
+    const r = suggestDecks({
+      packs: books,
+      weights: DEFAULT_WEIGHTS,
+      started: new Set(),
+      recentPillars: ["family", "family", "family", "family"],
+      count: 1,
+    });
+    expect(r[0].pillar).not.toBe("family");
+  });
+});

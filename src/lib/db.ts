@@ -12,6 +12,7 @@ export interface ProgressRow {
   cardIndex: number;
   startedAt: number;
   completedAt?: number;
+  updatedAt?: number;
 }
 export interface SeenRow {
   cardId: string;
@@ -137,6 +138,7 @@ export async function saveProgress(
     cardIndex: Math.max(cardIndex, existing?.cardIndex ?? 0),
     startedAt: existing?.startedAt ?? now,
     completedAt: existing?.completedAt ?? (done ? now : undefined),
+    updatedAt: now,
   });
 }
 

@@ -33,6 +33,9 @@ export async function syncContent(
       if (have === undefined) result.added++;
       else result.updated++;
     }
+    // Removed packs are hidden; progress and Notebook snapshots are kept.
+    const keep = new Set(index.packs.map((p) => p.id));
+    for (const id of cached.keys()) if (!keep.has(id)) await d.packs.delete(id);
     await setSetting("lastSync", now, d);
     result.ok = true;
   } catch {

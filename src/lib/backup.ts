@@ -22,6 +22,7 @@ export const BackupSchema = z.object({
       cardIndex: z.number(),
       startedAt: z.number(),
       completedAt: z.number().optional(),
+      updatedAt: z.number().optional(),
     }),
   ),
   seen: z.array(z.object({ cardId: z.string(), seenAt: z.number() })),
