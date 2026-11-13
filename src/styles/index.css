@@ -1,0 +1,79 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --reader-size: 19px;
+  }
+  html,
+  body,
+  #root {
+    height: 100%;
+  }
+  body {
+    @apply bg-paper font-sans text-ink antialiased;
+    -webkit-tap-highlight-color: transparent;
+    overscroll-behavior: none;
+  }
+  .dark body {
+    @apply bg-ink text-paper;
+  }
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
+  /* Controls aren't selectable; body text stays selectable. */
+  button,
+  nav,
+  [role="toolbar"] {
+    -webkit-user-select: none;
+    user-select: none;
+  }
+  .font-serif {
+    font-size: var(--reader-size);
+  }
+}
+
+@layer components {
+  .app-shell {
+    height: 100dvh;
+    padding-top: env(safe-area-inset-top);
+    padding-left: env(safe-area-inset-left);
+    padding-right: env(safe-area-inset-right);
+  }
+  .stack-surface {
+    overscroll-behavior: none;
+  }
+  .ctl {
+    @apply flex h-12 w-12 items-center justify-center rounded-full text-ink/75 active:bg-ink/10 disabled:opacity-30 dark:text-paper/80 dark:active:bg-paper/10;
+  }
+  .ctl-primary {
+    @apply h-14 w-14 bg-ink text-paper active:bg-ink-700 dark:bg-brass dark:text-ink dark:active:bg-brass-light;
+  }
+  .menu-item {
+    @apply block min-h-[44px] w-full rounded-lg px-4 py-2 text-left text-sm active:bg-ink/10 dark:active:bg-paper/10;
+  }
+  .btn {
+    @apply inline-flex min-h-[48px] items-center justify-center rounded-full px-6 font-sans text-sm font-semibold;
+  }
+  .btn-primary {
+    @apply bg-ink text-paper active:bg-ink-700 dark:bg-brass dark:text-ink;
+  }
+  .btn-secondary {
+    @apply border border-ink/25 text-ink active:bg-ink/10 dark:border-paper/30 dark:text-paper dark:active:bg-paper/10;
+  }
+  .screen {
+    @apply mx-auto h-full w-full max-w-2xl overflow-y-auto px-5 pb-6 pt-4;
+  }
+  .card-surface {
+    @apply rounded-2xl border border-ink/10 bg-white/50 p-4 dark:border-paper/10 dark:bg-ink-800;
+  }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto !important;
+  }
+}

@@ -1,0 +1,265 @@
+{
+  "schemaVersion": 1,
+  "id": "meditations",
+  "type": "book",
+  "title": "Meditations",
+  "author": "Marcus Aurelius",
+  "year": 180,
+  "pillar": "character",
+  "publicDomain": true,
+  "translation": "George Long (1862)",
+  "summary": "A Roman emperor's private notes on staying steady, kind and clear-headed under pressure.",
+  "estMinutes": 13,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "meditations-01",
+      "pillar": "character",
+      "format": "hook",
+      "hook": "The most powerful man in the world wrote notes to himself, and never meant for you to read them.",
+      "body": "For nearly twenty years Marcus Aurelius ruled the Roman Empire, much of that time on military campaign. In the margins of that life he kept a private notebook: reminders, rebukes, and rules for staying decent under pressure. It wasn't a book until long after he was gone. That's why it reads like a man talking to himself, and why it still works on you.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "meditations-02",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Before he wrote a single rule, he wrote a list of debts.",
+      "body": "Book 1 is not philosophy. It's gratitude, person by person: what he learned from his mother, his teachers, his adoptive father, his friends. From his mother, for example, he credits piety, generosity, and a simple way of living, far from the habits of the rich. The first move of a steady man is to notice how much of his character was handed to him.",
+      "deeper": "Notice the method: he doesn't thank people in general. He names the specific trait he got from each one. That's what makes it work. Try it with three people: write the one thing you learned from each that you'd otherwise take credit for.",
+      "source": {
+        "ref": "Book 1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-03",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Marcus expected the worst of people before breakfast, and it kept him calm.",
+      "body": "He opens his day by telling himself he'll meet the meddler, the ungrateful, the arrogant, the deceitful. Not to feel bitter, but so nothing surprises him. His reasoning is the interesting part: people behave this way out of ignorance of what is good, and they are still family in the wide sense, made to cooperate. You can't be hurt by what you saw coming, or hate someone you understand.",
+      "quote": {
+        "text": "Begin the morning by saying to thyself, I shall meet with the busybody, the ungrateful, arrogant, deceitful, envious, unsocial.",
+        "attribution": "Marcus Aurelius, Meditations 2.1 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 2, §1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-04",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Your boss didn't ruin your day. Your verdict about your boss did.",
+      "body": "Marcus returns again and again to one idea: events arrive neutral, and the suffering comes from the judgment we attach. That is not a trick to pretend things don't hurt. It's a place to push. You rarely control what happens, but you often control the story you tell in the first ten seconds, and that story decides how the next ten hours go.",
+      "deeper": "Stoics sorted the world into what is up to us (our judgments, choices, effort) and what isn't (other people, outcomes, the past). Marcus applies this ruthlessly to himself. When he feels pain, his first question is not 'who did this?' but 'which judgment am I holding?' Often he can drop it now, in the same minute.",
+      "quote": {
+        "text": "If thou art pained by any external thing, it is not this thing that disturbs thee, but thy own judgment about it.",
+        "attribution": "Marcus Aurelius, Meditations 8.47 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 8, §47"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-05",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "The thing blocking your path can become the path.",
+      "body": "Marcus argues that Nature takes every obstacle and builds it into the road. A delay becomes practice in patience; an insult becomes practice in composure; a setback shows you what you were actually made of. This isn't forced cheerfulness. It's a practical question to ask in the middle of trouble: what does this make possible that smooth sailing wouldn't?",
+      "source": {
+        "ref": "Book 5, §20"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-06",
+      "pillar": "character",
+      "format": "quote",
+      "hook": "There's a retreat that costs nothing and needs no cabin in the woods.",
+      "body": "Men go looking for escapes: the country house, the shore, the mountains. Marcus says the most reliable one is inside. When you're loaded with the right thoughts, a few minutes of looking inward restores order. You can do it on a bus, in a queue, in a car park before walking back into the house.",
+      "quote": {
+        "text": "it is in thy power whenever thou shalt choose to retire into thyself.",
+        "attribution": "Marcus Aurelius, Meditations 4.3 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 4, §3"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-07",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Even the emperor didn't feel like getting up.",
+      "body": "Marcus argues with himself about the warm bed, and the argument is the lesson. His answer is not willpower; it's purpose. Humans exist to do something with their hands, their heads and other people. Staying under the blankets, however pleasant, is not what you were built for. He frames the day as work worth doing rather than a penalty to endure.",
+      "quote": {
+        "text": "I am rising to the work of a human being.",
+        "attribution": "Marcus Aurelius, Meditations 5.1 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 5, §1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-08",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "You become what you rehearse in your head.",
+      "body": "Marcus says the mind takes on the colour of its habitual thoughts, the way cloth takes on a dye. That is a warning and an instruction. Fifteen minutes of grievance a day is not harmless venting; it is dyeing the soul. So choose the thoughts you want to be stained with, and repeat them until they hold.",
+      "quote": {
+        "text": "the soul is dyed by the thoughts.",
+        "attribution": "Marcus Aurelius, Meditations 5.16 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 5, §16"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-09",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "His rule for revenge was one short sentence.",
+      "body": "When someone wrongs you, the pull is to hit back in kind. Marcus says the real victory is to refuse to become the person who wronged you. Answer cruelty with cruelty and you've enrolled in their school. It's a hard standard for a man who has been disrespected, and a very good one for a husband and father.",
+      "quote": {
+        "text": "The best way of avenging thyself is not to become like [the wrong-doer].",
+        "attribution": "Marcus Aurelius, Meditations 6.6 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 6, §6"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-10",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "A short line about bees that says more than most leadership books.",
+      "body": "Marcus thought of people as parts of one body, hands and feet working together. From that follows the bee line: if something harms the hive, it can't really be good for the bee. Your gain at the expense of your family, your team or your community is a loss you haven't noticed yet.",
+      "deeper": "He treats cooperation as human nature, not a favour. In Book 2 he says we were made to work together like feet, hands, eyelids and the rows of teeth. Acting against one another is against nature. It's a useful test for decisions at home and at work: does this make the hive stronger or weaker?",
+      "quote": {
+        "text": "That which is not good for the swarm, neither is it good for the bee.",
+        "attribution": "Marcus Aurelius, Meditations 6.54 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 6, §54"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-11",
+      "pillar": "character",
+      "format": "fact",
+      "hook": "The Roman emperor wrote his notebook in Greek, not Latin.",
+      "body": "Latin was the language of administration and the army. Greek was the language of philosophy, and Marcus chose it for his private thinking. There is also no sign he gave the notes a title: the Greek heading often translated as 'To Himself' came later. It's a good reminder of what this is: not advice from a stage, but a man working things out in the margins.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-12",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "He kept death in the room, not to scare himself, but to sharpen the day.",
+      "body": "Marcus writes that you shouldn't act as though you have ten thousand years. Death is hanging over you, so while you can, be good. It's not morbid. It's a filter. Pettiness, grudges and endless postponing look different when the deadline is real. The result isn't panic; it's priorities.",
+      "quote": {
+        "text": "Do not act as if thou wert going to live ten thousand years.",
+        "attribution": "Marcus Aurelius, Meditations 4.17 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 4, §17"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-13",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "He believed changing your mind was a freedom, not a defeat.",
+      "body": "If someone shows you you're wrong, Marcus says, following them is as free as sticking with your error. The activity is still your own: your judgment, your understanding. The man who can't be corrected isn't strong, he's trapped. Try it the next time your partner or a colleague is right and you're not.",
+      "quote": {
+        "text": "to change thy opinion and to follow him who corrects thy error is as consistent with freedom as it is to persist in thy error.",
+        "attribution": "Marcus Aurelius, Meditations 8.16 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 8, §16"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-14",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Life is closer to wrestling than to dancing.",
+      "body": "A dancer rehearses a known routine. A wrestler has to meet the sudden and unexpected: a shove from nowhere, a grip you didn't plan for. Marcus says the art of life is the second kind. You can't script your days, but you can stay balanced, stay ready and keep your footing when something hits.",
+      "quote": {
+        "text": "The art of life is more like the wrestler's art than the dancer's",
+        "attribution": "Marcus Aurelius, Meditations 7.61 (trans. George Long)"
+      },
+      "source": {
+        "ref": "Book 7, §61"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-15",
+      "pillar": "character",
+      "format": "challenge",
+      "hook": "Tomorrow, before you check your phone, say this out loud.",
+      "body": "Take Marcus's morning script and make it your own. Before the day starts, name the likely friction: the traffic, the slow colleague, the child who won't cooperate. Then add one line: 'I can't control that, but I can control how I answer.' Do it for one day. Notice whether the first irritation lands differently.",
+      "source": {
+        "ref": "Book 2, §1; Book 8, §47"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-16",
+      "pillar": "character",
+      "format": "reflection",
+      "hook": "Which person in your life would you thank if you wrote Marcus's Book 1 today?",
+      "body": "Marcus started his notebook by crediting others. Pick one person who shaped how you handle pressure, money, anger or loyalty. What exactly did you learn from them? And have you ever told them? If they're still around, that might be worth a call this week.",
+      "source": {
+        "ref": "Book 1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "meditations-17",
+      "pillar": "character",
+      "format": "recap",
+      "hook": "Three things to take from Marcus.",
+      "body": "1. **Your judgments are the part you control.** Events are neutral; the story you attach is yours to change.\n2. **Prepare for friction in advance.** Meet the day expecting difficult people and obstacles, and use them as practice.\n3. **Don't become what you resent.** Answer wrong with steadiness, and keep the common good in view.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}

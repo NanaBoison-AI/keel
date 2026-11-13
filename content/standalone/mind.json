@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "mind",
+  "type": "standalone",
+  "title": "Mind: Quick Reads",
+  "pillar": "mind",
+  "publicDomain": false,
+  "summary": "Mental models and the biases that quietly run your decisions.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "mind-01",
+      "pillar": "mind",
+      "format": "fact",
+      "hook": "Your brain has two speeds, and the fast one is in charge most of the time.",
+      "body": "Daniel Kahneman describes System 1, which is quick, automatic and intuitive, and System 2, which is slow, effortful and logical. System 1 handles most of your day and is usually good enough. The trouble is that it also produces confident answers to questions it hasn't really thought about, and System 2 is often too lazy to check.",
+      "source": {
+        "ref": "Kahneman, *Thinking, Fast and Slow*, Part I"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mind-02",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "Whoever names the first number controls the negotiation.",
+      "body": "Anchoring is the pull of an initial figure on your judgment, even when the figure is irrelevant. Kahneman describes experiments where random numbers shifted people's estimates. In a negotiation, a salary talk or a price haggle, the first number becomes the reference point everything else is measured from. Know your own number before the conversation starts, and be wary of anyone else's.",
+      "source": {
+        "ref": "Kahneman, *Thinking, Fast and Slow*, Part II (anchoring)"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mind-03",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "What you see is all there is, and that's the problem.",
+      "body": "Kahneman's phrase for a habit of the mind: we build the best story we can from the information in front of us, and we don't stop to ask what's missing. A confident story from little evidence feels the same as a confident story from a lot. Before a big decision, ask: what do I not know here, and who could tell me?",
+      "source": {
+        "ref": "Kahneman, *Thinking, Fast and Slow*, Part I"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mind-04",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "Charlie Munger's shortcut for hard problems: flip them over.",
+      "body": "Munger liked to quote the mathematician Jacobi's advice to invert, always invert. Instead of asking how to build a good marriage, ask what would reliably wreck one, then avoid that. Instead of asking how to be successful, ask how you'd guarantee failure. Avoiding stupidity is often easier and more reliable than chasing brilliance.",
+      "source": {
+        "ref": "Munger, *Poor Charlie's Almanack*, talks on worldly wisdom"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mind-05",
+      "pillar": "mind",
+      "format": "challenge",
+      "hook": "A free gift makes you feel in debt, and that's by design.",
+      "body": "Robert Cialdini's research on reciprocity shows that a small gift or favour creates a strong urge to return one, often a bigger one. It's why free samples exist. That urge is harmless between friends, but worth noticing when a salesperson or stranger uses it. This week, when a favour arrives out of nowhere, pause and ask yourself whether you owe anything, or just a thank-you.",
+      "source": {
+        "ref": "Cialdini, *Influence: The Psychology of Persuasion*, Ch. 2 (Reciprocation)"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}

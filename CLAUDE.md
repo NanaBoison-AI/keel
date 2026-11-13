@@ -32,17 +32,17 @@ simplest option that respects the Product Principles, and note the decision in
 
 Every card belongs to exactly one pillar. IDs are fixed; do not rename them.
 
-| id           | Label                    | Default weight | Covers |
-|--------------|--------------------------|---------------:|--------|
-| `family`     | Family & Relationships   | 25 | Marriage, fatherhood, friendship, communication, conflict |
-| `mind`       | Mind                     | 10 | Mental models, decision-making, logic, biases |
-| `psychology` | Psychology               | 10 | Emotions, motivation, behavior, self-understanding |
-| `character`  | Character                | 10 | Discipline, courage, integrity, Stoicism, purpose |
-| `money`      | Money                    | 10 | Personal finance, investing, income |
-| `world`      | The World                | 10 | Economy, geopolitics, history; weekly briefing |
-| `work`       | Work & Productivity      | 10 | Focus, career, leadership, negotiation, habits |
-| `body`       | Body                     |  8 | Strength, sleep, nutrition, energy |
-| `competence` | Competence               |  7 | Practical skills: home repair, cooking, first aid, car, crisis |
+| id           | Label                  | Default weight | Covers                                                         |
+| ------------ | ---------------------- | -------------: | -------------------------------------------------------------- |
+| `family`     | Family & Relationships |             25 | Marriage, fatherhood, friendship, communication, conflict      |
+| `mind`       | Mind                   |             10 | Mental models, decision-making, logic, biases                  |
+| `psychology` | Psychology             |             10 | Emotions, motivation, behavior, self-understanding             |
+| `character`  | Character              |             10 | Discipline, courage, integrity, Stoicism, purpose              |
+| `money`      | Money                  |             10 | Personal finance, investing, income                            |
+| `world`      | The World              |             10 | Economy, geopolitics, history; weekly briefing                 |
+| `work`       | Work & Productivity    |             10 | Focus, career, leadership, negotiation, habits                 |
+| `body`       | Body                   |              8 | Strength, sleep, nutrition, energy                             |
+| `competence` | Competence             |              7 | Practical skills: home repair, cooking, first aid, car, crisis |
 
 Weights are user-adjustable in Settings (they must always sum to 100; the UI normalizes).
 
@@ -50,21 +50,21 @@ Weights are user-adjustable in Settings (they must always sum to 100; the UI nor
 
 ## 3. Tech stack
 
-| Concern | Choice |
-|---|---|
-| Language | TypeScript (strict) |
-| Framework | React 18+ with Vite |
-| Styling | Tailwind CSS |
-| Gestures / motion | `motion` (Framer Motion) + `@use-gesture/react` |
-| Routing | `react-router` (hash or browser routing; Cloudflare Pages SPA fallback) |
-| Local data | IndexedDB via `dexie` (+ `dexie-react-hooks`) |
-| PWA / offline | `vite-plugin-pwa` (Workbox) |
-| Schema / validation | `zod` |
-| Fonts | Self-hosted via `@fontsource` — body serif: **Literata** (or Source Serif 4); UI sans: **Inter** |
-| Tests | `vitest` + `@testing-library/react` |
-| Lint / format | ESLint + Prettier |
-| Hosting | Cloudflare Pages (auto-deploy on push to `main`) |
-| CI | GitHub Actions (validate + test + build on every push and PR) |
+| Concern             | Choice                                                                                           |
+| ------------------- | ------------------------------------------------------------------------------------------------ |
+| Language            | TypeScript (strict)                                                                              |
+| Framework           | React 18+ with Vite                                                                              |
+| Styling             | Tailwind CSS                                                                                     |
+| Gestures / motion   | `motion` (Framer Motion) + `@use-gesture/react`                                                  |
+| Routing             | `react-router` (hash or browser routing; Cloudflare Pages SPA fallback)                          |
+| Local data          | IndexedDB via `dexie` (+ `dexie-react-hooks`)                                                    |
+| PWA / offline       | `vite-plugin-pwa` (Workbox)                                                                      |
+| Schema / validation | `zod`                                                                                            |
+| Fonts               | Self-hosted via `@fontsource` — body serif: **Literata** (or Source Serif 4); UI sans: **Inter** |
+| Tests               | `vitest` + `@testing-library/react`                                                              |
+| Lint / format       | ESLint + Prettier                                                                                |
+| Hosting             | Cloudflare Pages (auto-deploy on push to `main`)                                                 |
+| CI                  | GitHub Actions (validate + test + build on every push and PR)                                    |
 
 Node version: 22 (pin in `.nvmrc` and `package.json` `engines`).
 
@@ -106,14 +106,14 @@ No backend. No database server. No environment secrets.
 
 ### npm scripts (must exist)
 
-| Script | Does |
-|---|---|
-| `dev` | Vite dev server |
-| `validate` | `tsx scripts/validate-content.ts` — exits non-zero on any error |
+| Script        | Does                                                                                                |
+| ------------- | --------------------------------------------------------------------------------------------------- |
+| `dev`         | Vite dev server                                                                                     |
+| `validate`    | `tsx scripts/validate-content.ts` — exits non-zero on any error                                     |
 | `build:index` | `tsx scripts/build-index.ts` — copies packs to `dist/content/` and writes `dist/content/index.json` |
-| `build` | `npm run validate && vite build && npm run build:index` |
-| `test` | vitest run |
-| `lint` | eslint |
+| `build`       | `npm run validate && vite build && npm run build:index`                                             |
+| `test`        | vitest run                                                                                          |
+| `lint`        | eslint                                                                                              |
 
 **Important:** `index.json` is **generated at build time**, never hand-written and never
 committed. Scheduled tasks only add or edit pack files. This removes a whole class of errors.
@@ -127,58 +127,69 @@ The app, the validator and the scheduled tasks all use this shape.
 
 ```ts
 const PillarId = z.enum([
-  "family", "mind", "psychology", "character", "money",
-  "world", "work", "body", "competence",
+  "family",
+  "mind",
+  "psychology",
+  "character",
+  "money",
+  "world",
+  "work",
+  "body",
+  "competence",
 ]);
 
 const CardFormat = z.enum([
-  "hook",          // opening card of a deck: why this matters
-  "idea",          // one core idea, explained
-  "story",         // a story / example / historical anecdote from the source
-  "quote",         // a quote (public-domain sources freely; modern sources: rules in §9)
-  "fact",          // a surprising, sourced fact
-  "challenge",     // "try this today" — a small concrete action
-  "conversation",  // a question to ask your partner / kids / friend
-  "reflection",    // a question to think about
-  "howto",         // practical steps (mostly the competence pillar)
-  "recap",         // closing card: the 3 things to remember
+  "hook", // opening card of a deck: why this matters
+  "idea", // one core idea, explained
+  "story", // a story / example / historical anecdote from the source
+  "quote", // a quote (public-domain sources freely; modern sources: rules in §9)
+  "fact", // a surprising, sourced fact
+  "challenge", // "try this today" — a small concrete action
+  "conversation", // a question to ask your partner / kids / friend
+  "reflection", // a question to think about
+  "howto", // practical steps (mostly the competence pillar)
+  "recap", // closing card: the 3 things to remember
 ]);
 
 const Card = z.object({
-  id: z.string().regex(/^[a-z0-9-]+$/),     // `${packId}-${nn}`, permanent, never reused
+  id: z.string().regex(/^[a-z0-9-]+$/), // `${packId}-${nn}`, permanent, never reused
   pillar: PillarId,
   format: CardFormat,
-  hook: z.string().min(10).max(140),        // the first line the reader sees
-  body: z.string().min(20).max(900),        // ~40–140 words; light markdown: **bold**, *italic*, lists
-  deeper: z.string().max(2200).optional(),  // revealed on tap; ~100–350 words
-  quote: z.object({
-    text: z.string().max(400),
-    attribution: z.string(),                // e.g. "Marcus Aurelius, Meditations 2.1 (trans. George Long)"
-  }).optional(),
-  source: z.object({
-    ref: z.string().optional(),             // e.g. "Book 2, §1" or "Ch. 3: The Four Horsemen"
-    url: z.string().url().optional(),       // required for briefing cards
-  }).optional(),
-  mixable: z.boolean().default(true),       // may appear in the daily mix outside its deck
+  hook: z.string().min(10).max(140), // the first line the reader sees
+  body: z.string().min(20).max(900), // ~40–140 words; light markdown: **bold**, *italic*, lists
+  deeper: z.string().max(2200).optional(), // revealed on tap; ~100–350 words
+  quote: z
+    .object({
+      text: z.string().max(400),
+      attribution: z.string(), // e.g. "Marcus Aurelius, Meditations 2.1 (trans. George Long)"
+    })
+    .optional(),
+  source: z
+    .object({
+      ref: z.string().optional(), // e.g. "Book 2, §1" or "Ch. 3: The Four Horsemen"
+      url: z.string().url().optional(), // required for briefing cards
+    })
+    .optional(),
+  mixable: z.boolean().default(true), // may appear in the daily mix outside its deck
   version: z.number().int().min(1).default(1),
 });
 
 const Pack = z.object({
   schemaVersion: z.literal(1),
-  id: z.string().regex(/^[a-z0-9-]+$/),     // must equal the filename without .json
+  id: z.string().regex(/^[a-z0-9-]+$/), // must equal the filename without .json
   type: z.enum(["book", "briefing", "series", "standalone"]),
   title: z.string(),
-  author: z.string().optional(),            // required for books
-  year: z.number().int().optional(),        // original publication year (books)
-  pillar: PillarId,                         // primary pillar of the pack
+  author: z.string().optional(), // required for books
+  year: z.number().int().optional(), // original publication year (books)
+  pillar: PillarId, // primary pillar of the pack
   publicDomain: z.boolean().default(false),
-  translation: z.string().optional(),       // e.g. "George Long (1862)" for public-domain translations
-  summary: z.string().max(200),             // one line shown in Library
-  estMinutes: z.number().int().min(1),      // ~ cards × 0.75
-  version: z.number().int().min(1),         // bump on ANY change to the pack
-  createdAt: z.string(),                    // ISO date
-  updatedAt: z.string(),                    // ISO date
-  expiresAt: z.string().optional(),         // briefings only: createdAt + 21 days
+  translation: z.string().optional(), // e.g. "George Long (1862)" for public-domain translations
+  summary: z.string().max(200), // one line shown in Library
+  estMinutes: z.number().int().min(1), // ~ cards × 0.75
+  version: z.number().int().min(1), // bump on ANY change to the pack
+  createdAt: z.string(), // ISO date
+  updatedAt: z.string(), // ISO date
+  expiresAt: z.string().optional(), // briefings only: createdAt + 21 days
   sources: z.array(z.object({ title: z.string(), url: z.string().url() })).optional(), // briefings
   cards: z.array(Card).min(1),
 });
@@ -203,7 +214,7 @@ const Pack = z.object({
 
 ```ts
 const QueueItem = z.object({
-  id: z.string().regex(/^[a-z0-9-]+$/),   // becomes the pack id / filename
+  id: z.string().regex(/^[a-z0-9-]+$/), // becomes the pack id / filename
   title: z.string(),
   author: z.string(),
   year: z.number().int(),
@@ -211,9 +222,9 @@ const QueueItem = z.object({
   publicDomain: z.boolean(),
   translation: z.string().optional(),
   status: z.enum(["queued", "in_progress", "done", "skipped"]),
-  note: z.string().optional(),            // e.g. why skipped
+  note: z.string().optional(), // e.g. why skipped
 });
-const Queue = z.array(QueueItem);         // processed top to bottom
+const Queue = z.array(QueueItem); // processed top to bottom
 ```
 
 ---
@@ -244,17 +255,17 @@ const Queue = z.array(QueueItem);         // processed top to bottom
 
 ### Card interaction
 
-| Gesture | Action | Visible button equivalent |
-|---|---|---|
-| Swipe up | Next card | ↓ arrow |
-| Swipe down | Previous card | — |
-| Tap card | Expand/collapse `deeper` (if present) | "Read more" |
-| Double-tap | Save to Notebook (brief bookmark animation) | Bookmark icon |
-| Swipe left | "Less like this" (records feedback, advances, shows Undo toast for 4s) | ⋯ menu |
+| Gesture    | Action                                                                 | Visible button equivalent |
+| ---------- | ---------------------------------------------------------------------- | ------------------------- |
+| Swipe up   | Next card                                                              | ↓ arrow                   |
+| Swipe down | Previous card                                                          | —                         |
+| Tap card   | Expand/collapse `deeper` (if present)                                  | "Read more"               |
+| Double-tap | Save to Notebook (brief bookmark animation)                            | Bookmark icon             |
+| Swipe left | "Less like this" (records feedback, advances, shows Undo toast for 4s) | ⋯ menu                    |
 
 - Every gesture must have a visible button alternative (accessibility).
 - Card footer shows: pillar chip, pack title (tappable → opens deck), and `source.ref`.
-- Daily-mix cards from a book show "From *Deep Work* → Continue the book".
+- Daily-mix cards from a book show "From _Deep Work_ → Continue the book".
 - Respect `prefers-reduced-motion` (crossfade instead of slide).
 
 ### Reading experience (this is the product — get it right)
@@ -362,9 +373,9 @@ settings  : key, value
 ### Copyright
 
 - **Public-domain works** (published before 1929 in the US, or public-domain translations
-  such as George Long's 1862 *Meditations*): quotes from the public-domain text are fine.
+  such as George Long's 1862 _Meditations_): quotes from the public-domain text are fine.
   Set `publicDomain: true` and `translation` where relevant. Never quote a modern,
-  copyrighted translation (e.g. do not use Gregory Hays' *Meditations*).
+  copyrighted translation (e.g. do not use Gregory Hays' _Meditations_).
 - **Modern books:** explain ideas **in your own words**. At most **one** direct quote per
   pack, **under 15 words**. Do not mirror the book's sentences or reproduce its
   passages. Summaries of ideas, frameworks and stories in original wording are fine.
@@ -374,7 +385,7 @@ settings  : key, value
 ### Voice and craft
 
 - **Every card opens with a hook** — tension, surprise, or a question. Not a title.
-  Bad: "Gottman's Four Horsemen." Good: "Couples who divorce don't argue more. They argue *differently*."
+  Bad: "Gottman's Four Horsemen." Good: "Couples who divorce don't argue more. They argue _differently_."
 - Plain, direct, warm. Talk to a capable adult man; no lecturing, no hustle-bro tone,
   no clichés ("in today's fast-paced world").
 - One idea per card. Short paragraphs. `body` ~40–140 words; `deeper` for the rest.
@@ -404,6 +415,7 @@ settings  : key, value
 Scheduled Claude tasks clone this repo, read this file, and do one job per run.
 
 **Library builder (2–3× per week)**
+
 1. Pick the first `queued` item in `content/queue.json`; set it to `in_progress`.
 2. Write `content/books/<id>.json` per §5 and §9. Run the verification pass.
 3. Set the queue item to `done`. Run `npm ci && npm run validate`. Fix until it passes.
@@ -411,6 +423,7 @@ Scheduled Claude tasks clone this repo, read this file, and do one job per run.
    titled `Book: <title> — <author>` with a short summary of the deck in the description.
 
 **Weekly briefing (Sunday evening UTC)**
+
 1. Research the past 7 days' economy and world news from reputable sources.
 2. Write `content/briefings/<YYYY-wNN>.json` (ISO week). Verification pass.
 3. `npm ci && npm run validate`. Commit `content: briefing <YYYY-wNN>` and push directly
@@ -426,7 +439,7 @@ of pushing broken content. Never delete existing packs.
 
 - `.github/workflows/ci.yml`: on push and PR → `npm ci`, `npm run lint`, `npm test`,
   `npm run build`.
-- **Cloudflare Pages settings:** framework preset *None* (or Vite), build command
+- **Cloudflare Pages settings:** framework preset _None_ (or Vite), build command
   `npm run build`, output directory `dist`, env `NODE_VERSION=22`.
   Production branch `main`; PRs get preview deployments (useful for reviewing new books).
 - Add `public/_redirects` with `/* /index.html 200` for SPA routing.
@@ -436,48 +449,48 @@ of pushing broken content. Never delete existing packs.
 
 ## 12. Seed content (build with the app)
 
-1. **`content/books/meditations.json`** — Marcus Aurelius, *Meditations*,
+1. **`content/books/meditations.json`** — Marcus Aurelius, _Meditations_,
    `publicDomain: true`, `translation: "George Long (1862)"`, pillar `character`,
    16–18 cards following §9. Quotes must come from the Long translation.
 2. **`content/standalone/<pillar>.json`** for all 9 pillars — 4–6 cards each, every
    card grounded in a real book from the queue below (put the book and chapter in
-   `source.ref`, e.g. "Gottman, *The Seven Principles…*, Ch. 2"). Competence cards
+   `source.ref`, e.g. "Gottman, _The Seven Principles…_, Ch. 2"). Competence cards
    may be `howto` cards based on widely established practice (first aid basics
    following Red Cross guidance, etc.).
 3. **No seeded briefing.** Do not invent news. The Journey screen shows a friendly empty
    state ("Your first weekly briefing arrives Sunday evening.").
 4. **`content/queue.json`** pre-filled in this order (all `queued` except Meditations `done`):
 
-| id | Title | Author | Year | Pillar | PD |
-|---|---|---|---|---|---|
-| seven-principles-marriage | The Seven Principles for Making Marriage Work | John Gottman & Nan Silver | 1999 | family | no |
-| how-to-talk-so-kids-will-listen | How to Talk So Kids Will Listen & Listen So Kids Will Talk | Adele Faber & Elaine Mazlish | 1980 | family | no |
-| mans-search-for-meaning | Man's Search for Meaning | Viktor Frankl | 1946 | psychology | no |
-| psychology-of-money | The Psychology of Money | Morgan Housel | 2020 | money | no |
-| thinking-fast-and-slow | Thinking, Fast and Slow | Daniel Kahneman | 2011 | mind | no |
-| letters-from-a-stoic | Letters from a Stoic (Moral Letters to Lucilius) | Seneca | 65 | character | yes (Richard Mott Gummere trans., 1917–25) |
-| whole-brain-child | The Whole-Brain Child | Daniel Siegel & Tina Payne Bryson | 2011 | family | no |
-| deep-work | Deep Work | Cal Newport | 2016 | work | no |
-| richest-man-in-babylon | The Richest Man in Babylon | George S. Clason | 1926 | money | yes |
-| nonviolent-communication | Nonviolent Communication | Marshall Rosenberg | 1999 | family | no |
-| as-a-man-thinketh | As a Man Thinketh | James Allen | 1903 | character | yes |
-| influence | Influence: The Psychology of Persuasion | Robert Cialdini | 1984 | mind | no |
-| how-to-win-friends | How to Win Friends and Influence People | Dale Carnegie | 1936 | family | no |
-| atomic-habits | Atomic Habits | James Clear | 2018 | work | no |
-| outlive | Outlive | Peter Attia | 2023 | body | no |
-| courage-to-be-disliked | The Courage to Be Disliked | Ichiro Kishimi & Fumitake Koga | 2013 | psychology | no |
-| extreme-ownership | Extreme Ownership | Jocko Willink & Leif Babin | 2015 | character | no |
-| intelligent-investor | The Intelligent Investor | Benjamin Graham | 1949 | money | no |
-| never-split-the-difference | Never Split the Difference | Chris Voss | 2016 | work | no |
-| wealth-of-nations | The Wealth of Nations | Adam Smith | 1776 | world | yes |
-| effective-executive | The Effective Executive | Peter Drucker | 1967 | work | no |
-| poor-charlies-almanack | Poor Charlie's Almanack | Charles T. Munger (ed. Peter Kaufman) | 2005 | mind | no |
-| guns-germs-and-steel | Guns, Germs, and Steel | Jared Diamond | 1997 | world | no |
-| spark | Spark | John Ratey | 2008 | body | no |
-| salt-fat-acid-heat | Salt, Fat, Acid, Heat | Samin Nosrat | 2017 | competence | no |
-| enchiridion | Enchiridion | Epictetus | 125 | character | yes (Elizabeth Carter trans., 1758) |
-| art-of-war | The Art of War | Sun Tzu | -500 | mind | yes (Lionel Giles trans., 1910) |
-| autobiography-of-franklin | The Autobiography of Benjamin Franklin | Benjamin Franklin | 1791 | character | yes |
+| id                              | Title                                                      | Author                                | Year | Pillar     | PD                                         |
+| ------------------------------- | ---------------------------------------------------------- | ------------------------------------- | ---- | ---------- | ------------------------------------------ |
+| seven-principles-marriage       | The Seven Principles for Making Marriage Work              | John Gottman & Nan Silver             | 1999 | family     | no                                         |
+| how-to-talk-so-kids-will-listen | How to Talk So Kids Will Listen & Listen So Kids Will Talk | Adele Faber & Elaine Mazlish          | 1980 | family     | no                                         |
+| mans-search-for-meaning         | Man's Search for Meaning                                   | Viktor Frankl                         | 1946 | psychology | no                                         |
+| psychology-of-money             | The Psychology of Money                                    | Morgan Housel                         | 2020 | money      | no                                         |
+| thinking-fast-and-slow          | Thinking, Fast and Slow                                    | Daniel Kahneman                       | 2011 | mind       | no                                         |
+| letters-from-a-stoic            | Letters from a Stoic (Moral Letters to Lucilius)           | Seneca                                | 65   | character  | yes (Richard Mott Gummere trans., 1917–25) |
+| whole-brain-child               | The Whole-Brain Child                                      | Daniel Siegel & Tina Payne Bryson     | 2011 | family     | no                                         |
+| deep-work                       | Deep Work                                                  | Cal Newport                           | 2016 | work       | no                                         |
+| richest-man-in-babylon          | The Richest Man in Babylon                                 | George S. Clason                      | 1926 | money      | yes                                        |
+| nonviolent-communication        | Nonviolent Communication                                   | Marshall Rosenberg                    | 1999 | family     | no                                         |
+| as-a-man-thinketh               | As a Man Thinketh                                          | James Allen                           | 1903 | character  | yes                                        |
+| influence                       | Influence: The Psychology of Persuasion                    | Robert Cialdini                       | 1984 | mind       | no                                         |
+| how-to-win-friends              | How to Win Friends and Influence People                    | Dale Carnegie                         | 1936 | family     | no                                         |
+| atomic-habits                   | Atomic Habits                                              | James Clear                           | 2018 | work       | no                                         |
+| outlive                         | Outlive                                                    | Peter Attia                           | 2023 | body       | no                                         |
+| courage-to-be-disliked          | The Courage to Be Disliked                                 | Ichiro Kishimi & Fumitake Koga        | 2013 | psychology | no                                         |
+| extreme-ownership               | Extreme Ownership                                          | Jocko Willink & Leif Babin            | 2015 | character  | no                                         |
+| intelligent-investor            | The Intelligent Investor                                   | Benjamin Graham                       | 1949 | money      | no                                         |
+| never-split-the-difference      | Never Split the Difference                                 | Chris Voss                            | 2016 | work       | no                                         |
+| wealth-of-nations               | The Wealth of Nations                                      | Adam Smith                            | 1776 | world      | yes                                        |
+| effective-executive             | The Effective Executive                                    | Peter Drucker                         | 1967 | work       | no                                         |
+| poor-charlies-almanack          | Poor Charlie's Almanack                                    | Charles T. Munger (ed. Peter Kaufman) | 2005 | mind       | no                                         |
+| guns-germs-and-steel            | Guns, Germs, and Steel                                     | Jared Diamond                         | 1997 | world      | no                                         |
+| spark                           | Spark                                                      | John Ratey                            | 2008 | body       | no                                         |
+| salt-fat-acid-heat              | Salt, Fat, Acid, Heat                                      | Samin Nosrat                          | 2017 | competence | no                                         |
+| enchiridion                     | Enchiridion                                                | Epictetus                             | 125  | character  | yes (Elizabeth Carter trans., 1758)        |
+| art-of-war                      | The Art of War                                             | Sun Tzu                               | -500 | mind       | yes (Lionel Giles trans., 1910)            |
+| autobiography-of-franklin       | The Autobiography of Benjamin Franklin                     | Benjamin Franklin                     | 1791 | character  | yes                                        |
 
 ---
 

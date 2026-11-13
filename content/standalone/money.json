@@ -1,0 +1,75 @@
+{
+  "schemaVersion": 1,
+  "id": "money",
+  "type": "standalone",
+  "title": "Money: Quick Reads",
+  "pillar": "money",
+  "publicDomain": false,
+  "summary": "How money actually works on the inside of your head.",
+  "estMinutes": 4,
+  "version": 1,
+  "createdAt": "2026-11-13",
+  "updatedAt": "2026-11-13",
+  "cards": [
+    {
+      "id": "money-01",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Getting wealthy and staying wealthy are two different skills.",
+      "body": "Morgan Housel points out that getting rich often takes risk and optimism, while staying rich takes a near-opposite: frugality, humility and a fear of ruin. Many people who made money lost it by taking the same bets again. Survival is the most underrated strategy in money.",
+      "source": {
+        "ref": "Housel, *The Psychology of Money*, 'Getting Wealthy vs. Staying Wealthy'"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "money-02",
+      "pillar": "money",
+      "format": "fact",
+      "hook": "Most of Warren Buffett's fortune arrived after he was past sixty-five.",
+      "body": "Housel uses Buffett to explain compounding: the huge returns come late because the base has been growing for decades. Buffett's skill is investing, but his real edge is that he started young and stayed in the game for a very long time. Time does most of the work. The lesson is to start early and not interrupt it.",
+      "source": {
+        "ref": "Housel, *The Psychology of Money*, 'Confounding Compounding'"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "money-03",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Nobody looks at your car and thinks about you.",
+      "body": "Housel's point about spending: people buy expensive things hoping to be admired, but the admiration usually goes to the thing, not the owner. When someone sees a fancy car, they imagine themselves in it. Spending to impress is usually a poor trade, and the wealth you don't spend is the wealth that actually works for you.",
+      "source": {
+        "ref": "Housel, *The Psychology of Money*, 'Man in the Car Paradox'"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "money-04",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "The oldest money rule: keep at least a tenth of what you earn.",
+      "body": "In Clason's parables set in ancient Babylon, the first cure for a lean purse is simple. Pay yourself first, setting aside at least a tenth of everything you earn before spending on anything else. The rule is valuable because it is dull. It's a habit you set once and forget, not a decision you have to win every month.",
+      "source": {
+        "ref": "Clason, *The Richest Man in Babylon*, 'Seven Cures for a Lean Purse'"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "money-05",
+      "pillar": "money",
+      "format": "story",
+      "hook": "Benjamin Graham gave the market a mood, and called him Mr. Market.",
+      "body": "Imagine a business partner who shows up every day offering to buy your share or sell you his, at wildly different prices depending on his mood. Graham says the stock market is like that. You don't have to accept his price. You can ignore him when he's silly and use him when his offer is good. Prices exist to serve you, not to instruct you. This is an idea, not advice.",
+      "source": {
+        "ref": "Graham, *The Intelligent Investor*, Ch. 8"
+      },
+      "mixable": true,
+      "version": 1
+    }
+  ]
+}
