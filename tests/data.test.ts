@@ -1,6 +1,7 @@
 import { describe, it, expect, beforeEach } from "vitest";
 import {
   KeelDB,
+  resolveSettings,
   toggleSave,
   markSeen,
   recentlySeenIds,
@@ -21,6 +22,7 @@ const pack: Pack = {
   type: "standalone",
   title: "P Title",
   pillar: "mind",
+  origin: "source",
   publicDomain: false,
   summary: "s",
   estMinutes: 1,
@@ -82,6 +84,7 @@ describe("personal data", () => {
         work: 0,
         body: 0,
         competence: 0,
+        mentor: 0,
       },
       d,
     );
@@ -163,5 +166,27 @@ describe("syncContent", () => {
       throw new Error("offline");
     });
     expect(r.ok).toBe(false);
+  });
+});
+
+describe("settings migration", () => {
+  it("fills the new Mentor weight for installs saved before it existed", async () => {
+    const old = {
+      family: 25,
+      mind: 10,
+      psychology: 10,
+      character: 10,
+      money: 10,
+      world: 10,
+      work: 10,
+      body: 8,
+      competence: 7,
+    };
+    await d.settings.put({ key: "weights", value: old });
+    const w = (await getAllSettings(d)).weights;
+    expect(w.mentor).toBeGreaterThan(0);
+    expect(Object.values(w).reduce((a, b) => a + b, 0)).toBe(100);
+    expect(w.family).toBeGreaterThan(w.mind);
+    expect(resolveSettings([]).weights.mentor).toBe(10);
   });
 });

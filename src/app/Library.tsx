@@ -99,7 +99,7 @@ export function Library() {
                 <div className="flex flex-wrap items-center gap-2">
                   <PillarChip pillar={p.pillar} />
                   <span className="font-sans text-xs capitalize text-ink/70 dark:text-paper/70">
-                    {p.type}
+                    {p.origin === "ai" ? "Lesson" : p.type}
                   </span>
                   {p.publicDomain && (
                     <span className="rounded-full border border-brass/50 px-2 py-0.5 font-sans text-[11px] text-brass-dark dark:text-brass-light">
@@ -109,7 +109,11 @@ export function Library() {
                 </div>
                 <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">{p.title}</h3>
                 <p className="font-sans text-xs text-ink/70 dark:text-paper/70">
-                  {[p.author, p.year && p.year > 0 ? p.year : undefined, `${p.estMinutes} min`]
+                  {[
+                    p.origin === "ai" ? "Written by Claude" : p.author,
+                    p.origin === "ai" ? undefined : p.year && p.year > 0 ? p.year : undefined,
+                    `${p.estMinutes} min`,
+                  ]
                     .filter(Boolean)
                     .join(" · ")}
                 </p>

@@ -1,4 +1,4 @@
-import { Pack, Queue, PACK_FOLDERS, type PackType } from "../schema/content";
+import { Curriculum, Pack, Queue, PACK_FOLDERS, type PackType } from "../schema/content";
 
 export interface LoadedPack {
   file: string; // e.g. books/meditations.json
@@ -66,6 +66,13 @@ export function validatePacks(files: LoadedPack[]): { problems: Problem[]; packs
           );
         }
       }
+      if (pack.origin === "ai") {
+        if (card.pillar !== "mentor") p('every card in an "ai" pack must have pillar "mentor"');
+        if (card.quote) p('"ai" packs may not contain quotes');
+        if (card.source) p('"ai" packs may not contain source references');
+      } else if (card.pillar === "mentor") {
+        p('only "ai" packs may contain cards with pillar "mentor"');
+      }
       if (pack.type === "standalone" && card.pillar !== pack.pillar) {
         p(`card pillar "${card.pillar}" must match standalone pack pillar "${pack.pillar}"`);
       }
@@ -86,6 +93,34 @@ export function validatePacks(files: LoadedPack[]): { problems: Problem[]; packs
         rule: `non-public-domain pack may contain at most one quote (has ${quoteCount})`,
       });
     }
+    if ((pack.pillar === "mentor") !== (pack.origin === "ai")) {
+      problems.push({
+        file,
+        rule: `pillar "mentor" and origin "ai" go together (pillar "${pack.pillar}", origin "${pack.origin}")`,
+      });
+    }
+    if (pack.origin === "ai") {
+      const bad = (rule: string) => problems.push({ file, rule: `"ai" pack ${rule}` });
+      if (pack.type !== "series") bad('must have type "series"');
+      if (pack.author) bad("must not have an author");
+      if (pack.year !== undefined) bad("must not have a year");
+      if (pack.publicDomain) bad("must not be publicDomain");
+      if (pack.cards.length < 6 || pack.cards.length > 10) {
+        bad(`must have 6–10 cards (has ${pack.cards.length})`);
+      }
+      const first = pack.cards[0];
+      const last = pack.cards[pack.cards.length - 1];
+      if (first.format !== "hook") bad('first card must be format "hook"');
+      if (last.format !== "recap") bad('last card must be format "recap"');
+      for (const c of [first, last]) {
+        if ((c.format === "hook" || c.format === "recap") && c.mixable) {
+          problems.push({ file, cardId: c.id, rule: `${c.format} card must have mixable: false` });
+        }
+      }
+      if (!pack.cards.some((c) => c.format === "challenge" || c.format === "reflection")) {
+        bad('needs at least one "challenge" or "reflection" card');
+      }
+    }
     if (pack.type === "book") {
       if (!pack.author) problems.push({ file, rule: "book requires author" });
       if (pack.year === undefined) problems.push({ file, rule: "book requires year" });
@@ -103,6 +138,32 @@ export function validatePacks(files: LoadedPack[]): { problems: Problem[]; packs
   }
 
   return { problems, packs: packs.map((p) => p.pack) };
+}
+
+export function validateCurriculum(raw: unknown, packs: Pack[]): Problem[] {
+  const file = "mentor-curriculum.json";
+  const problems: Problem[] = [];
+  const parsed = Curriculum.safeParse(raw);
+  if (!parsed.success) {
+    for (const issue of parsed.error.issues) {
+      problems.push({ file, rule: `schema: ${issue.path.join(".")} — ${issue.message}` });
+    }
+    return problems;
+  }
+  const byId = new Map(packs.map((p) => [p.id, p]));
+  const seen = new Set<string>();
+  for (const item of parsed.data) {
+    if (seen.has(item.id)) problems.push({ file, rule: `duplicate id "${item.id}"` });
+    seen.add(item.id);
+    if (item.status === "done") {
+      const pack = byId.get(item.id);
+      if (!pack)
+        problems.push({ file, rule: `"${item.id}" is done but has no series/${item.id}.json` });
+      else if (pack.origin !== "ai")
+        problems.push({ file, rule: `"${item.id}" is done but its pack is not origin "ai"` });
+    }
+  }
+  return problems;
 }
 
 export function validateQueue(raw: unknown, packIds: Set<string>): Problem[] {

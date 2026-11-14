@@ -46,7 +46,13 @@ export function Deck() {
       pack
         ? pack.cards.map((c) => ({
             key: c.id,
-            view: { card: c, pillar: c.pillar, packId: pack.id, packTitle: pack.title },
+            view: {
+              card: c,
+              pillar: c.pillar,
+              packId: pack.id,
+              packTitle: pack.title,
+              origin: pack.origin,
+            },
           }))
         : [],
     [pack],

@@ -10,6 +10,8 @@ export interface CardView {
   packTitle: string;
   /** Show "From <title> → Continue the book" (daily mix). */
   fromDeck?: boolean;
+  /** "ai" = written by Claude (Mentor pillar). */
+  origin?: "source" | "ai";
 }
 
 interface Props {
@@ -20,7 +22,7 @@ interface Props {
 }
 
 export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
-  const { card, pillar, packId, packTitle, fromDeck } = view;
+  const { card, pillar, packId, packTitle, fromDeck, origin } = view;
   return (
     <article className="flex h-full min-h-0 flex-col" data-testid="card">
       <div
@@ -86,7 +88,11 @@ export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
               packTitle
             )}
           </Link>
-          {card.source?.ref && <span className="truncate">{card.source.ref}</span>}
+          {origin === "ai" ? (
+            <span className="truncate">Written by Claude</span>
+          ) : (
+            card.source?.ref && <span className="truncate">{card.source.ref}</span>
+          )}
         </div>
       </footer>
     </article>

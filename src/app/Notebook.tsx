@@ -87,6 +87,11 @@ export function Notebook() {
                           className="mt-3 border-t border-ink/10 pt-3 font-serif leading-[1.6] dark:border-paper/15"
                         />
                       )}
+                      {s.snapshot.pillar === "mentor" && (
+                        <p className="mt-3 font-sans text-xs text-ink/70 dark:text-paper/70">
+                          Written by Claude
+                        </p>
+                      )}
                       {s.snapshot.source?.ref && (
                         <p className="mt-3 font-sans text-xs text-ink/70 dark:text-paper/70">
                           {s.snapshot.source.ref}

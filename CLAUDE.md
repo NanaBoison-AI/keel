@@ -14,8 +14,10 @@ simplest option that respects the Product Principles, and note the decision in
 
 ## 1. Product principles (non-negotiable)
 
-1. **Real books, real content.** Every book card summarizes an actual, well-known book.
-   No invented quotes, statistics, studies, chapters or anecdotes. If unsure, leave it out.
+1. **Real books, real content — except Mentor, which is honestly labelled.** Every card in
+   the nine book pillars summarizes an actual, well-known book. No invented quotes,
+   statistics, studies, chapters or anecdotes. The **Mentor** pillar is the only exception:
+   original lessons written by Claude, always labelled "Written by Claude" (see §9b).
 2. **It has an end.** The daily stack finishes with "You're done for today." No infinite feed.
 3. **Never boring, never a chore.** Hooks first, varied formats, no guilt mechanics
    (no punishing streaks, no red badges, no nagging notifications).
@@ -30,11 +32,11 @@ simplest option that respects the Product Principles, and note the decision in
 
 ## 2. Pillars
 
-Every card belongs to exactly one pillar. IDs are fixed; do not rename them.
+Every card belongs to exactly one pillar. Nine are book-based; **Mentor** is AI-written. IDs are fixed; do not rename them.
 
 | id           | Label                  | Default weight | Covers                                                         |
 | ------------ | ---------------------- | -------------: | -------------------------------------------------------------- |
-| `family`     | Family & Relationships |             25 | Marriage, fatherhood, friendship, communication, conflict      |
+| `family`     | Family & Relationships |             15 | Marriage, fatherhood, friendship, communication, conflict      |
 | `mind`       | Mind                   |             10 | Mental models, decision-making, logic, biases                  |
 | `psychology` | Psychology             |             10 | Emotions, motivation, behavior, self-understanding             |
 | `character`  | Character              |             10 | Discipline, courage, integrity, Stoicism, purpose              |
@@ -43,6 +45,7 @@ Every card belongs to exactly one pillar. IDs are fixed; do not rename them.
 | `work`       | Work & Productivity    |             10 | Focus, career, leadership, negotiation, habits                 |
 | `body`       | Body                   |              8 | Strength, sleep, nutrition, energy                             |
 | `competence` | Competence             |              7 | Practical skills: home repair, cooking, first aid, car, crisis |
+| `mentor`     | Mentor                 |             10 | Original AI-written lessons: "Things I would teach a human whom I want to succeed in life" |
 
 Weights are user-adjustable in Settings (they must always sum to 100; the UI normalizes).
 
@@ -84,7 +87,8 @@ No backend. No database server. No environment secrets.
 │   ├── briefings/            ← weekly briefings, e.g. 2026-w46.json
 │   ├── series/               ← multi-card themed series, e.g. better-listener.json
 │   ├── standalone/           ← loose cards grouped by pillar, e.g. family.json
-│   └── queue.json            ← books waiting to be generated (NOT shipped to the app)
+│   ├── queue.json            ← books waiting to be generated (NOT shipped to the app)
+│   └── mentor-curriculum.json ← Mentor lesson topics (NOT shipped)
 ├── schema/
 │   └── content.ts            ← zod schemas (single source of truth for content shape)
 ├── scripts/
@@ -136,6 +140,7 @@ const PillarId = z.enum([
   "work",
   "body",
   "competence",
+  "mentor", // AI-written lessons; see §9b
 ]);
 
 const CardFormat = z.enum([
@@ -182,6 +187,7 @@ const Pack = z.object({
   author: z.string().optional(), // required for books
   year: z.number().int().optional(), // original publication year (books)
   pillar: PillarId, // primary pillar of the pack
+  origin: z.enum(["source", "ai"]).default("source"), // "ai" = written by Claude (Mentor only)
   publicDomain: z.boolean().default(false),
   translation: z.string().optional(), // e.g. "George Long (1862)" for public-domain translations
   summary: z.string().max(200), // one line shown in Library
@@ -207,6 +213,14 @@ const Pack = z.object({
 - Card `quote` on a pack with `publicDomain: false` → `quote.text` must be ≤ 15 words,
   and at most **one** quote card per pack (see §9).
 - No duplicate `hook` text across all packs.
+- `pack.pillar === "mentor"` ⇔ `pack.origin === "ai"`. In an `ai` pack every card has
+  `pillar: "mentor"`; in a `source` pack no card does.
+- `ai` packs: `type` must be `"series"` (in `content/series/`); no `author`, no `year`;
+  `publicDomain` false; **no card may have a `quote`** and **no card may have `source`**;
+  6–10 cards; first card `format: "hook"` and last `format: "recap"` (both
+  `mixable: false`); at least one `challenge` or `reflection` card.
+- `mentor-curriculum.json` validates against its own schema (below) and every `done` entry
+  has `content/series/<id>.json` with `origin: "ai"`.
 - `queue.json` validates against its own schema (below) and every `done` entry has a pack file.
 - Fail with a clear, human-readable message naming file, card id and rule.
 
@@ -226,6 +240,21 @@ const QueueItem = z.object({
 });
 const Queue = z.array(QueueItem); // processed top to bottom
 ```
+
+### `content/mentor-curriculum.json`
+
+```ts
+const CurriculumItem = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/), // pack id / filename in content/series/
+  title: z.string(), // e.g. "How to learn anything"
+  group: z.enum(["think", "self", "people", "life"]),
+  brief: z.string().max(300), // the angle the lesson should take
+  status: z.enum(["queued", "in_progress", "done", "skipped"]),
+  note: z.string().optional(),
+});
+```
+
+Like `queue.json`, it is not shipped to the app.
 
 ---
 
@@ -410,6 +439,48 @@ settings  : key, value
 
 ---
 
+## 9b. Mentor content rules (AI-written pillar)
+
+Theme: **"Things I would teach a human whom I want to succeed in life."**
+Claude writes these lessons in its own voice, as a mentor who genuinely wants the reader
+to win. They are original thinking, honestly labelled — never presented as coming from a
+book or a person.
+
+### Honesty
+- No quotes, no "as Seneca said", no attributing ideas to real people or books.
+  (Ideas can be widely known; just say them in your own words without attribution.)
+- Facts must still be true. Do not invent studies, statistics, names or historical events.
+  Prefer reasoning and plain observation over numbers. If a number is essential, use only a
+  widely established one and state it generally.
+- **Parables** (format `story`) are allowed and encouraged, but they must be clearly
+  fictional: open with "A parable:" or "Imagine…", and never present them as real events.
+- Stay within general life wisdom: no specific medical, legal, tax or investment advice,
+  and no political or religious positions.
+
+### Voice
+- First person ("I") as Claude, speaking to "you". Warm, direct, honest and a little
+  demanding, like a mentor who respects you too much to flatter you.
+- Explain the *why* behind every piece of advice. Advice, not commandments. No preaching,
+  no hustle-bro tone, no clichés.
+- Admit trade-offs and limits ("this is hard", "this won't always work").
+- Every card opens with a real hook, as in §9.
+
+### Lesson structure (one pack per curriculum topic, 6–10 cards)
+1. `hook`: why this lesson matters (`mixable: false`)
+2. 3–6 × `idea` / `story` (parable) / `fact`: the lesson itself, one idea per card
+3. 1–2 × `challenge` / `reflection` / `conversation`: put it into practice
+4. `recap`: the 3 things to remember (`mixable: false`)
+
+Pack fields: `type: "series"`, `origin: "ai"`, `pillar: "mentor"`, every card
+`pillar: "mentor"`, no `author`/`year`, no `quote`, no `source`.
+Summary line in the Library: a one-sentence promise of what the lesson gives you.
+
+### Freshness
+Before writing, read the existing Mentor packs. Don't repeat their ideas, hooks, parables or
+examples. Each lesson should feel like a new letter, not a remix.
+
+---
+
 ## 10. Content pipeline (how scheduled tasks use this repo)
 
 Scheduled Claude tasks clone this repo, read this file, and do one job per run.
@@ -429,9 +500,21 @@ Scheduled Claude tasks clone this repo, read this file, and do one job per run.
 3. `npm ci && npm run validate`. Commit `content: briefing <YYYY-wNN>` and push directly
    to `main` (so it deploys for Monday).
 
+**Mentor lessons (weekly)**
+
+1. Pick the first `queued` item in `content/mentor-curriculum.json` (skip ids with an open
+   `content/mentor-<id>` PR); set it to `in_progress`.
+2. Write `content/series/<id>.json` per §5 and §9b, following the item's `brief`.
+3. Re-read as a skeptical editor: remove any attribution, quote, invented fact or preachiness.
+4. Set the item to `done`. `npm ci && npm run validate && npm test`. Fix until green.
+5. Branch `content/mentor-<id>`, commit `content: add mentor lesson <title>`, push, open a
+   PR titled `Mentor: <title>`.
+
 **Rules for tasks:** never modify app code, schemas or workflows; only `content/`.
 If validation can't be made to pass, open a PR (or issue) describing the problem instead
-of pushing broken content. Never delete existing packs.
+of pushing broken content. Never delete existing packs. GitHub GraphQL is not available in
+Claude sessions, so use the REST API via `gh api` for PRs (e.g.
+`gh api repos/NanaBoison-AI/keel/pulls`), not `gh pr list` / `gh pr create`.
 
 ---
 

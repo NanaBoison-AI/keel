@@ -178,3 +178,130 @@ describe("validateQueue", () => {
   it("flags schema errors", () =>
     expect(validateQueue([{ id: "X" }], new Set())).not.toHaveLength(0));
 });
+
+import { validateCurriculum } from "../scripts/validate-lib";
+
+describe("Mentor / origin rules", () => {
+  const mcard = (n: number, over: AnyObj = {}) => card("lesson", n, { pillar: "mentor", ...over });
+  function ai(over: AnyObj = {}, cardOver?: (c: AnyObj[]) => AnyObj[]): AnyObj {
+    let cards: AnyObj[] = [
+      mcard(1, { format: "hook", mixable: false }),
+      mcard(2),
+      mcard(3, { format: "story" }),
+      mcard(4),
+      mcard(5, { format: "challenge" }),
+      mcard(6, { format: "recap", mixable: false }),
+    ];
+    if (cardOver) cards = cardOver(cards);
+    return {
+      schemaVersion: 1,
+      id: "lesson",
+      type: "series",
+      origin: "ai",
+      title: "A lesson",
+      pillar: "mentor",
+      publicDomain: false,
+      summary: "s",
+      estMinutes: 5,
+      version: 1,
+      createdAt: "2026-01-01",
+      updatedAt: "2026-01-01",
+      cards,
+      ...over,
+    };
+  }
+  const runAi = (raw: AnyObj) => run(raw, "series");
+
+  it("accepts a valid ai pack", () => expect(runAi(ai())).toEqual([]));
+  it("pillar mentor requires origin ai", () =>
+    expect(runAi(ai({ origin: "source" })).some((r) => r.includes("go together"))).toBe(true));
+  it("origin ai requires pillar mentor", () =>
+    expect(runAi(ai({ pillar: "mind" })).some((r) => r.includes("go together"))).toBe(true));
+  it("ai card must have pillar mentor", () =>
+    expect(
+      runAi(
+        ai({}, (c) => {
+          c[2] = mcard(3, { pillar: "mind" });
+          return c;
+        }),
+      ).some((r) => r.includes('pillar "mentor"')),
+    ).toBe(true));
+  it("source packs may not contain mentor cards", () => {
+    const raw = {
+      ...book("demo", {}, (c) => {
+        c[3] = card("demo", 4, { pillar: "mentor" });
+        return c;
+      }),
+    };
+    expect(run(raw).some((r) => r.includes('only "ai" packs may contain'))).toBe(true);
+  });
+  it("ai pack must be type series", () =>
+    expect(
+      run(ai({ type: "standalone" }), "standalone").some((r) => r.includes('type "series"')),
+    ).toBe(true));
+  it("ai pack may not have author, year or publicDomain", () => {
+    const rules = runAi(ai({ author: "Someone", year: 2020, publicDomain: true }));
+    expect(rules.some((r) => r.includes("author"))).toBe(true);
+    expect(rules.some((r) => r.includes("year"))).toBe(true);
+    expect(rules.some((r) => r.includes("publicDomain"))).toBe(true);
+  });
+  it("ai cards may not have quotes or source", () => {
+    const rules = runAi(
+      ai({}, (c) => {
+        c[1] = mcard(2, { quote: { text: "short", attribution: "x" } });
+        c[3] = mcard(4, { source: { ref: "Book 1" } });
+        return c;
+      }),
+    );
+    expect(rules.some((r) => r.includes("quotes"))).toBe(true);
+    expect(rules.some((r) => r.includes("source references"))).toBe(true);
+  });
+  it("ai pack needs 6–10 cards", () => {
+    expect(
+      runAi(ai({}, (c) => c.slice(0, 3).concat(c.slice(-1)))).some((r) => r.includes("6–10")),
+    ).toBe(true);
+    const many = (c: AnyObj[]) => [
+      ...c.slice(0, 5),
+      ...[7, 8, 9, 10, 11].map((n) => mcard(n)),
+      c[5],
+    ];
+    expect(runAi(ai({}, many)).some((r) => r.includes("6–10"))).toBe(true);
+  });
+  it("ai pack needs hook first and recap last, both unmixable", () => {
+    const rules = runAi(
+      ai({}, (c) => {
+        c[0] = mcard(1, { format: "idea" });
+        c[5] = mcard(6, { format: "recap", mixable: true });
+        return c;
+      }),
+    );
+    expect(rules.some((r) => r.includes("first card"))).toBe(true);
+    expect(rules.some((r) => r.includes("mixable: false"))).toBe(true);
+  });
+  it("ai pack needs a challenge or reflection", () =>
+    expect(
+      runAi(
+        ai({}, (c) => {
+          c[4] = mcard(5);
+          return c;
+        }),
+      ).some((r) => r.includes("challenge")),
+    ).toBe(true));
+});
+
+describe("validateCurriculum", () => {
+  const item = { id: "x", title: "X", group: "think", brief: "b", status: "queued" };
+  const pk = (origin: "ai" | "source") => ({ id: "x", origin }) as never;
+  it("accepts queued items without packs", () =>
+    expect(validateCurriculum([item], [])).toEqual([]));
+  it("done needs an ai pack", () => {
+    expect(validateCurriculum([{ ...item, status: "done" }], [])).toHaveLength(1);
+    expect(validateCurriculum([{ ...item, status: "done" }], [pk("source")])).toHaveLength(1);
+    expect(validateCurriculum([{ ...item, status: "done" }], [pk("ai")])).toEqual([]);
+  });
+  it("rejects bad groups, long briefs and duplicates", () => {
+    expect(validateCurriculum([{ ...item, group: "nope" }], [])).not.toHaveLength(0);
+    expect(validateCurriculum([{ ...item, brief: "x".repeat(301) }], [])).not.toHaveLength(0);
+    expect(validateCurriculum([item, item], [])).toHaveLength(1);
+  });
+});

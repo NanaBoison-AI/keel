@@ -10,6 +10,7 @@ export const PILLAR_LABEL: Record<PillarId, string> = {
   work: "Work & Productivity",
   body: "Body",
   competence: "Competence",
+  mentor: "Mentor",
 };
 
 export const PILLAR_SHORT: Record<PillarId, string> = {
@@ -22,6 +23,7 @@ export const PILLAR_SHORT: Record<PillarId, string> = {
   work: "Work",
   body: "Body",
   competence: "Competence",
+  mentor: "Mentor",
 };
 
 // Muted chip colours. Full class strings so Tailwind can see them.
@@ -35,4 +37,5 @@ export const PILLAR_CHIP: Record<PillarId, string> = {
   work: "bg-[#e9e0cc] text-[#5e4a22] dark:bg-[#38301c] dark:text-[#e0cf9f]",
   body: "bg-[#e7d8d5] text-[#6a3a37] dark:bg-[#3a2523] dark:text-[#e6bcb8]",
   competence: "bg-[#dfdfd6] text-[#444a3a] dark:bg-[#2b2e25] dark:text-[#c9ceb9]",
+  mentor: "bg-[#ece2cf] text-[#6b5326] dark:bg-[#3a3020] dark:text-[#e3cf9e]",
 };
