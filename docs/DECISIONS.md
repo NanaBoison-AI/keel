@@ -10,7 +10,7 @@ Short log of non-obvious decisions.
 - **Standalone seed cards** contain no direct quotes; refs cite book/chapter only where confident, otherwise the Part or principle name.
 - **Swipe vs. scrolling:** when a card's text overflows, vertical swipes scroll it natively (a fade hints at more text). A swipe that _starts_ with the text already at its top/bottom edge chains to previous/next card; otherwise the ↑/↓ buttons do it. When the card fits, `@use-gesture` handles all directions. Left swipe works in both cases.
 - **Tap handling:** single tap expands (`deeper`), double tap saves. The single tap waits 260 ms to rule out a double tap. Controls marked `data-nogesture` bypass use-gesture's click suppression.
-- **Pillar weights** are stored normalized (sum 100). Moving one slider rescales the others proportionally (`setPillarWeight`).
+- **Pillar weights** are stored as independent values (0–100, step 5) set with − / + steppers; changing one never touches the others. Sliders were dropped because they changed by accident while scrolling. The mix algorithm only uses relative weights, and Settings shows each pillar's derived share of the stack (`normalizeWeights`, so the shown shares always sum to 100). "Cards per day" uses a stepper for the same reason.
 - **Daily stack** is persisted in the `daily` table on first open of the day, so later syncs or setting changes never reshuffle it. Cards are marked `seen` when displayed; the 90-day window is applied when the next day's stack is built.
 - **Progress** has an optional `updatedAt` (not in the original spec) so "Continue" can pick the most recently read deck.
 - **Removed packs:** a successful sync deletes cached packs no longer in `index.json`; progress and Notebook snapshots remain.

@@ -219,21 +219,18 @@ describe("computeAffinity / normalizeWeights", () => {
   });
 });
 
-import { setPillarWeight } from "../src/lib/mix";
+import { stepWeight } from "../src/lib/mix";
 import { suggestDecks } from "../src/lib/suggest";
 
-describe("setPillarWeight", () => {
-  it("keeps the sum at 100 and sets the pillar", () => {
-    const w = setPillarWeight(DEFAULT_WEIGHTS, "money", 40);
-    expect(w.money).toBe(40);
-    expect(PILLARS.reduce((s, p) => s + w[p], 0)).toBe(100);
-    expect(w.family).toBeLessThan(DEFAULT_WEIGHTS.family);
+describe("stepWeight", () => {
+  it("changes only the chosen pillar", () => {
+    const w = stepWeight(DEFAULT_WEIGHTS, "money", 5);
+    expect(w.money).toBe(DEFAULT_WEIGHTS.money + 5);
+    for (const p of PILLARS) if (p !== "money") expect(w[p]).toBe(DEFAULT_WEIGHTS[p]);
   });
-  it("handles 100 and 0", () => {
-    const w = setPillarWeight(DEFAULT_WEIGHTS, "mind", 100);
-    expect(w.mind).toBe(100);
-    const z = setPillarWeight(w, "mind", 0);
-    expect(PILLARS.reduce((s, p) => s + z[p], 0)).toBe(100);
+  it("clamps to 0–100", () => {
+    expect(stepWeight(DEFAULT_WEIGHTS, "mind", -999).mind).toBe(0);
+    expect(stepWeight(DEFAULT_WEIGHTS, "mind", 999).mind).toBe(100);
   });
 });
 

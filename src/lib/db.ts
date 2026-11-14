@@ -1,6 +1,6 @@
 import Dexie, { type Table } from "dexie";
 import type { Pack, PillarId, Card } from "../../schema/content";
-import { DEFAULT_WEIGHTS, normalizeWeights } from "./mix";
+import { DEFAULT_WEIGHTS } from "./mix";
 
 export interface PackRow {
   id: string;
@@ -99,8 +99,7 @@ export async function getSetting<K extends keyof Settings>(key: K, d = db): Prom
 }
 
 export async function setSetting<K extends keyof Settings>(key: K, value: Settings[K], d = db) {
-  const v = key === "weights" ? normalizeWeights(value as Settings["weights"]) : value;
-  await d.settings.put({ key, value: v });
+  await d.settings.put({ key, value });
 }
 
 export async function getAllSettings(d = db): Promise<Settings> {

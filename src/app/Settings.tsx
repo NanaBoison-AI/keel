@@ -1,6 +1,6 @@
 import { useRef, useState } from "react";
 import { Link } from "react-router";
-import { PILLARS, setPillarWeight } from "../lib/mix";
+import { DEFAULT_WEIGHTS, normalizeWeights, PILLARS, stepWeight } from "../lib/mix";
 import { PILLAR_LABEL } from "../lib/pillars";
 import { resetLessSignals, setSetting, type ThemeSetting } from "../lib/db";
 import { useSettings } from "../lib/hooks";
@@ -20,6 +20,7 @@ export function Settings() {
   const s = useSettings();
   const toast = useToast();
   const fileRef = useRef<HTMLInputElement>(null);
+  const shares = normalizeWeights(s.weights);
   const [pending, setPending] = useState<string | null>(null);
   const [error, setError] = useState<string | null>(null);
 
@@ -47,50 +48,95 @@ export function Settings() {
 
       <Section title="Pillar mix">
         <p className="mb-3 font-serif text-sm text-ink/70 dark:text-paper/70">
-          Shares always add up to 100%. Move one and the others adjust.
+          Each pillar is set on its own: tap + or − and nothing else moves. The percentage is the
+          share of your daily stack, worked out from all of them. Set a pillar to 0 to leave it out.
         </p>
-        <div className="space-y-4">
+        <ul className="divide-y divide-ink/10 dark:divide-paper/10">
           {PILLARS.map((p) => (
-            <label key={p} className="block">
-              <div className="flex justify-between font-sans text-sm">
-                <span>{PILLAR_LABEL[p]}</span>
-                <span className="tabular-nums text-ink/70 dark:text-paper/70">{s.weights[p]}%</span>
+            <li key={p} className="flex items-center justify-between gap-3 py-2">
+              <div className="min-w-0">
+                <div className="truncate font-sans text-sm">{PILLAR_LABEL[p]}</div>
+                <div className="font-sans text-xs tabular-nums text-ink/70 dark:text-paper/70">
+                  {shares[p]}% of your stack
+                </div>
               </div>
-              <input
-                type="range"
-                min={0}
-                max={100}
-                value={s.weights[p]}
-                aria-label={`${PILLAR_LABEL[p]} share`}
-                onChange={(e) =>
-                  void setSetting("weights", setPillarWeight(s.weights, p, Number(e.target.value)))
-                }
-                className="mt-1 h-8 w-full accent-[#b8893a]"
-              />
-            </label>
+              <div
+                className="flex shrink-0 items-center gap-1"
+                role="group"
+                aria-label={PILLAR_LABEL[p]}
+              >
+                <button
+                  className="ctl border border-ink/20 dark:border-paper/25"
+                  aria-label={`Less ${PILLAR_LABEL[p]}`}
+                  disabled={s.weights[p] <= 0}
+                  onClick={() => void setSetting("weights", stepWeight(s.weights, p, -5))}
+                >
+                  <span aria-hidden className="text-xl leading-none">
+                    −
+                  </span>
+                </button>
+                <output
+                  className="w-10 text-center font-sans text-base font-semibold tabular-nums"
+                  aria-label={`${PILLAR_LABEL[p]} weight`}
+                >
+                  {s.weights[p]}
+                </output>
+                <button
+                  className="ctl border border-ink/20 dark:border-paper/25"
+                  aria-label={`More ${PILLAR_LABEL[p]}`}
+                  disabled={s.weights[p] >= 100}
+                  onClick={() => void setSetting("weights", stepWeight(s.weights, p, 5))}
+                >
+                  <span aria-hidden className="text-xl leading-none">
+                    +
+                  </span>
+                </button>
+              </div>
+            </li>
           ))}
-        </div>
+        </ul>
+        <button
+          className="btn btn-secondary mt-3 w-full"
+          onClick={() => void setSetting("weights", { ...DEFAULT_WEIGHTS })}
+        >
+          Reset pillar mix
+        </button>
       </Section>
 
       <Section title="Daily stack">
-        <label className="block">
-          <div className="flex justify-between font-sans text-sm">
-            <span>Cards per day</span>
-            <span className="tabular-nums">{s.stackSize}</span>
+        <div className="flex items-center justify-between gap-3">
+          <span className="font-sans text-sm">Cards per day</span>
+          <div className="flex items-center gap-1" role="group" aria-label="Cards per day">
+            <button
+              className="ctl border border-ink/20 dark:border-paper/25"
+              aria-label="Fewer cards"
+              disabled={s.stackSize <= 8}
+              onClick={() => void setSetting("stackSize", s.stackSize - 1)}
+            >
+              <span aria-hidden className="text-xl leading-none">
+                −
+              </span>
+            </button>
+            <output
+              className="w-10 text-center font-sans text-base font-semibold tabular-nums"
+              aria-label="Cards per day value"
+            >
+              {s.stackSize}
+            </output>
+            <button
+              className="ctl border border-ink/20 dark:border-paper/25"
+              aria-label="More cards"
+              disabled={s.stackSize >= 15}
+              onClick={() => void setSetting("stackSize", s.stackSize + 1)}
+            >
+              <span aria-hidden className="text-xl leading-none">
+                +
+              </span>
+            </button>
           </div>
-          <input
-            type="range"
-            min={8}
-            max={15}
-            step={1}
-            value={s.stackSize}
-            aria-label="Cards per day"
-            onChange={(e) => void setSetting("stackSize", Number(e.target.value))}
-            className="mt-1 h-8 w-full accent-[#b8893a]"
-          />
-        </label>
-        <p className="font-serif text-xs text-ink/70 dark:text-paper/70">
-          Applies to the next day's stack.
+        </div>
+        <p className="mt-1 font-serif text-xs text-ink/70 dark:text-paper/70">
+          Applies to tomorrow's stack.
         </p>
       </Section>
 
