@@ -151,6 +151,15 @@ export function Deck() {
           >
             Read again
           </button>
+          <button
+            className="btn btn-secondary"
+            onClick={() => {
+              setFinished(false);
+              setIndex(pack.cards.length - 1);
+            }}
+          >
+            Back to the last card
+          </button>
         </div>
       </div>
     );

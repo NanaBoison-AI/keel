@@ -11,9 +11,11 @@ import { cardIndex, useAffinity, useSavedIds } from "../lib/session";
 export function DoneScreen({
   title = "You're done for today.",
   note,
+  onBack,
 }: {
   title?: string;
   note?: string;
+  onBack?: () => void;
 }) {
   return (
     <div className="flex h-full flex-col items-center justify-center px-8 text-center">
@@ -28,6 +30,11 @@ export function DoneScreen({
         <Link to="/notebook" className="btn btn-secondary">
           See what you saved
         </Link>
+        {onBack && (
+          <button className="btn btn-secondary" onClick={onBack}>
+            Back to the last card
+          </button>
+        )}
       </div>
     </div>
   );

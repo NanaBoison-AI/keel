@@ -68,7 +68,7 @@ describe("personal data", () => {
     await saveProgress("p", 9, 10, d);
     expect((await d.progress.get("p"))?.completedAt).toBeTypeOf("number");
   });
-  it("settings default and normalize weights", async () => {
+  it("settings default and store weights independently", async () => {
     expect((await getAllSettings(d)).stackSize).toBe(12);
     await setSetting(
       "weights",
@@ -86,7 +86,8 @@ describe("personal data", () => {
       d,
     );
     const w = (await getAllSettings(d)).weights;
-    expect(Object.values(w).reduce((a, b) => a + b, 0)).toBe(100);
+    expect(w.family).toBe(50);
+    expect(w.competence).toBe(0);
   });
   it("undo removes only 'less' feedback for the card", async () => {
     await addFeedback("p-01", "mind", "less", d);

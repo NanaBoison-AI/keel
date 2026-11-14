@@ -303,18 +303,12 @@ export function normalizeWeights(w: Record<PillarId, number>): Record<PillarId, 
   return Object.fromEntries(PILLARS.map((p, i) => [p, floor[i]])) as Record<PillarId, number>;
 }
 
-/** Set one pillar to `value` (0–100); the other pillars share the rest proportionally. Sums to 100. */
-export function setPillarWeight(
+/** Change one pillar's weight by `delta`, clamped to 0–100. Other pillars are untouched. */
+export function stepWeight(
   weights: Record<PillarId, number>,
   pillar: PillarId,
-  value: number,
+  delta: number,
 ): Record<PillarId, number> {
-  const v = Math.round(Math.min(100, Math.max(0, value)));
-  const others = PILLARS.filter((p) => p !== pillar);
-  const otherSum = others.reduce((s, p) => s + (weights[p] ?? 0), 0);
-  const raw = { ...weights, [pillar]: v } as Record<PillarId, number>;
-  for (const p of others) {
-    raw[p] = otherSum > 0 ? ((weights[p] ?? 0) / otherSum) * (100 - v) : (100 - v) / others.length;
-  }
-  return normalizeWeights(raw);
+  const v = Math.min(100, Math.max(0, Math.round((weights[pillar] ?? 0) + delta)));
+  return { ...weights, [pillar]: v };
 }
