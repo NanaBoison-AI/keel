@@ -25,3 +25,17 @@ it("renders the shell and an empty state before content arrives", async () => {
   expect(screen.getByRole("navigation", { name: "Main" })).toBeInTheDocument();
   await waitFor(() => expect(screen.getByText(/Getting your reading ready/)).toBeInTheDocument());
 });
+
+it("done screen offers a way back to the last card", async () => {
+  const { DoneScreen } = await import("../src/app/Today");
+  const { MemoryRouter } = await import("react-router");
+  const { fireEvent } = await import("@testing-library/react");
+  let back = 0;
+  render(
+    <MemoryRouter>
+      <DoneScreen onBack={() => back++} />
+    </MemoryRouter>,
+  );
+  fireEvent.click(screen.getByRole("button", { name: "Back to the last card" }));
+  expect(back).toBe(1);
+});
