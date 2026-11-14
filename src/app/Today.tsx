@@ -177,7 +177,12 @@ export function Today() {
     );
   }
   if (done)
-    return <DoneScreen note={total === 0 ? "There's nothing new to show today." : undefined} />;
+    return (
+      <DoneScreen
+        note={total === 0 ? "There's nothing new to show today." : undefined}
+        onBack={total > 0 ? () => setIndex(total - 1) : undefined}
+      />
+    );
 
   return (
     <CardStack
