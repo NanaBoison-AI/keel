@@ -28,8 +28,10 @@ function DeckRow({
         </span>
       </div>
       <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">{pack.title}</h3>
-      {pack.author && (
-        <p className="font-sans text-xs text-ink/70 dark:text-paper/70">{pack.author}</p>
+      {(pack.origin === "ai" || pack.author) && (
+        <p className="font-sans text-xs text-ink/70 dark:text-paper/70">
+          {pack.origin === "ai" ? "Written by Claude" : pack.author}
+        </p>
       )}
       <p className="mt-1 font-serif text-sm text-ink/75 dark:text-paper/75">
         {note ?? pack.summary}

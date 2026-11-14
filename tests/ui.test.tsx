@@ -122,3 +122,34 @@ describe("Markdown", () => {
     expect(container.querySelectorAll("ul li")).toHaveLength(2);
   });
 });
+
+describe("Mentor badge", () => {
+  const view = (origin: "ai" | "source") => ({
+    card: {
+      hook: "A hook",
+      body: "Body",
+      source: origin === "ai" ? undefined : { ref: "Book 2, §1" },
+    },
+    pillar: "mentor" as const,
+    packId: "p",
+    packTitle: "Lesson",
+    origin,
+  });
+  it("shows 'Written by Claude' for ai cards and the ref for book cards", async () => {
+    const { CardFace } = await import("../src/components/Card");
+    render(
+      <MemoryRouter>
+        <CardFace view={view("ai")} expanded={false} onToggleExpand={() => {}} />
+      </MemoryRouter>,
+    );
+    expect(screen.getByText("Written by Claude")).toBeInTheDocument();
+    cleanup();
+    render(
+      <MemoryRouter>
+        <CardFace view={view("source")} expanded={false} onToggleExpand={() => {}} />
+      </MemoryRouter>,
+    );
+    expect(screen.queryByText("Written by Claude")).not.toBeInTheDocument();
+    expect(screen.getByText("Book 2, §1")).toBeInTheDocument();
+  });
+});

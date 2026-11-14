@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { useLiveQuery } from "dexie-react-hooks";
 import type { Pack } from "../../schema/content";
-import { db, DEFAULT_SETTINGS, type Settings } from "./db";
+import { db, resolveSettings, type Settings } from "./db";
 import { isExpired } from "./mix";
 
 export function localDate(d = new Date()): string {
@@ -24,9 +24,7 @@ export function useLivePacks(): Pack[] | undefined {
 
 export function useSettings(): Settings {
   const rows = useLiveQuery(() => db.settings.toArray(), []);
-  const out: Record<string, unknown> = { ...DEFAULT_SETTINGS };
-  for (const r of rows ?? []) out[r.key] = r.value;
-  return out as unknown as Settings;
+  return resolveSettings(rows ?? []);
 }
 
 const TEXT_SIZES = [17, 19, 21, 23];

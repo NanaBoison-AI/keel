@@ -36,6 +36,7 @@ function mkPack(id: string, pillar: PillarId, n: number, over: Partial<Pack> = {
     type: "standalone",
     title: id,
     pillar,
+    origin: "source",
     publicDomain: false,
     summary: "s",
     estMinutes: 5,
@@ -79,7 +80,11 @@ describe("buildDailyStack", () => {
     const get = pillarOf(packs);
     const s = buildDailyStack({ ...base, packs, size: 15 });
     const fam = s.filter((r) => get(r.cardId).pillar === "family").length;
-    expect(fam).toBeGreaterThanOrEqual(3);
+    expect(fam).toBeGreaterThanOrEqual(2);
+    for (const p of PILLARS) {
+      const n = s.filter((r) => get(r.cardId).pillar === p).length;
+      expect(fam).toBeGreaterThanOrEqual(n);
+    }
   });
   it("respects user weights", () => {
     const packs = allPacks();
@@ -261,5 +266,42 @@ describe("suggestDecks", () => {
       count: 1,
     });
     expect(r[0].pillar).not.toBe("family");
+  });
+});
+
+import { completeWeights } from "../src/lib/mix";
+
+describe("mentor pillar defaults and migration", () => {
+  it("default weights cover every pillar and sum to 100", () => {
+    expect(PILLARS).toContain("mentor");
+    expect(PILLARS.reduce((s, p) => s + DEFAULT_WEIGHTS[p], 0)).toBe(100);
+    expect(DEFAULT_WEIGHTS.family).toBe(15);
+    expect(DEFAULT_WEIGHTS.mentor).toBe(10);
+  });
+  it("completeWeights fills a missing pillar from defaults and rescales to 100", () => {
+    const old = {
+      family: 25,
+      mind: 10,
+      psychology: 10,
+      character: 10,
+      money: 10,
+      world: 10,
+      work: 10,
+      body: 8,
+      competence: 7,
+    };
+    const w = completeWeights(old);
+    expect(PILLARS.reduce((s, p) => s + w[p], 0)).toBe(100);
+    expect(w.mentor).toBeGreaterThan(0);
+    // The user's relative choices are preserved: family stays the biggest, ratios unchanged.
+    expect(w.family).toBeGreaterThan(w.mind);
+    expect(Math.round((w.family / w.mind) * 10) / 10).toBeCloseTo(2.5, 0);
+  });
+  it("leaves complete weights untouched", () => {
+    const mine = { ...DEFAULT_WEIGHTS, mind: 45 };
+    expect(completeWeights(mine)).toBe(mine);
+  });
+  it("handles missing weights entirely", () => {
+    expect(completeWeights({})).toEqual(normalizeWeights({ ...DEFAULT_WEIGHTS }));
   });
 });

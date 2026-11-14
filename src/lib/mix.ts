@@ -10,10 +10,11 @@ export const PILLARS: PillarId[] = [
   "work",
   "body",
   "competence",
+  "mentor",
 ];
 
 export const DEFAULT_WEIGHTS: Record<PillarId, number> = {
-  family: 25,
+  family: 15,
   mind: 10,
   psychology: 10,
   character: 10,
@@ -22,6 +23,7 @@ export const DEFAULT_WEIGHTS: Record<PillarId, number> = {
   work: 10,
   body: 8,
   competence: 7,
+  mentor: 10,
 };
 
 export interface CardRef {
@@ -311,4 +313,19 @@ export function stepWeight(
 ): Record<PillarId, number> {
   const v = Math.min(100, Math.max(0, Math.round((weights[pillar] ?? 0) + delta)));
   return { ...weights, [pillar]: v };
+}
+
+/**
+ * Migration for saved weights from before a pillar existed: fill any missing pillar from the
+ * defaults and rescale to 100, keeping the user's other choices in proportion. Weights that are
+ * already complete are returned untouched.
+ */
+export function completeWeights(
+  saved: Partial<Record<PillarId, number>>,
+): Record<PillarId, number> {
+  if (PILLARS.every((p) => typeof saved[p] === "number")) return saved as Record<PillarId, number>;
+  const filled = Object.fromEntries(
+    PILLARS.map((p) => [p, typeof saved[p] === "number" ? saved[p] : DEFAULT_WEIGHTS[p]]),
+  ) as Record<PillarId, number>;
+  return normalizeWeights(filled);
 }

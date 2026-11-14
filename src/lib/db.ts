@@ -1,6 +1,6 @@
 import Dexie, { type Table } from "dexie";
 import type { Pack, PillarId, Card } from "../../schema/content";
-import { DEFAULT_WEIGHTS } from "./mix";
+import { completeWeights, DEFAULT_WEIGHTS } from "./mix";
 
 export interface PackRow {
   id: string;
@@ -93,8 +93,17 @@ export const DEFAULT_SETTINGS: Settings = {
   lastSync: 0,
 };
 
+/** Merge stored rows over the defaults, migrating weights saved before the newest pillar existed. */
+export function resolveSettings(rows: SettingRow[]): Settings {
+  const out: Record<string, unknown> = { ...DEFAULT_SETTINGS };
+  for (const r of rows) out[r.key] = r.value;
+  out.weights = completeWeights(out.weights as Partial<Settings["weights"]>);
+  return out as unknown as Settings;
+}
+
 export async function getSetting<K extends keyof Settings>(key: K, d = db): Promise<Settings[K]> {
   const row = await d.settings.get(key);
+  if (key === "weights") return completeWeights((row?.value ?? {}) as never) as Settings[K];
   return (row ? row.value : DEFAULT_SETTINGS[key]) as Settings[K];
 }
 
@@ -103,10 +112,7 @@ export async function setSetting<K extends keyof Settings>(key: K, value: Settin
 }
 
 export async function getAllSettings(d = db): Promise<Settings> {
-  const rows = await d.settings.toArray();
-  const out: Record<string, unknown> = { ...DEFAULT_SETTINGS };
-  for (const r of rows) out[r.key] = r.value;
-  return out as unknown as Settings;
+  return resolveSettings(await d.settings.toArray());
 }
 
 export const SEEN_WINDOW_MS = 90 * 86_400_000;

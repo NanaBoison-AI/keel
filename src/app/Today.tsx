@@ -71,6 +71,7 @@ export function Today() {
                 packId: hit.pack.id,
                 packTitle: hit.pack.title,
                 fromDeck: hit.pack.type === "book" || hit.pack.type === "series",
+                origin: hit.pack.origin,
               },
             },
           ];

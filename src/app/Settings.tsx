@@ -55,7 +55,7 @@ export function Settings() {
           {PILLARS.map((p) => (
             <li key={p} className="flex items-center justify-between gap-3 py-2">
               <div className="min-w-0">
-                <div className="truncate font-sans text-sm">{PILLAR_LABEL[p]}</div>
+                <div className="font-sans text-sm leading-tight">{PILLAR_LABEL[p]}</div>
                 <div className="font-sans text-xs tabular-nums text-ink/70 dark:text-paper/70">
                   {shares[p]}% of your stack
                 </div>
@@ -66,7 +66,7 @@ export function Settings() {
                 aria-label={PILLAR_LABEL[p]}
               >
                 <button
-                  className="ctl border border-ink/20 dark:border-paper/25"
+                  className="ctl !h-11 !w-11 border border-ink/20 dark:border-paper/25"
                   aria-label={`Less ${PILLAR_LABEL[p]}`}
                   disabled={s.weights[p] <= 0}
                   onClick={() => void setSetting("weights", stepWeight(s.weights, p, -5))}
@@ -82,7 +82,7 @@ export function Settings() {
                   {s.weights[p]}
                 </output>
                 <button
-                  className="ctl border border-ink/20 dark:border-paper/25"
+                  className="ctl !h-11 !w-11 border border-ink/20 dark:border-paper/25"
                   aria-label={`More ${PILLAR_LABEL[p]}`}
                   disabled={s.weights[p] >= 100}
                   onClick={() => void setSetting("weights", stepWeight(s.weights, p, 5))}
@@ -108,7 +108,7 @@ export function Settings() {
           <span className="font-sans text-sm">Cards per day</span>
           <div className="flex items-center gap-1" role="group" aria-label="Cards per day">
             <button
-              className="ctl border border-ink/20 dark:border-paper/25"
+              className="ctl !h-11 !w-11 border border-ink/20 dark:border-paper/25"
               aria-label="Fewer cards"
               disabled={s.stackSize <= 8}
               onClick={() => void setSetting("stackSize", s.stackSize - 1)}
@@ -124,7 +124,7 @@ export function Settings() {
               {s.stackSize}
             </output>
             <button
-              className="ctl border border-ink/20 dark:border-paper/25"
+              className="ctl !h-11 !w-11 border border-ink/20 dark:border-paper/25"
               aria-label="More cards"
               disabled={s.stackSize >= 15}
               onClick={() => void setSetting("stackSize", s.stackSize + 1)}
@@ -244,6 +244,10 @@ export function Settings() {
           Keel is a quiet reading app. No accounts, no analytics, no trackers. Everything you do
           stays on this device. All reading is written ahead of time and shipped as plain files; the
           app makes no AI calls.
+        </p>
+        <p className="mt-3 font-serif text-sm text-ink/70 dark:text-paper/70">
+          The Mentor pillar contains original lessons written by Claude (AI). Everything else
+          summarizes real books.
         </p>
       </Section>
     </div>

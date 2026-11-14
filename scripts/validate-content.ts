@@ -3,6 +3,7 @@ import { join, dirname } from "node:path";
 import { fileURLToPath } from "node:url";
 import { PACK_FOLDERS } from "../schema/content";
 import {
+  validateCurriculum,
   validatePacks,
   validateQueue,
   formatProblem,
@@ -46,6 +47,20 @@ function main() {
       );
     } catch (e) {
       problems.push({ file: "queue.json", rule: `invalid JSON: ${(e as Error).message}` });
+    }
+  }
+
+  const curriculumPath = join(root, "mentor-curriculum.json");
+  if (existsSync(curriculumPath)) {
+    try {
+      problems.push(
+        ...validateCurriculum(JSON.parse(readFileSync(curriculumPath, "utf8")), result.packs),
+      );
+    } catch (e) {
+      problems.push({
+        file: "mentor-curriculum.json",
+        rule: `invalid JSON: ${(e as Error).message}`,
+      });
     }
   }
 

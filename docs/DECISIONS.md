@@ -18,3 +18,7 @@ Short log of non-obvious decisions.
 - **Icons** are drawn as SVG (`public/icon.svg`) and rasterised to PNG with Chromium (192, 512, maskable 512, apple-touch 180).
 - **Standalone pack titles** read "<Pillar>: Quick Reads" so the Library and card footers are unambiguous.
 - **Audit (local, mobile):** Lighthouse accessibility 100 / best-practices 100; axe (WCAG A/AA) clean on all screens in light and dark. Offline verified with Chromium: after the first online load, Today, Library and decks render with the network disabled. Still to do: real-device check on iOS Safari and Android Chrome.
+- **Mentor pillar (10th):** the only AI-written pillar, enforced by the validator (`pillar: "mentor"` ⇔ `origin: "ai"`, series only, no quotes/sources/author/year). Every Mentor card and Library entry says "Written by Claude"; About explains the boundary. Default weights are now family 15 / mentor 10 (others unchanged, still sum to 100).
+- **Weights migration:** `completeWeights` fills any pillar missing from saved weights from the defaults and rescales to 100, preserving the user's relative choices. Complete weights are never touched, so the independent stepper values stay as set.
+- **`mentor-curriculum.json`** is validated but never shipped: `build-index.ts` only copies the four pack folders.
+- Library type label for `origin: "ai"` packs is "Lesson"; the Series type filter still includes them.

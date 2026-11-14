@@ -10,6 +10,7 @@ export const PillarId = z.enum([
   "work",
   "body",
   "competence",
+  "mentor",
 ]);
 export type PillarId = z.infer<typeof PillarId>;
 
@@ -49,6 +50,7 @@ export const Pack = z.object({
   author: z.string().optional(),
   year: z.number().int().optional(),
   pillar: PillarId,
+  origin: z.enum(["source", "ai"]).default("source"), // "ai" = original lessons written by Claude (Mentor pillar)
   publicDomain: z.boolean().default(false),
   translation: z.string().optional(),
   summary: z.string().max(200),
@@ -76,6 +78,17 @@ export const QueueItem = z.object({
 });
 export type QueueItem = z.infer<typeof QueueItem>;
 export const Queue = z.array(QueueItem);
+
+export const CurriculumItem = z.object({
+  id: z.string().regex(/^[a-z0-9-]+$/), // pack id / filename in content/series/
+  title: z.string(),
+  group: z.enum(["think", "self", "people", "life"]),
+  brief: z.string().max(300), // the angle the lesson should take
+  status: z.enum(["queued", "in_progress", "done", "skipped"]),
+  note: z.string().optional(),
+});
+export type CurriculumItem = z.infer<typeof CurriculumItem>;
+export const Curriculum = z.array(CurriculumItem);
 
 export const PACK_FOLDERS: Record<PackType, string> = {
   book: "books",
