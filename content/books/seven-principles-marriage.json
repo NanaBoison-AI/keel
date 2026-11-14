@@ -1,0 +1,240 @@
+{
+  "schemaVersion": 1,
+  "id": "seven-principles-marriage",
+  "type": "book",
+  "title": "The Seven Principles for Making Marriage Work",
+  "author": "John Gottman & Nan Silver",
+  "year": 1999,
+  "pillar": "family",
+  "publicDomain": false,
+  "summary": "Decades of research on real couples, distilled into seven habits that keep a marriage friendly, resilient and close.",
+  "estMinutes": 14,
+  "version": 1,
+  "createdAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "cards": [
+    {
+      "id": "seven-principles-marriage-01",
+      "pillar": "family",
+      "format": "hook",
+      "hook": "Most marriages don't end in a blowup. They end in a slow drift that nobody notices until it's late.",
+      "body": "John Gottman spent decades in a lab watching real couples talk, argue and make up, then followed them for years to see who stayed together. This book turns that research into seven principles you can practice at home. The surprise: the couples who last aren't better at fighting. They're better friends. That's good news, because friendship is a skill you can build.",
+      "source": {
+        "ref": "Introduction"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-02",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Gottman could often tell which couples would divorce after watching them talk for a few minutes.",
+      "body": "In his Seattle 'Love Lab', couples discussed a real disagreement while researchers recorded their words, faces and heart rates. Gottman reports predicting which marriages would end in divorce with about 91 percent accuracy. The point isn't the party trick. It's that the warning signs are specific, visible and learnable, so you can spot them in your own home before they set.",
+      "deeper": "His core finding is that happy marriages rest on a deep friendship: mutual respect, enjoying each other's company, knowing each other well. That friendship builds what he calls positive sentiment override: when things get tense, each partner gives the other the benefit of the doubt. Without it, even neutral comments start to sound like attacks.",
+      "source": {
+        "ref": "Ch. 1: Inside the Seattle Love Lab"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-03",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "The most common marriage advice, 'just listen and reflect back', isn't what makes happy couples happy.",
+      "body": "Many therapists teach active listening: repeat your partner's complaint back and validate it before responding. Gottman argues it rarely holds up, because it asks people to stay calm and generous at exactly the moment they feel attacked. And when he watched couples in stable, happy marriages, they mostly didn't do it. What they had instead was a strong friendship that kept their fights from turning ugly.",
+      "source": {
+        "ref": "Ch. 1: Inside the Seattle Love Lab"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-04",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "How a hard conversation starts usually decides how it ends.",
+      "body": "Gottman's research found that the first three minutes of a discussion predicted its outcome about 96 percent of the time. When a conversation opens with criticism or sarcasm, what he calls a harsh startup, it tends to stay negative no matter what follows. If you need to raise something difficult, the opening sentence matters more than any clever argument you've lined up.",
+      "source": {
+        "ref": "Ch. 2: How I Predict Divorce"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-05",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Couples who split don't fight more. They fight with four particular weapons.",
+      "body": "Gottman calls them the Four Horsemen. **Criticism**: attacking who your partner is, not what they did. **Contempt**: sarcasm, mockery, eye-rolling, anything that says 'I'm above you'. **Defensiveness**: deflecting blame back. **Stonewalling**: shutting down and tuning out. Every couple slips into these sometimes. Trouble comes when they become the normal way of fighting.",
+      "deeper": "Of the four, contempt is the most corrosive, because it's fuelled by long-simmering negative thoughts about your partner, and it communicates disgust. Gottman notes the horsemen tend to arrive in sequence: criticism invites contempt and defensiveness, and eventually one partner tunes out entirely. The practical move isn't to never complain. It's to complain about a specific behavior without attacking the person.",
+      "source": {
+        "ref": "Ch. 2: How I Predict Divorce"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-06",
+      "pillar": "family",
+      "format": "fact",
+      "hook": "In most marriages Gottman studied, the one who goes silent during fights is the husband.",
+      "body": "Stonewalling, going blank, looking away, saying nothing, was the husband's move in the large majority of the couples he observed. It's often not indifference. It's flooding: your heart races, adrenaline surges, and your body reacts as if under threat. In that state you can't really hear or think. Shutting down feels like keeping the peace, but to your partner it looks like you've left the room.",
+      "deeper": "Gottman's explanation is partly physiological: in his observations, men tended to be flooded more easily and to take longer to calm down. Knowing that isn't an excuse. It's useful information: if you feel yourself going numb in an argument, that's the signal to say so and take a real break, rather than sitting there silently while the fight continues without you.",
+      "source": {
+        "ref": "Ch. 2: How I Predict Divorce"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-07",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Every couple says hurtful things. The ones who last are good at the small save.",
+      "body": "Gottman calls them repair attempts: a joke, a touch, 'okay, I'm getting upset', 'let's take a breath'. Anything that stops negativity from spiralling. Happy couples make them often and, crucially, accept them. When a marriage is drowning in negativity, repair attempts stop landing. Another late warning sign is when couples begin to rewrite their shared history, remembering even the early days as mostly bad.",
+      "source": {
+        "ref": "Ch. 2: How I Predict Divorce"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-08",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Could you name your wife's current biggest worry? Gottman thinks that answer says a lot.",
+      "body": "Principle 1 is to enhance your **love maps**: the part of your mind where you store your partner's world. Her friends and rivals, what's stressing her at work, her hopes, the small things she likes. Couples with detailed love maps handle big changes, like a new baby or a job loss, far better, because they never lose track of who the other person is becoming.",
+      "deeper": "Love maps go stale without updates. People change, and the version of your partner you got to know while dating isn't the one living with you now. The fix is unglamorous: ask questions and remember the answers. Gottman's book includes question exercises for exactly this, because curiosity is a habit, not a mood.",
+      "source": {
+        "ref": "Principle 1: Enhance Your Love Maps"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-09",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Contempt has an antidote, and it's simpler than you think.",
+      "body": "Principle 2 is to nurture **fondness and admiration**: the basic sense that your partner is worthy of respect. It's the opposite of contempt, and Gottman sees it as one of the best protections a marriage has. If it hasn't been completely lost, it can be revived, often by remembering: how you met, what drew you to her, a hard time you got through together.",
+      "source": {
+        "ref": "Principle 2: Nurture Your Fondness and Admiration"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-10",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Romance isn't kept alive by big gestures. It's kept alive by how you answer 'look at that'.",
+      "body": "Principle 3 is to **turn toward each other instead of away**. Partners constantly make small bids for attention: a comment, a question, a sigh, a hand on the arm. You can turn toward (respond), turn away (ignore), or turn against (snap). Each response is a deposit or withdrawal in what Gottman calls the emotional bank account, and a healthy balance is what carries you through the hard seasons.",
+      "deeper": "These moments seem trivial, which is exactly why they get missed: a phone, a game, a long day. But Gottman's view is that this everyday responsiveness is the real basis of emotional connection, romance and even good sex. Not candlelit dinners, but noticing a bid and answering it.",
+      "source": {
+        "ref": "Principle 3: Turn Toward Each Other Instead of Away"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-11",
+      "pillar": "family",
+      "format": "fact",
+      "hook": "Husbands who refuse to share power are far more likely to see their marriages fail.",
+      "body": "Principle 4 is to **let your partner influence you**. In a study of 130 newlywed couples, Gottman found that when a man was unwilling to share power with his wife, there was an 81 percent chance the marriage would self-destruct. Accepting influence doesn't mean giving up your view. It means genuinely taking hers into account, finding the part of her position you can say yes to.",
+      "deeper": "Gottman notes that wives in his studies generally already accepted their husbands' influence, so the difference-maker was how husbands responded. He frames this as strength, not surrender: the man who can be persuaded is the one his wife can trust with hard conversations. Watch for reflexive 'no' responses, and ask yourself what's reasonable in what she's asking.",
+      "source": {
+        "ref": "Principle 4: Let Your Partner Influence You"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-12",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Most of what you and your partner argue about will never be solved, and that's normal.",
+      "body": "Gottman divides conflicts into two kinds: **solvable** problems and **perpetual** ones. Perpetual problems come from lasting differences in personality or needs, like tidiness, money or how much time to spend with family. By his count they make up about 69 percent of marital disagreements. Happy couples don't eliminate them. They learn to talk about them with humor and affection, so the problem stays a problem and doesn't become a war.",
+      "source": {
+        "ref": "Ch. 7: The Two Kinds of Marital Conflict"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-13",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "For the problems that can be solved, Gottman offers a five-step method.",
+      "body": "Principle 5 is to **solve your solvable problems**:\n\n1. Soften your startup: complain without blame.\n2. Make and receive repair attempts.\n3. Soothe yourself and each other when tension spikes.\n4. Compromise: look for common ground rather than a winner.\n5. Be tolerant of each other's faults.\n\nNone of it requires agreeing about everything. It requires staying on the same side while you disagree.",
+      "deeper": "Soothing gets underrated. When either of you is flooded, no technique works, so call a pause and actually step away from the topic. Gottman suggests the break should last at least twenty minutes, and that you spend it calming down rather than rehearsing your case. Then come back and finish the conversation.",
+      "source": {
+        "ref": "Principle 5: Solve Your Solvable Problems"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-14",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "When an argument keeps coming back, there's usually a dream hiding underneath it.",
+      "body": "Principle 6 is to **overcome gridlock**. Gridlock is a perpetual problem that has turned painful: you keep having the same fight and each round leaves you more entrenched. Gottman's insight is that gridlock usually signals an unspoken dream or deep need, like security, freedom, or honoring where you came from. The goal isn't to solve it, but to understand the dream behind each position well enough to stop treating each other as the enemy.",
+      "source": {
+        "ref": "Principle 6: Overcome Gridlock"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-15",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "A marriage isn't only two people getting along. It's two people building something.",
+      "body": "Principle 7 is to **create shared meaning**: a culture of your own. That includes rituals of connection (how you eat dinner, mark birthdays, reunite at the end of the day), shared views of your roles as husband, wife, parent, and shared goals and symbols. Couples with this sense of meaning find conflict less intense, because they're arguing inside something they both care about.",
+      "source": {
+        "ref": "Principle 7: Create Shared Meaning"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-16",
+      "pillar": "family",
+      "format": "challenge",
+      "hook": "Today, try catching every small bid your partner makes, and answer it.",
+      "body": "A comment about her day, a link she sends, 'look at this', a sigh in the kitchen. For one day, notice these bids and turn toward them: look up, put the phone face down, ask a follow-up question. It costs seconds each time. At the end of the day, note how many you caught, and how many you probably missed before.",
+      "source": {
+        "ref": "Principle 3: Turn Toward Each Other Instead of Away"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-17",
+      "pillar": "family",
+      "format": "conversation",
+      "hook": "Pick the argument you two keep having. Ask about the story behind it, not the solution.",
+      "body": "Choose a calm moment, not mid-fight. Ask: \"When it comes to this, what matters most to you? Is there something from your past or a hope for the future that's tied up in it?\" Then just listen. Don't defend or fix. Afterwards, swap roles. You're not trying to settle the issue tonight, only to understand the dream behind each other's position.",
+      "source": {
+        "ref": "Principle 6: Overcome Gridlock"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "seven-principles-marriage-18",
+      "pillar": "family",
+      "format": "recap",
+      "hook": "Three things to remember from The Seven Principles.",
+      "body": "1. **Friendship is the foundation.** Love maps, fondness and turning toward each other's small bids keep the bank account full.\n2. **Watch how you fight.** Start softly, avoid the Four Horsemen, and make and accept repairs.\n3. **Most conflict is perpetual.** Solve what you can, and for the rest, understand the dream underneath and keep talking with goodwill.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
