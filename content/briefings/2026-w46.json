@@ -1,0 +1,261 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-w46",
+  "type": "briefing",
+  "title": "The Week: 9–15 November 2026",
+  "pillar": "world",
+  "origin": "source",
+  "publicDomain": false,
+  "summary": "Nvidia loses its founder-CEO, US inflation keeps a December rate hike in play, oil whipsaws on Iran, and Russia and Ukraine talk again.",
+  "estMinutes": 14,
+  "version": 1,
+  "createdAt": "2026-11-15",
+  "updatedAt": "2026-11-15",
+  "expiresAt": "2026-12-06",
+  "sources": [
+    { "title": "BLS — Consumer Price Index, October 2026", "url": "https://www.bls.gov/news.release/cpi.nr0.htm" },
+    { "title": "BLS — Producer Price Index, October 2026", "url": "https://www.bls.gov/news.release/ppi.nr0.htm?ftag=YHF4eb9d17" },
+    { "title": "CBS News — Inflation remained elevated in October, upping odds of Fed rate hike", "url": "https://www.cbsnews.com/news/october-cpi-report-elevated-inflation/" },
+    { "title": "TheStreet — Stock Market Today, Nov. 13, 2026", "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026" },
+    { "title": "The Motley Fool — Stock Market Midday, Nov. 13: Treasury yields hit 5%", "url": "https://www.fool.com/coverage/stock-market-today/2026/11/13/stock-market-midday-nov-13-nasdaq-plunges-as-nvidia-turmoil-deepens-and-treasury-yields-hit-5/" },
+    { "title": "Nvidia — Form 8-K: CEO transition", "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm" },
+    { "title": "Al Jazeera — Why did Nvidia CEO Jensen Huang resign, and who is Colette Kress?", "url": "https://www.aljazeera.com/news/2026/11/12/why-did-nvidia-ceo-jensen-huang-resign-and-who-is-colette-kress" },
+    { "title": "Yahoo Finance — Anthropic seeks $1.4 trillion valuation in IPO", "url": "https://finance.yahoo.com/markets/article/anthropic-seeks-14-trillion-valuation-in-ipo-130300928.html" },
+    { "title": "Euronews — Oil prices continue to fall on hopes of US-Iran peace deal talks", "url": "https://www.euronews.com/2026/11/10/oil-prices-continue-to-fall-on-hopes-of-us-iran-peace-deal-talks" },
+    { "title": "Rigzone/Bloomberg — Oil rises as Trump dims Iran deal hopes", "url": "https://www.rigzone.com/news/wire/oil_rises_as_trump_dims_iran_deal_hopes-12-nov-2026-185073-article/" },
+    { "title": "Rigzone/Bloomberg — Crude fluctuates as Iran tensions persist", "url": "https://rigzone.com/news/wire/crude_fluctuates_as_iran_tensions_persist-13-nov-2026-185085-article" },
+    { "title": "Al Jazeera — Russia-Ukraine talks in Abu Dhabi end with prisoner exchange agreement", "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement" },
+    { "title": "Khaleej Times — COP31 opens with leaders told to 'get serious'", "url": "https://www.khaleejtimes.com/world/cop31-opens-leaders-pressure-tackle-climate-crisis" },
+    { "title": "RTÉ/Reuters — UK economy sees biggest expansion in over 2 years in Q3", "url": "https://www.rte.ie/news/business/2026/1112/1598912-uk-economy-grows-0-7-in-third-quarter-ons-data-shows/" },
+    { "title": "Reuters via Investing.com — China's factory-gate inflation at fastest in nearly 4-1/2 years", "url": "https://www.investing.com/news/economy-news/chinas-october-producer-inflation-quickens-further-consumer-prices-edge-down-5010403" },
+    { "title": "China-Global South Project — APEC Summit 2026 in Shenzhen", "url": "https://chinaglobalsouth.com/analysis/apec-summit-2026-china-shenzhen-trump-xi-putin/" }
+  ],
+  "cards": [
+    {
+      "id": "2026-w46-01",
+      "pillar": "world",
+      "format": "hook",
+      "hook": "The week in 60 seconds: a CEO exit shook tech, and inflation kept a rate hike on the table.",
+      "body": "- **Nvidia's Jensen Huang resigned** after 33 years as CEO; CFO Colette Kress is interim chief.\n- **US prices rose 0.4% in October**, and markets now expect the Fed to *raise* rates in December.\n- **Oil swung** as hopes for a US–Iran deal rose, then faded.\n- **Russia and Ukraine talked directly** for the first time since February and agreed a prisoner swap.\n- **The 10-year US Treasury yield** pushed above 5%.",
+      "source": { "url": "https://www.cbsnews.com/news/october-cpi-report-elevated-inflation/" },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-02",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "The Dow ended Friday up. The Nasdaq ended it down almost 1%. Same market, two stories.",
+      "body": "On Friday 13 November the Dow closed at 52,347.55, up 0.10%. The S&P 500 fell 0.40% to 7,561.67 and the tech-heavy Nasdaq dropped 0.91% to 25,136.27.\n\nThe split tells you where the pressure was: technology, industrials, consumer discretionary and materials fell, while every other S&P 500 sector rose. Turmoil at Nvidia and rising bond yields weighed on the growth stocks that dominate the Nasdaq.",
+      "source": {
+        "ref": "Market close, 13 Nov 2026",
+        "url": "https://www.thestreet.com/stock-market-today/stock-market-today-dow-jones-sp-500-nasdaq-updates-nov-13-2026"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-03",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "Why does a bond number above 5% make tech investors nervous?",
+      "body": "On Friday the 10-year US Treasury yield climbed to about 5.10%, pushed up by another round of inflation data.\n\nHere's the logic. When safe government bonds pay more, the guaranteed return competes with riskier assets like shares. And higher yields raise the cost of borrowing, which bites hardest for capital-hungry technology companies that need money now to earn profits years from now.",
+      "deeper": "A yield is the return an investor gets for lending to the government for a set period. When investors expect inflation to stay high, they demand a higher yield to compensate, which is exactly the worry this week's price data stoked.",
+      "source": {
+        "ref": "Markets, 13 Nov 2026",
+        "url": "https://www.fool.com/coverage/stock-market-today/2026/11/13/stock-market-midday-nov-13-nasdaq-plunges-as-nvidia-turmoil-deepens-and-treasury-yields-hit-5/"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-04",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Britain just had its best quarter in two and a half years. Computer programmers helped.",
+      "body": "UK GDP grew 0.7% from July to September, the Office for National Statistics said on Thursday, up from 0.5% in the spring quarter and the fastest pace since early 2024. Services grew 0.9%, and computer programming expanded at its quickest rate in three years, which the ONS partly linked to AI-related businesses.\n\nThe warning lights are still on: retail sales volumes fell in September, and some economists expect slower growth as high energy prices and borrowing costs bite.",
+      "source": {
+        "ref": "ONS first quarterly estimate, 12 Nov 2026",
+        "url": "https://www.rte.ie/news/business/2026/1112/1598912-uk-economy-grows-0-7-in-third-quarter-ons-data-shows/"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-05",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "China's factories are paying sharply more. Its shoppers are paying barely more. Why the gap?",
+      "body": "In October China's producer prices were 5.7% higher than a year earlier, the biggest annual rise since June 2022. Consumer prices rose just 0.7%, down from 0.9% in September.\n\nThe cause of the first number is mostly oil: Middle East war has pushed up energy costs for mining, chemicals and other heavy industry. The second stays low because Chinese households are still spending cautiously, so firms struggle to pass those costs on.",
+      "source": {
+        "ref": "China NBS data, 9 Nov 2026 (via Reuters)",
+        "url": "https://www.investing.com/news/economy-news/chinas-october-producer-inflation-quickens-further-consumer-prices-edge-down-5010403"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-06",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "US inflation cooled in October. It still wasn't good news.",
+      "body": "Consumer prices rose 0.4% in October, the Bureau of Labor Statistics reported on Tuesday, down from 0.6% in September but above the 0.3% forecasters expected.\n\nThe more worrying figure is \"core\" inflation, which strips out volatile food and energy. It rose 0.3% for a third month in a row. Housing costs drove over 30% of the overall rise, food climbed 0.5%, and energy added 0.7%.",
+      "deeper": "Why economists fuss over core: energy and food prices can jump around with weather or war, so they can mislead in any one month. Core inflation is closer to the underlying trend. A steady 0.3% a month, sustained for a year, works out to well above the Federal Reserve's 2% annual target. Analysts quoted by CBS News described the underlying pressure as more persistent than the Fed would like, with higher energy costs seeping into other prices.",
+      "source": {
+        "ref": "BLS CPI release, 10 Nov 2026",
+        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-07",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "The prices businesses pay rose 6.5% in a year — the fastest since late 2022.",
+      "body": "The Producer Price Index, which tracks what US producers receive for their goods and services, rose 0.3% in October, a little below forecasts. But over twelve months it is up 6.5%, the largest annual jump since November 2022. Goods prices alone are up 10.2% on the year.\n\nProducer prices matter because they are often an early signal: costs that land on businesses today can reach shop shelves later.",
+      "source": {
+        "ref": "BLS PPI release, 13 Nov 2026",
+        "url": "https://www.bls.gov/news.release/ppi.nr0.htm?ftag=YHF4eb9d17"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-08",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "Markets aren't asking whether the Fed raises rates in December. They're asking by how much.",
+      "body": "After the October inflation report, futures pricing tracked by CME FedWatch implied an 85% chance of a quarter-point rate rise at the Fed's 8–9 December meeting, and a 15% chance of a half point.\n\nAt its October meeting the Fed held rates, though two policymakers already voted for a hike. Fed Governor Christopher Waller has gone further, arguing that a quarter-point move could put the Fed's credibility at risk and that a half point deserves consideration.",
+      "deeper": "Credibility is the theme officials keep returning to. Chicago Fed President Austan Goolsbee said this week that inflation has been above 2% for almost six years and is now heading the wrong way, and that the Fed has work to do to rebuild trust. A central bank that is believed can often cool inflation with smaller moves, because people and businesses adjust their expectations. One that has lost that trust may have to act harder. These are market odds and officials' views, not decisions: the Fed decides in December.",
+      "source": {
+        "ref": "CBS News, 11 Nov 2026",
+        "url": "https://www.cbsnews.com/news/october-cpi-report-elevated-inflation/"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-09",
+      "pillar": "world",
+      "format": "story",
+      "hook": "Why is there no annual US inflation rate this month? Blame a shutdown from a year ago.",
+      "body": "Normally the headline inflation number compares this October's prices with last October's. This time the Bureau of Labor Statistics couldn't publish most of those comparisons.\n\nThe reason goes back to autumn 2025, when a lapse in federal funding — a government shutdown — meant BLS never collected October 2025 price data. With no base month, there is no clean 12-month figure. That's why this week's coverage leaned on monthly changes instead.",
+      "deeper": "A few unadjusted 12-month changes were still published, and they tell a story of their own: gasoline was up 37.4% on a year earlier, new vehicles up 0.7% and used cars and trucks down 3.3%. The gap is a reminder that economic statistics depend on people going out and collecting them; when that stops, the hole can echo for a year. The next CPI report, for November, is scheduled for 10 December — the day after the Fed's December decision.",
+      "source": {
+        "ref": "BLS CPI release, 10 Nov 2026",
+        "url": "https://www.bls.gov/news.release/cpi.nr0.htm"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-10",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Oil fell about 20% in a month on peace hopes. Then one social media post reversed some of it.",
+      "body": "On Tuesday Brent crude slipped to about $91 a barrel, having lost roughly a fifth of its value in November as traders bet on an end to the seven-month US–Iran war. President Trump had spoken of positive momentum after meeting Qatar's prime minister.\n\nOn Thursday the tone hardened: Trump posted that the US does not need a deal with Iran. Brent jumped 3.3% that day to $95.82, and ended the week at $95.84.",
+      "deeper": "Other forces were pulling the opposite way. US crude stockpiles rose 4.7 million barrels in a week, the biggest build since early August; Saudi Arabia reported October output up 26%; and the International Energy Agency said the market should be in surplus this quarter, the first since the war began. Brent still recorded its second straight weekly decline.",
+      "source": {
+        "ref": "Bloomberg via Rigzone, 12 Nov 2026",
+        "url": "https://www.rigzone.com/news/wire/oil_rises_as_trump_dims_iran_deal_hopes-12-nov-2026-185073-article/"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-11",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Thirty-six attacks on merchant ships in one month. That's why the Strait of Hormuz still matters.",
+      "body": "Risk firm Verisk Maplecroft counted 36 confirmed attacks on commercial ships in the Persian Gulf, the Strait of Hormuz and the Gulf of Oman in October, the highest monthly total since the war began. More ships were attacked this week, and Iranian media said two loaded supertankers using an unauthorised route through the strait were halted by explosions.\n\nOne energy analyst quoted by Bloomberg summed up the market's view: continued attacks on shipping and damage to energy infrastructure keep Hormuz a significant concern for oil supply.",
+      "source": {
+        "ref": "Bloomberg via Rigzone, 13 Nov 2026",
+        "url": "https://rigzone.com/news/wire/crude_fluctuates_as_iran_tensions_persist-13-nov-2026-185085-article"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-12",
+      "pillar": "world",
+      "format": "story",
+      "hook": "Russia and Ukraine sat in the same room for the first time since February. What did they agree?",
+      "body": "Two days of US-mediated talks in Abu Dhabi ended on Wednesday with one concrete result: agreement on a large-scale prisoner exchange. Russia's team was led by Vladimir Medinsky, Ukraine's by David Arakhamia; US envoys Jared Kushner and Steve Witkoff mediated.\n\nOn the big questions the sides remain far apart. Kushner said territory will be the hardest issue, though he reported progress on a post-war security framework.",
+      "deeper": "Next steps: the US envoys planned to travel to Moscow to brief President Putin, then meet President Zelenskyy in Dublin. Ukraine wants the next round to include European countries; Russia's negotiator said Moscow does not object to EU participation, but Europe's role is still unsettled. Russian state news agency TASS said the prisoner swap should happen within two to three weeks.",
+      "source": {
+        "ref": "Al Jazeera, 11 Nov 2026",
+        "url": "https://www.aljazeera.com/news/2026/11/11/russia-ukraine-talks-in-abu-dhabi-end-with-prisoner-exchange-agreement"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-13",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "The world's climate summit opened this week with one country hosting and another running the talks.",
+      "body": "COP31 opened on Monday in Antalya, Turkey, and runs for two weeks. Under an unusual compromise that settled a hosting dispute, Turkey holds the presidency while Australia leads the negotiations. The pair have branded it the \"implementation COP\": turning old pledges into action.\n\nThe Trump administration has not sent officials, though a US congressional delegation is attending. Climate finance for developing nations is a central fight, and a senior EU official warned there is little political will for new funding pledges.",
+      "source": {
+        "ref": "Khaleej Times, 9 Nov 2026",
+        "url": "https://www.khaleejtimes.com/world/cop31-opens-leaders-pressure-tackle-climate-crisis"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-14",
+      "pillar": "world",
+      "format": "story",
+      "hook": "He ran Nvidia for 33 years. On Thursday he left, effective immediately.",
+      "body": "Nvidia announced on 12 November that Jensen Huang had stepped down as president, CEO and board member. The company gave no reason. CFO Colette Kress becomes interim CEO while the board searches inside and outside the company, and Harvey Jones becomes Nvidia's first board chair.\n\nThe exit came four days after Huang admitted to an extramarital affair and the board opened an independent investigation. The shares fell more than 14% at one point on Thursday.",
+      "deeper": "The affair drew wider scrutiny because of reports that the woman involved may have had links to Chinese intelligence. Those reports are allegations, not established facts; Nvidia's board has said it has no reason to believe national security was compromised. Senate Banking Committee chairman Tim Scott has requested testimony from Huang on 3 December. For markets, the question is simpler: how a company at the centre of the AI boom fares without the founder who built it. Nvidia is due to report quarterly results in the coming week.",
+      "source": {
+        "ref": "Nvidia Form 8-K, 12 Nov 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000082/nvidiaannouncesceotransiti.htm"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-15",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "A share sale that could raise up to $64 billion may arrive as soon as next week.",
+      "body": "AI company Anthropic updated its IPO filing on Tuesday: it plans to sell 825 million shares at $70 to $78 each on the Nasdaq under the ticker ANT. At the top of the range that would raise up to $64.35 billion, and imply a valuation of roughly $1.4 trillion — well above the $965 billion of its May funding round.\n\nThe Wall Street Journal reported a debut on 19 or 20 November. Bloomberg reported some prospective buyers have discussed a lower valuation.",
+      "deeper": "Several big tech and chip companies, including Nvidia, Microsoft and Google, are reportedly committing a further $26 billion in private purchases of non-voting shares at the IPO price. Disclosure: Keel's briefings are written by Claude, an AI model made by Anthropic. This card reports the filing and press coverage only; it is not a view on the shares.",
+      "source": {
+        "ref": "Yahoo Finance, 10 Nov 2026",
+        "url": "https://finance.yahoo.com/markets/article/anthropic-seeks-14-trillion-valuation-in-ipo-130300928.html"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-16",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Rates may be going up again. Here's how that reaches your wallet.",
+      "body": "When yields and central-bank rates rise, the effects run both ways for a household:\n\n- **Borrowing gets dearer.** New loans and variable-rate debt tend to cost more as rates climb.\n- **Saving pays more.** Higher yields make interest-paying savings and fixed-income products more rewarding.\n- **Fuel has eased a little.** AAA's US national average for gasoline dropped below $4 a gallon for the first time in nearly four months.\n\nThe practical move is simply to know which of your own debts and savings are fixed and which float.",
+      "source": {
+        "ref": "CBS News, 11 Nov 2026",
+        "url": "https://www.cbsnews.com/news/october-cpi-report-elevated-inflation/"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w46-17",
+      "pillar": "world",
+      "format": "recap",
+      "hook": "Three things to watch next week.",
+      "body": "1. **APEC in Shenzhen (18–19 Nov).** President Trump and President Putin are expected alongside host Xi Jinping; US–China trade and the Middle East are on the agenda.\n2. **Big tech tests.** Nvidia reports results under an interim CEO, and Anthropic's IPO is reported for 19 or 20 November.\n3. **Diplomacy on two wars.** Whether US envoys' meetings with Putin and Zelenskyy move Ukraine talks forward, and whether US–Iran deal hopes revive or fade.",
+      "source": {
+        "ref": "APEC 2026 preview, 13 Nov 2026",
+        "url": "https://chinaglobalsouth.com/analysis/apec-summit-2026-china-shenzhen-trump-xi-putin/"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
