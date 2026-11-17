@@ -218,3 +218,37 @@ describe("CardStack in Today mode", () => {
     await waitFor(() => expect(screen.getByText("Hook number 0")).toBeInTheDocument());
   });
 });
+
+describe("Today swipe-up hint", () => {
+  const renderStack = (showOpenHint: boolean, mode: "today" | "deck" = "today") =>
+    render(
+      <ToastProvider>
+        <MemoryRouter>
+          <div style={{ height: 600 }}>
+            <CardStack
+              mode={mode}
+              showOpenHint={showOpenHint}
+              items={items}
+              index={0}
+              onIndexChange={() => {}}
+              onFinish={() => {}}
+              isSaved={() => false}
+              onToggleSave={() => {}}
+              onLess={() => {}}
+            />
+          </div>
+        </MemoryRouter>
+      </ToastProvider>,
+    );
+  it("shows the hint when asked", () => {
+    renderStack(true);
+    expect(screen.getByText("Swipe up to read the book")).toBeInTheDocument();
+  });
+  it("hides it otherwise, and never in deck mode", () => {
+    renderStack(false);
+    expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
+    cleanup();
+    renderStack(true, "deck");
+    expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
+  });
+});

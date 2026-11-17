@@ -28,6 +28,8 @@ interface Props {
   mode?: "today" | "deck";
   /** Today mode: swipe up on a card. */
   onOpenBook?: (key: string) => void;
+  /** Today mode: show the "swipe up" hint under the card (first card only). */
+  showOpenHint?: boolean;
   /** Wrapper content shown above the card (progress dots, counters). */
   header?: React.ReactNode;
 }
@@ -45,6 +47,7 @@ export function CardStack({
   onLess,
   mode = "deck",
   onOpenBook,
+  showOpenHint = false,
   header,
 }: Props) {
   const today = mode === "today";
@@ -259,6 +262,23 @@ export function CardStack({
           )}
         </AnimatePresence>
       </div>
+
+      {today && showOpenHint && (
+        <p
+          className="flex select-none items-center justify-center gap-1.5 pb-1 font-sans text-sm font-semibold text-sea dark:text-sea-light"
+          data-testid="open-hint"
+        >
+          <motion.span
+            aria-hidden
+            animate={reduced ? undefined : { y: [0, -4, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="inline-flex"
+          >
+            <ArrowUp width={18} height={18} />
+          </motion.span>
+          Swipe up to read the book
+        </p>
+      )}
 
       {/* Controls live in the bottom third for one-handed use. */}
       {today ? (
