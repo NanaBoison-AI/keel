@@ -235,7 +235,7 @@ export function CardStack({
             animate="animate"
             exit="exit"
             transition={{ duration: reduced ? 0.15 : 0.28, ease: [0.25, 0.8, 0.25, 1] }}
-            className="absolute inset-0"
+            className="card-face absolute inset-3"
           >
             <CardFace
               view={item.view}

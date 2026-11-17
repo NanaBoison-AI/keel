@@ -29,7 +29,7 @@ export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
         ref={scrollRef}
         tabIndex={0}
         aria-label="Card text"
-        className="min-h-0 flex-1 overflow-y-auto px-6 pt-3 outline-none focus-visible:ring-2 focus-visible:ring-brass/60 [overscroll-behavior:contain]"
+        className="min-h-0 flex-1 overflow-y-auto px-5 pt-5 outline-none focus-visible:ring-2 focus-visible:ring-brass/60 [overscroll-behavior:contain]"
       >
         <div className="mx-auto max-w-[38em]">
           <h2 className="font-display text-[1.4em] font-semibold leading-snug text-ink dark:text-paper">
@@ -70,9 +70,9 @@ export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
           )}
         </div>
         {/* Fade hints that more text sits below; end padding keeps the last line clear of it. */}
-        <div className="pointer-events-none sticky bottom-0 -mx-6 h-8 bg-gradient-to-t from-paper to-transparent dark:from-ink" />
+        <div className="pointer-events-none sticky bottom-0 -mx-5 h-8 bg-gradient-to-t from-white to-transparent dark:from-ink-800" />
       </div>
-      <footer className="select-none px-6 pb-2 pt-1">
+      <footer className="select-none px-5 pb-4 pt-1">
         <div className="mx-auto flex max-w-[38em] flex-wrap items-center gap-x-3 gap-y-1 font-sans text-xs text-ink/70 dark:text-paper/70">
           <PillarChip pillar={pillar} />
           <Link
