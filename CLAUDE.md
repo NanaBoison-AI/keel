@@ -299,11 +299,11 @@ Like `queue.json`, it is not shipped to the app.
 
 | Gesture    | Action                                                                 | Visible button equivalent |
 | ---------- | ---------------------------------------------------------------------- | ------------------------- |
-| Swipe up   | Next card                                                              | ↓ arrow                   |
-| Swipe down | Previous card                                                          | —                         |
+| Swipe up   | Next card                                                              | none on screen (keyboard ←/→, screen-reader buttons) |
+| Swipe down | Previous card                                                          | none on screen            |
 | Tap card   | Expand/collapse `deeper` (if present)                                  | "Read more"               |
 | Double-tap | Save to Notebook (brief bookmark animation)                            | Bookmark icon             |
-| Swipe left | "Less like this" (records feedback, advances, shows Undo toast for 4s) | ⋯ menu                    |
+| Swipe left | "Less like this" (records feedback, advances, shows Undo toast for 4s) | Thumbs-down icon          |
 
 - Every gesture must have an accessible alternative: a visible control, or (Today swipes) keyboard
   arrows and screen-reader-only buttons.

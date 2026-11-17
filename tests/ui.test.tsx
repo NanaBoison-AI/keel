@@ -71,16 +71,16 @@ describe("CardStack", () => {
     const onFinish = vi.fn();
     render(<Harness onFinish={onFinish} />);
     expect(screen.getByText("Hook number 0")).toBeInTheDocument();
-    expect(screen.getByLabelText("Previous card")).toBeDisabled();
-    fireEvent.click(screen.getByLabelText("Next card"));
+    expect(screen.getByRole("button", { name: "Previous card" })).toBeDisabled();
+    fireEvent.click(screen.getByRole("button", { name: "Next card" }));
     await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
-    fireEvent.click(screen.getByLabelText("Previous card"));
+    fireEvent.click(screen.getByRole("button", { name: "Previous card" }));
     await waitFor(() => expect(screen.getByText("Hook number 0")).toBeInTheDocument());
-    fireEvent.click(screen.getByLabelText("Next card"));
+    fireEvent.click(screen.getByRole("button", { name: "Next card" }));
     await waitFor(() => screen.getByText("Hook number 1"));
-    fireEvent.click(screen.getByLabelText("Next card"));
+    fireEvent.click(screen.getByRole("button", { name: "Next card" }));
     await waitFor(() => screen.getByText("Hook number 2"));
-    fireEvent.click(screen.getByLabelText("Finish"));
+    fireEvent.click(screen.getByRole("button", { name: "Finish" }));
     expect(onFinish).toHaveBeenCalled();
   });
 
@@ -101,11 +101,10 @@ describe("CardStack", () => {
     expect(screen.getByLabelText("Remove from Notebook")).toHaveAttribute("aria-pressed", "true");
   });
 
-  it("'Less like this' is reachable from the menu and advances", async () => {
+  it("thumbs-down is 'Less like this' and advances", async () => {
     const onLess = vi.fn();
     render(<Harness onLess={onLess} />);
-    await userEvent.click(screen.getByLabelText("More options"));
-    await userEvent.click(screen.getByRole("button", { name: "Less like this" }));
+    await userEvent.click(screen.getByLabelText("Less like this"));
     expect(onLess).toHaveBeenCalledWith("c0");
     await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
   });
@@ -250,5 +249,16 @@ describe("Today swipe-up hint", () => {
     cleanup();
     renderStack(true, "deck");
     expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
+  });
+});
+
+describe("CardStack in deck mode", () => {
+  it("has thumbs-down and bookmark but no arrow buttons or ⋯ menu", () => {
+    render(<Harness />);
+    expect(screen.getByLabelText("Less like this")).toBeInTheDocument();
+    expect(screen.getByLabelText("Save to Notebook")).toBeInTheDocument();
+    expect(screen.queryByLabelText("More options")).not.toBeInTheDocument();
+    expect(screen.queryByLabelText("Next card")).not.toBeInTheDocument(); // only a screen-reader button remains
+    expect(screen.queryByText("Open the book")).not.toBeInTheDocument();
   });
 });

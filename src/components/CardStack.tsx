@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useDrag } from "@use-gesture/react";
 import { CardFace, type CardView } from "./Card";
-import { ArrowDown, ArrowUp, Bookmark, More, ThumbDown } from "./icons";
+import { ArrowUp, Bookmark, ThumbDown } from "./icons";
 import { useReducedMotion } from "../lib/hooks";
 
 export interface StackItem {
@@ -23,7 +23,7 @@ interface Props {
   onLess: (key: string) => void;
   /**
    * "today": swipe left/right to move, swipe up opens the book (onOpenBook), thumbs-down button.
-   * "deck": swipe up/down to move, swipe left is "less like this", ⋯ menu.
+   * "deck": swipe up/down to move, swipe left is "less like this". Both modes: thumbs-down and bookmark buttons.
    */
   mode?: "today" | "deck";
   /** Today mode: swipe up on a card. */
@@ -54,9 +54,7 @@ export function CardStack({
   const reduced = useReducedMotion();
   const item = items[index];
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
-  const [menuKey, setMenuKey] = useState<string | null>(null);
   const expanded = !!item && expandedKey === item.key;
-  const menu = !!item && menuKey === item.key;
   const [dir, setDir] = useState(1);
   const [flash, setFlash] = useState(0);
   const [scrollable, setScrollable] = useState(false);
@@ -237,7 +235,7 @@ export function CardStack({
             animate="animate"
             exit="exit"
             transition={{ duration: reduced ? 0.15 : 0.28, ease: [0.25, 0.8, 0.25, 1] }}
-            className="absolute inset-0"
+            className="card-face absolute inset-3"
           >
             <CardFace
               view={item.view}
@@ -281,99 +279,35 @@ export function CardStack({
       )}
 
       {/* Controls live in the bottom third for one-handed use. */}
-      {today ? (
-        <div
-          className="relative flex select-none items-center justify-center gap-8 px-4 pb-3 pt-1 font-sans"
-          role="toolbar"
-          aria-label="Card controls"
+      <div
+        className="relative flex select-none items-center justify-center gap-8 px-4 pb-3 pt-1 font-sans"
+        role="toolbar"
+        aria-label="Card controls"
+      >
+        <button className="ctl ctl-lg" onClick={less} aria-label="Less like this">
+          <ThumbDown width={28} height={28} />
+        </button>
+        <button
+          className={`ctl ctl-lg ${isSaved(item.key) ? "text-brass" : ""}`}
+          onClick={save}
+          aria-label={isSaved(item.key) ? "Remove from Notebook" : "Save to Notebook"}
+          aria-pressed={isSaved(item.key)}
         >
-          <button className="ctl ctl-lg" onClick={less} aria-label="Less like this">
-            <ThumbDown width={28} height={28} />
-          </button>
-          <button
-            className={`ctl ctl-lg ${isSaved(item.key) ? "text-brass" : ""}`}
-            onClick={save}
-            aria-label={isSaved(item.key) ? "Remove from Notebook" : "Save to Notebook"}
-            aria-pressed={isSaved(item.key)}
-          >
-            <Bookmark width={28} height={28} filled={isSaved(item.key)} />
-          </button>
-          {/* Swipes have no on-screen buttons; these keep keyboard and screen-reader access. */}
-          <button className="sr-only" onClick={prev} disabled={index === 0}>
-            Previous card
-          </button>
-          <button className="sr-only" onClick={next}>
-            {index >= items.length - 1 ? "Finish" : "Next card"}
-          </button>
+          <Bookmark width={28} height={28} filled={isSaved(item.key)} />
+        </button>
+        {/* Swipes have no on-screen buttons; these keep keyboard and screen-reader access. */}
+        <button className="sr-only" onClick={prev} disabled={index === 0}>
+          Previous card
+        </button>
+        <button className="sr-only" onClick={next}>
+          {index >= items.length - 1 ? "Finish" : "Next card"}
+        </button>
+        {today && (
           <button className="sr-only" onClick={openBook}>
             Open the book
           </button>
-        </div>
-      ) : (
-        <div
-          className="relative flex select-none items-center justify-between gap-2 px-4 pb-2 pt-1 font-sans"
-          role="toolbar"
-          aria-label="Card controls"
-        >
-          <div className="flex items-center gap-1">
-            <button
-              className="ctl"
-              onClick={prev}
-              disabled={index === 0}
-              aria-label="Previous card"
-            >
-              <ArrowUp />
-            </button>
-            <button
-              className="ctl"
-              onClick={() => setMenuKey(menu ? null : item.key)}
-              aria-label="More options"
-              aria-expanded={menu}
-            >
-              <More />
-            </button>
-          </div>
-          <button
-            className={`ctl ${isSaved(item.key) ? "text-brass" : ""}`}
-            onClick={save}
-            aria-label={isSaved(item.key) ? "Remove from Notebook" : "Save to Notebook"}
-            aria-pressed={isSaved(item.key)}
-          >
-            <Bookmark filled={isSaved(item.key)} />
-          </button>
-          <button
-            className="ctl ctl-primary"
-            onClick={next}
-            aria-label={index >= items.length - 1 ? "Finish" : "Next card"}
-          >
-            <ArrowDown />
-          </button>
-          {menu && (
-            <div className="absolute bottom-full left-4 mb-2 min-w-[200px] rounded-xl border border-ink/10 bg-paper p-1 shadow-lg dark:border-paper/15 dark:bg-ink-800">
-              <button
-                className="menu-item"
-                onClick={() => {
-                  setMenuKey(null);
-                  less();
-                }}
-              >
-                Less like this
-              </button>
-              {item.view.card.deeper && (
-                <button
-                  className="menu-item"
-                  onClick={() => {
-                    setMenuKey(null);
-                    toggleExpand();
-                  }}
-                >
-                  {expanded ? "Show less" : "Read more"}
-                </button>
-              )}
-            </div>
-          )}
-        </div>
-      )}
+        )}
+      </div>
     </div>
   );
 }
