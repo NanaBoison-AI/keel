@@ -1,5 +1,5 @@
 import { useCallback, useEffect, useMemo, useRef, useState } from "react";
-import { Link } from "react-router";
+import { Link, useNavigate } from "react-router";
 import { CardStack, type StackItem } from "../components/CardStack";
 import { useToast } from "../components/Toast";
 import { Dots } from "./Progress";
@@ -19,8 +19,8 @@ export function DoneScreen({
 }) {
   return (
     <div className="flex h-full flex-col items-center justify-center px-8 text-center">
-      <h2 className="font-serif text-3xl font-semibold">{title}</h2>
-      <p className="mt-3 max-w-sm font-serif text-ink/70 dark:text-paper/70">
+      <h2 className="font-display text-3xl font-semibold">{title}</h2>
+      <p className="mt-3 max-w-sm font-reading text-ink/70 dark:text-paper/70">
         {note ?? "That's the stack. Nothing more to scroll. Come back tomorrow, or go deeper now."}
       </p>
       <div className="mt-8 flex w-full max-w-xs flex-col gap-3">
@@ -46,6 +46,7 @@ export function Today() {
   const affinity = useAffinity();
   const saved = useSavedIds();
   const toast = useToast();
+  const navigate = useNavigate();
   const date = localDate();
 
   const [items, setItems] = useState<StackItem[] | null>(null);
@@ -194,6 +195,11 @@ export function Today() {
       onToggleSave={onToggleSave}
       onExpand={onExpand}
       onLess={onLess}
+      mode="today"
+      onOpenBook={(key) => {
+        const hit = lookup.get(key);
+        if (hit) navigate(`/deck/${hit.pack.id}`);
+      }}
       header={<Dots total={total} index={index} />}
     />
   );

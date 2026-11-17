@@ -32,15 +32,15 @@ export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
         className="min-h-0 flex-1 overflow-y-auto px-6 pt-3 outline-none focus-visible:ring-2 focus-visible:ring-brass/60 [overscroll-behavior:contain]"
       >
         <div className="mx-auto max-w-[38em]">
-          <h2 className="font-serif text-[1.4em] font-semibold leading-snug text-ink dark:text-paper">
+          <h2 className="font-display text-[1.4em] font-semibold leading-snug text-ink dark:text-paper">
             {card.hook}
           </h2>
           <Markdown
             text={card.body}
-            className="mt-5 font-serif leading-[1.6] text-ink/90 dark:text-paper/90"
+            className="mt-5 font-reading leading-[1.6] text-ink/90 dark:text-paper/90"
           />
           {card.quote && (
-            <blockquote className="mt-5 border-l-2 border-brass pl-4 font-serif italic leading-[1.6] text-ink/90 dark:text-paper/90">
+            <blockquote className="mt-5 border-l-2 border-brass pl-4 font-reading italic leading-[1.6] text-ink/90 dark:text-paper/90">
               “{card.quote.text}”
               <footer className="mt-2 font-sans text-xs not-italic text-ink/70 dark:text-paper/70">
                 {card.quote.attribution}
@@ -52,7 +52,7 @@ export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
               {expanded && (
                 <Markdown
                   text={card.deeper}
-                  className="border-t border-ink/10 pt-4 font-serif leading-[1.6] text-ink/90 dark:border-paper/15 dark:text-paper/90"
+                  className="border-t border-ink/10 pt-4 font-reading leading-[1.6] text-ink/90 dark:border-paper/15 dark:text-paper/90"
                 />
               )}
               <button
@@ -62,7 +62,7 @@ export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
                   e.stopPropagation();
                   onToggleExpand();
                 }}
-                className="mt-2 min-h-[44px] font-sans text-sm font-semibold text-brass-dark dark:text-brass-light"
+                className="mt-2 min-h-[44px] font-sans text-sm font-semibold text-sea dark:text-sea-light"
               >
                 {expanded ? "Show less" : "Read more"}
               </button>

@@ -63,7 +63,7 @@ Weights are user-adjustable in Settings (they must always sum to 100; the UI nor
 | Local data          | IndexedDB via `dexie` (+ `dexie-react-hooks`)                                                    |
 | PWA / offline       | `vite-plugin-pwa` (Workbox)                                                                      |
 | Schema / validation | `zod`                                                                                            |
-| Fonts               | Self-hosted via `@fontsource` — body serif: **Literata** (or Source Serif 4); UI sans: **Inter** |
+| Fonts               | Self-hosted via `@fontsource` — headings: **Fraunces** (soft, warm serif); body and UI: **Nunito** (rounded sans) |
 | Tests               | `vitest` + `@testing-library/react`                                                              |
 | Lint / format       | ESLint + Prettier                                                                                |
 | Hosting             | Cloudflare Pages (auto-deploy on push to `main`)                                                 |
@@ -284,6 +284,19 @@ Like `queue.json`, it is not shipped to the app.
 
 ### Card interaction
 
+**Today tab** (the stepper/dots at the top show position, so navigation is horizontal):
+
+| Gesture     | Action                                                                  | Button equivalent                    |
+| ----------- | ----------------------------------------------------------------------- | ------------------------------------ |
+| Swipe left  | Next card                                                               | none on screen (keyboard ←/→, screen-reader buttons) |
+| Swipe right | Previous card                                                           | none on screen                       |
+| Swipe up    | Open the book (the deck the card comes from)                            | footer link "From … → Continue"      |
+| Tap card    | Expand/collapse `deeper` (if present)                                   | "Read more"                          |
+| Double-tap  | Save to Notebook (brief bookmark animation)                             | Bookmark icon                        |
+| —           | "Less like this" (records feedback, advances, Undo toast for 4s)        | Thumbs-down icon beside the bookmark |
+
+**Deck view** (Journey / Library / opened books) keeps vertical navigation:
+
 | Gesture    | Action                                                                 | Visible button equivalent |
 | ---------- | ---------------------------------------------------------------------- | ------------------------- |
 | Swipe up   | Next card                                                              | ↓ arrow                   |
@@ -292,14 +305,16 @@ Like `queue.json`, it is not shipped to the app.
 | Double-tap | Save to Notebook (brief bookmark animation)                            | Bookmark icon             |
 | Swipe left | "Less like this" (records feedback, advances, shows Undo toast for 4s) | ⋯ menu                    |
 
-- Every gesture must have a visible button alternative (accessibility).
+- Every gesture must have an accessible alternative: a visible control, or (Today swipes) keyboard
+  arrows and screen-reader-only buttons.
 - Card footer shows: pillar chip, pack title (tappable → opens deck), and `source.ref`.
 - Daily-mix cards from a book show "From _Deep Work_ → Continue the book".
 - Respect `prefers-reduced-motion` (crossfade instead of slide).
 
 ### Reading experience (this is the product — get it right)
 
-- Body text: serif, ~18–20px base, line-height ~1.6, max ~38em measure, generous padding.
+- Body text: Nunito (rounded sans), ~18–20px base, line-height ~1.6, max ~38em measure, generous padding.
+- Hooks and headings: Fraunces, bold.
 - Hook in larger, bolder type at the top of the card.
 - Card fits on one screen; `deeper` scrolls inside the card.
 - Dark mode is first-class (early mornings on trains), not an afterthought.
@@ -307,8 +322,9 @@ Like `queue.json`, it is not shipped to the app.
 
 ### Visual identity
 
-- Calm, nautical, understated. Palette: deep ink navy, warm off-white "paper",
-  one accent (brass/amber). Each pillar gets a muted chip color; never loud.
+- Friendly and warm, still nautical ("sunlit harbour"), never stern. Palette: soft harbour
+  navy (text, and the dark-mode background), warm cream "paper", sea blue for actions and
+  links, sunny amber as the highlight. Each pillar gets a soft pastel chip colour.
 - App icon: a simple, original abstract keel/hull mark (draw an SVG; no stock icons).
 - No emojis in UI chrome.
 

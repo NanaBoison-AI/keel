@@ -40,12 +40,12 @@ export function Notebook() {
       </div>
 
       {saves.length === 0 && (
-        <p className="mt-10 text-center font-serif text-ink/70 dark:text-paper/70">
+        <p className="mt-10 text-center font-reading text-ink/70 dark:text-paper/70">
           Nothing saved yet. Double-tap a card, or tap the bookmark, to keep it here.
         </p>
       )}
       {saves.length > 0 && shown.length === 0 && (
-        <p className="mt-10 text-center font-serif text-ink/70 dark:text-paper/70">
+        <p className="mt-10 text-center font-reading text-ink/70 dark:text-paper/70">
           Nothing saved in that pillar.
         </p>
       )}
@@ -66,15 +66,15 @@ export function Notebook() {
                     aria-expanded={isOpen}
                   >
                     <PillarChip pillar={s.snapshot.pillar} />
-                    <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">
+                    <h3 className="mt-2 font-display text-lg font-semibold leading-snug">
                       {s.snapshot.hook}
                     </h3>
                   </button>
                   {isOpen && (
                     <div className="mt-3">
-                      <Markdown text={s.snapshot.body} className="font-serif leading-[1.6]" />
+                      <Markdown text={s.snapshot.body} className="font-reading leading-[1.6]" />
                       {s.snapshot.quote && (
-                        <blockquote className="mt-3 border-l-2 border-brass pl-3 font-serif italic">
+                        <blockquote className="mt-3 border-l-2 border-brass pl-3 font-reading italic">
                           “{s.snapshot.quote.text}”
                           <footer className="mt-1 font-sans text-xs not-italic text-ink/70 dark:text-paper/70">
                             {s.snapshot.quote.attribution}
@@ -84,7 +84,7 @@ export function Notebook() {
                       {s.snapshot.deeper && (
                         <Markdown
                           text={s.snapshot.deeper}
-                          className="mt-3 border-t border-ink/10 pt-3 font-serif leading-[1.6] dark:border-paper/15"
+                          className="mt-3 border-t border-ink/10 pt-3 font-reading leading-[1.6] dark:border-paper/15"
                         />
                       )}
                       {s.snapshot.pillar === "mentor" && (

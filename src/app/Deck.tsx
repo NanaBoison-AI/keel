@@ -114,7 +114,7 @@ export function Deck() {
   if (!pack) {
     return (
       <div className="screen text-center">
-        <p className="mt-16 font-serif text-lg">That deck isn't available.</p>
+        <p className="mt-16 font-reading text-lg">That deck isn't available.</p>
         <Link to="/library" className="btn btn-secondary mt-6">
           Back to Library
         </Link>
@@ -126,8 +126,8 @@ export function Deck() {
   if (finished) {
     return (
       <div className="flex h-full flex-col items-center justify-center px-8 text-center">
-        <h2 className="font-serif text-3xl font-semibold">Deck complete.</h2>
-        <p className="mt-3 max-w-sm font-serif text-ink/70 dark:text-paper/70">
+        <h2 className="font-display text-3xl font-semibold">Deck complete.</h2>
+        <p className="mt-3 max-w-sm font-reading text-ink/70 dark:text-paper/70">
           You've finished <em>{pack.title}</em>. The recap is saved in your reading history; save
           any card to keep it in your Notebook.
         </p>

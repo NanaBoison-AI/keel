@@ -5,13 +5,16 @@ export default {
   theme: {
     extend: {
       colors: {
-        ink: { DEFAULT: "#0e1b2c", 800: "#14263b", 700: "#1d3550", 600: "#2b4868" },
-        paper: { DEFAULT: "#f6f1e7", dim: "#ebe4d4" },
-        brass: { DEFAULT: "#b8893a", light: "#d4a85a", dark: "#7f5c1a" },
+        // Sunlit harbour: friendly navy (also the dark background), warm cream, sea blue, sunny amber.
+        ink: { DEFAULT: "#18304a", 800: "#21405f", 700: "#2c5276", 600: "#3a6791" },
+        paper: { DEFAULT: "#fff8ec", dim: "#f7ebd5" },
+        sea: { DEFAULT: "#167b96", dark: "#0f6179", light: "#7fd0e6" },
+        brass: { DEFAULT: "#f2a03d", light: "#ffc873", dark: "#a3560a" },
       },
       fontFamily: {
-        serif: ["Literata", "Georgia", "serif"],
-        sans: ["Inter", "system-ui", "sans-serif"],
+        display: ["Fraunces", "Georgia", "serif"],
+        reading: ["Nunito", "system-ui", "sans-serif"],
+        sans: ["Nunito", "system-ui", "sans-serif"],
       },
     },
   },
