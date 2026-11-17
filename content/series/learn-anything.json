@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "learn-anything",
+  "type": "series",
+  "title": "How to learn anything",
+  "pillar": "mentor",
+  "origin": "ai",
+  "publicDomain": false,
+  "summary": "Learning is a skill in itself. Here is how to get good at it, so every other skill comes faster.",
+  "estMinutes": 7,
+  "version": 1,
+  "createdAt": "2026-11-14",
+  "updatedAt": "2026-11-14",
+  "cards": [
+    {
+      "id": "learn-anything-01",
+      "pillar": "mentor",
+      "format": "hook",
+      "hook": "A lot of men stop learning on purpose the day they leave school. That is the most expensive habit you can have.",
+      "body": "If I could teach you only one skill, it would be this one, because it is the skill that makes all the others possible. A new job, a trade, a language, how to raise a teenager, how to fix the thing that just broke: they all start with *learning*. And almost nobody was ever taught how to do that well. School taught you to sit through lessons. This is something different: a handful of methods that make learning faster, and stickier.",
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-02",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Rereading your notes feels like studying. It mostly isn't.",
+      "body": "When you reread something, it starts to look familiar, and familiarity feels like knowing. It is a trick of the mind. The real test is whether you can pull the idea out of your own head with the page closed.\n\nSo flip it around. Read a section, then shut the book and try to say or write what it said. Struggle a little. Then check. That effort of *retrieving* is the part that builds memory. It feels slower and clumsier than rereading. That's exactly why it works.",
+      "deeper": "I want to be honest about why people avoid this: it is uncomfortable. When you test yourself, you find out how much you didn't actually get, and that stings. Rereading protects you from that sting, which is why it is so popular and so weak.\n\nYou can use this almost anywhere. After a meeting, before you check your notes, jot down the three decisions that were made. After watching a how-to video, try to list the steps before you pick up the tool. After reading a chapter, explain it out loud on the walk to the station. The gaps you discover are not a failure. They are a map of exactly what to look at again.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-03",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Forgetting isn't the enemy of learning. Used well, it's part of the process.",
+      "body": "Cramming works for tomorrow and fails for next month. What lasts is coming back to something just as it starts to slip away: once the next day, again a few days later, again a couple of weeks after that.\n\nEach time you recall something you had half-forgotten, it settles in deeper and the gap before you need to review it again grows longer. This is called spacing, and it is one of the most reliable findings about how memory works. It costs you no extra hours. It just spreads the same hours out.",
+      "deeper": "The practical version is simple. When you learn something worth keeping, decide when you will next test yourself on it, and put it somewhere you'll see: a calendar note, a few flashcards, a line on tomorrow's to-do list. Short and frequent beats long and rare.\n\nThe trade-off: spacing feels less satisfying than a big session where everything seems fresh. You will feel slightly rusty each time you come back. That rustiness is the signal that the review is doing its job, not a sign you're failing.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-04",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Ten years of doing something can be one year repeated ten times.",
+      "body": "Experience on its own doesn't make you better. Plenty of people drive for decades and never get more skilful. They reached \"good enough\" and stopped stretching.\n\nReal improvement comes from practice aimed at the edge of what you can do: you pick the specific part you're weak at, work on it on purpose, and get quick, honest feedback on whether it's improving. It is focused, a bit tiring, and rarely fun in the moment. An hour of that is worth many hours of comfortable repetition.",
+      "deeper": "Three questions turn ordinary practice into the useful kind:\n\n- **What exactly am I bad at?** Not \"cooking\" but \"getting the timing right so everything is ready at once.\"\n- **How will I know if I'm improving?** A timer, a recording, a person who will tell you the truth, a result you can measure.\n- **Is this hard right now?** If it feels easy, you are rehearsing, not improving.\n\nThis won't always be possible. Some things have no clear feedback, and you will sometimes practise the wrong thing for a while. That's fine. Even rough aim beats none.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-05",
+      "pillar": "mentor",
+      "format": "story",
+      "hook": "Two men buy the same guitar on the same day. A year later, only one of them can really play.",
+      "body": "Imagine them. The first man practises every evening for an hour. He plays the four songs he already knows, start to finish, because it sounds good and feels good. The second practises for twenty minutes. He plays the one chord change he keeps fumbling, slowly, over and over, until it's clean. Then he moves to the next thing he fumbles.\n\nThe first man put in three times the hours. The second man got better. Comfort is pleasant, but it's not progress.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-06",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "There is no way to be good at something without first being bad at it in public.",
+      "body": "Every skill has an ugly early stretch: you're slow, you make obvious mistakes, and someone more experienced can see it. Many adults quit right there. Not because the skill is too hard, but because being visibly bad feels like a threat to who they think they are.\n\nI'd ask you to expect that stretch and plan for it. Tell yourself in advance: the first weeks will be clumsy, and that's the entry fee. It isn't evidence that you lack talent. It's evidence that you've started.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-07",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "If you want to find out whether you really understand something, try explaining it to a twelve-year-old.",
+      "body": "Explaining exposes every gap you were quietly stepping around. You'll hit a moment where you say \"and then it just sort of…\" and realise you don't actually know that step. That moment is gold: it shows you exactly what to go back and learn.\n\nYou don't need a real student. Explain it to your partner, your kid, a friend, or an empty room. Write a short note as if teaching a beginner. Plain words only; jargon is often where confusion hides.",
+      "deeper": "There's a second gift here. Teaching what you're learning to the people around you makes you better company, too. A father who says \"I've been learning how engines cool themselves, want to see?\" teaches his kids something bigger than engines: that grown men still learn, and enjoy it.\n\nOne caution: explaining something smoothly is not the same as being able to *do* it. For practical skills, the real test is still your hands. Use explaining to check your understanding, and practice to check your ability.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-08",
+      "pillar": "mentor",
+      "format": "challenge",
+      "hook": "Pick one thing you'd like to know properly by spring. Start learning it the right way tonight.",
+      "body": "Choose something small and real: a skill for work, a repair you keep paying for, a topic you'd like to talk about with confidence.\n\n1. Spend 20 minutes on it today.\n2. Close everything and write down what you remember. Check it.\n3. Tomorrow, before looking anything up, recall it again. Do it once more at the end of the week.\n4. Find the one part you're worst at and spend your next session only on that.\n5. Explain it to someone within seven days.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "learn-anything-09",
+      "pillar": "mentor",
+      "format": "recap",
+      "hook": "Three things to take with you, so learning stops being luck and becomes a skill.",
+      "body": "1. **Recall, don't reread.** Close the book and pull the idea out of your own head, then come back to it just as it starts to fade.\n2. **Practise at the edge.** Work on the specific part you're bad at, with honest feedback. Comfortable repetition isn't improvement.\n3. **Be bad first, and explain what you learn.** The clumsy stretch is the entry fee, and teaching shows you exactly where your gaps are.",
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
