@@ -5,6 +5,7 @@ import { CardFace, type CardView } from "./Card";
 import { ArrowUp, Bookmark, ThumbDown } from "./icons";
 import { useReducedMotion, useSettingsState } from "../lib/hooks";
 import { useKeepAwake } from "../lib/wakelock";
+import { chainedSwipe } from "../lib/swipe";
 
 export interface StackItem {
   key: string;
@@ -60,21 +61,14 @@ export function CardStack({
   const expanded = !!item && expandedKey === item.key;
   const [dir, setDir] = useState(1);
   const [flash, setFlash] = useState(0);
-  const [scrollable, setScrollable] = useState(false);
   const scrollEl = useRef<HTMLDivElement | null>(null);
   const surfaceEl = useRef<HTMLDivElement | null>(null);
+  // While one card slides out and the next slides in, both are mounted. React clears the leaving
+  // card's ref when it unmounts, which must not wipe out the entering card's: only ever set it.
+  const setScrollEl = useCallback((el: HTMLDivElement | null) => {
+    if (el) scrollEl.current = el;
+  }, []);
   const tapTimer = useRef<ReturnType<typeof setTimeout>>(undefined);
-
-  // Track whether the card content scrolls (then vertical swipes belong to scrolling).
-  useEffect(() => {
-    const el = scrollEl.current;
-    if (!el) return;
-    const measure = () => setScrollable(el.scrollHeight > el.clientHeight + 2);
-    measure();
-    const ro = new ResizeObserver(measure);
-    ro.observe(el);
-    return () => ro.disconnect();
-  }, [index, expanded, item?.key]);
 
   const next = useCallback(() => {
     setDir(1);
@@ -131,57 +125,90 @@ export function CardStack({
         return;
       }
       if (!last) return;
+      // Touch: horizontal swipes are handled here; vertical ones by the touch handler below, which
+      // knows whether the card text is scrolling. A mouse has no native scrolling, so it is handled here.
+      const isTouch = "touches" in event || "changedTouches" in event;
       const horizontal = Math.abs(mx) > Math.abs(my);
       const swipedLeft = mx < -SWIPE_DIST || (mx < -30 && vx > 0.6);
       const swipedRight = mx > SWIPE_DIST || (mx > 30 && vx > 0.6);
       const swipedUp = my < -SWIPE_DIST || (my < -30 && vy > 0.6);
       const swipedDown = my > SWIPE_DIST || (my > 30 && vy > 0.6);
-      if (today) {
-        if (horizontal) {
+      if (horizontal) {
+        if (today) {
           if (swipedLeft) next();
           else if (swipedRight) prev();
-        } else if (!scrollable && swipedUp) openBook();
-      } else if (horizontal) {
-        if (swipedLeft) less();
-      } else if (!scrollable) {
-        if (swipedUp) next();
+        } else if (swipedLeft) less();
+      } else if (!isTouch) {
+        if (today) {
+          if (swipedUp) openBook();
+        } else if (swipedUp) next();
         else if (swipedDown) prev();
       }
     },
-    { filterTaps: true, axis: scrollable ? "x" : undefined, pointer: { touch: true } },
+    { filterTaps: true, pointer: { touch: true } },
   );
 
-  // When the card scrolls, vertical swipes scroll it natively. A swipe that begins with the text
-  // already at its edge chains to next/previous card.
+  // Vertical touch swipes. The browser scrolls the card text natively (touch-action: pan-y); this
+  // watches the same swipe. If it took the text to its end and the finger kept going, it moves on to
+  // the next card (Today: opens the book). On a card that does not scroll, any swipe counts. It
+  // reads the scroll position at the time of the swipe, so there is no "does it scroll?" guess to
+  // go stale (fonts loading, text size changes).
   useEffect(() => {
     const el = surfaceEl.current;
-    if (!el || !scrollable) return;
+    if (!el) return;
+    let tracking = false;
+    let startX = 0;
     let startY = 0;
-    let edge: "top" | "bottom" | null = null;
+    let lastX = 0;
+    let lastY = 0;
+    let startT = 0;
+    let lastT = 0;
+    let startTop = 0;
     const onStart = (e: TouchEvent) => {
       const s = scrollEl.current;
-      edge = null;
-      if (!s || e.touches.length !== 1) return;
-      startY = e.touches[0].clientY;
-      if (s.scrollTop <= 1) edge = "top";
-      else if (s.scrollTop + s.clientHeight >= s.scrollHeight - 2) edge = "bottom";
+      tracking = !!s && e.touches.length === 1;
+      if (!tracking || !s) return;
+      startX = lastX = e.touches[0].clientX;
+      startY = lastY = e.touches[0].clientY;
+      startT = lastT = e.timeStamp;
+      startTop = s.scrollTop;
     };
-    const onEnd = (e: TouchEvent) => {
-      if (!edge) return;
-      const dy = e.changedTouches[0].clientY - startY;
-      if (today) {
-        if (edge === "bottom" && dy < -SWIPE_DIST) openBook();
-      } else if (edge === "bottom" && dy < -SWIPE_DIST) next();
-      else if (edge === "top" && dy > SWIPE_DIST) prev();
-      edge = null;
+    const onMove = (e: TouchEvent) => {
+      if (!tracking) return;
+      lastX = e.touches[0].clientX;
+      lastY = e.touches[0].clientY;
+      lastT = e.timeStamp;
     };
+    const onEnd = () => {
+      const s = scrollEl.current;
+      if (!tracking || !s) return;
+      tracking = false;
+      const dy = lastY - startY;
+      if (Math.abs(lastX - startX) > Math.abs(dy)) return; // a sideways swipe
+      const result = chainedSwipe({
+        startTop,
+        endTop: s.scrollTop,
+        max: s.scrollHeight - s.clientHeight,
+        dy,
+        fast: Math.abs(dy) / Math.max(1, lastT - startT) > 0.6,
+      });
+      if (result === "forward") {
+        if (today) openBook();
+        else next();
+      } else if (result === "back" && !today) prev();
+    };
+    // touchcancel: some browsers cancel the touch once native scrolling takes over.
     el.addEventListener("touchstart", onStart, { passive: true });
+    el.addEventListener("touchmove", onMove, { passive: true });
     el.addEventListener("touchend", onEnd, { passive: true });
+    el.addEventListener("touchcancel", onEnd, { passive: true });
     return () => {
       el.removeEventListener("touchstart", onStart);
+      el.removeEventListener("touchmove", onMove);
       el.removeEventListener("touchend", onEnd);
+      el.removeEventListener("touchcancel", onEnd);
     };
-  }, [scrollable, today, next, prev, openBook]);
+  }, [today, next, prev, openBook]);
 
   // use-gesture swallows clicks that weren't clean taps; let real controls through.
   const { onClickCapture, ...gestureRest } = bind();
@@ -227,7 +254,7 @@ export function CardStack({
         ref={surfaceEl}
         {...gestureProps}
         className="stack-surface relative min-h-0 flex-1 overflow-hidden"
-        style={{ touchAction: scrollable ? "pan-y" : "none" }}
+        style={{ touchAction: "pan-y" }}
       >
         <AnimatePresence mode="popLayout" custom={dir} initial={false}>
           <motion.div
@@ -244,7 +271,7 @@ export function CardStack({
               view={item.view}
               expanded={expanded}
               onToggleExpand={toggleExpand}
-              scrollRef={scrollEl}
+              scrollRef={setScrollEl}
             />
           </motion.div>
         </AnimatePresence>

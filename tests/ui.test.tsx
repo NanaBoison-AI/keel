@@ -262,3 +262,23 @@ describe("CardStack in deck mode", () => {
     expect(screen.queryByText("Open the book")).not.toBeInTheDocument();
   });
 });
+
+describe("vertical touch swipes keep working after the first card change", () => {
+  const swipeUp = (surface: Element) => {
+    fireEvent.touchStart(surface, { touches: [{ clientX: 200, clientY: 400 }] });
+    fireEvent.touchMove(surface, { touches: [{ clientX: 200, clientY: 250 }] });
+    fireEvent.touchMove(surface, { touches: [{ clientX: 200, clientY: 150 }] });
+    fireEvent.touchEnd(surface, { changedTouches: [{ clientX: 200, clientY: 150 }] });
+  };
+  it("swipe up moves to the next card, then to the one after (the leaving card must not clear the scroll ref)", async () => {
+    const { container } = render(<Harness />);
+    const surface = container.querySelector(".stack-surface")!;
+    expect(screen.getByText("Hook number 0")).toBeInTheDocument();
+    swipeUp(surface);
+    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
+    // let the outgoing card finish its exit animation and unmount
+    await waitFor(() => expect(screen.queryByText("Hook number 0")).not.toBeInTheDocument());
+    swipeUp(surface);
+    await waitFor(() => expect(screen.getByText("Hook number 2")).toBeInTheDocument());
+  });
+});
