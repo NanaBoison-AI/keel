@@ -15,7 +15,7 @@ export function Dots({ total, index }: { total: number; index: number }) {
             i === index
               ? "w-5 bg-brass"
               : i < index
-                ? "w-1.5 bg-ink/60 dark:bg-paper/60"
+                ? "w-1.5 bg-sea/60 dark:bg-paper/60"
                 : "w-1.5 bg-ink/20 dark:bg-paper/20"
           }`}
         />

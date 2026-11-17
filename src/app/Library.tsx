@@ -32,7 +32,7 @@ export function FilterChip({
       aria-pressed={active}
       className={`min-h-[40px] shrink-0 rounded-full border px-4 font-sans text-sm ${
         active
-          ? "border-ink bg-ink text-paper dark:border-brass dark:bg-brass dark:text-ink"
+          ? "border-sea bg-sea text-white dark:border-brass dark:bg-brass dark:text-ink"
           : "border-ink/20 text-ink/80 dark:border-paper/25 dark:text-paper/80"
       }`}
     >
@@ -82,7 +82,7 @@ export function Library() {
       </div>
 
       {shown.length === 0 && (
-        <p className="mt-8 text-center font-serif text-ink/70 dark:text-paper/70">
+        <p className="mt-8 text-center font-reading text-ink/70 dark:text-paper/70">
           {packs.length === 0
             ? "Nothing downloaded yet. Open Keel online once to fetch the reading."
             : "Nothing matches those filters."}
@@ -102,12 +102,12 @@ export function Library() {
                     {p.origin === "ai" ? "Lesson" : p.type}
                   </span>
                   {p.publicDomain && (
-                    <span className="rounded-full border border-brass/50 px-2 py-0.5 font-sans text-[11px] text-brass-dark dark:text-brass-light">
+                    <span className="rounded-full border border-brass/50 px-2 py-0.5 font-sans text-[11px] text-sea dark:text-sea-light">
                       Public domain
                     </span>
                   )}
                 </div>
-                <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">{p.title}</h3>
+                <h3 className="mt-2 font-display text-lg font-semibold leading-snug">{p.title}</h3>
                 <p className="font-sans text-xs text-ink/70 dark:text-paper/70">
                   {[
                     p.origin === "ai" ? "Written by Claude" : p.author,
@@ -117,7 +117,7 @@ export function Library() {
                     .filter(Boolean)
                     .join(" · ")}
                 </p>
-                <p className="mt-1 font-serif text-sm text-ink/75 dark:text-paper/75">
+                <p className="mt-1 font-reading text-sm text-ink/75 dark:text-paper/75">
                   {p.summary}
                 </p>
                 {value > 0 && <Bar value={value} className="mt-3" />}

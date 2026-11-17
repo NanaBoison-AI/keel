@@ -83,6 +83,8 @@ export interface Settings {
   textSize: number; // 0–3
   theme: ThemeSetting;
   lastSync: number;
+  /** True once the reader has opened a book with a swipe up (stops the first-card hint). */
+  hintOpenBook: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -91,6 +93,7 @@ export const DEFAULT_SETTINGS: Settings = {
   textSize: 1,
   theme: "system",
   lastSync: 0,
+  hintOpenBook: false,
 };
 
 /** Merge stored rows over the defaults, migrating weights saved before the newest pillar existed. */

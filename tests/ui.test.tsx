@@ -153,3 +153,102 @@ describe("Mentor badge", () => {
     expect(screen.getByText("Book 2, §1")).toBeInTheDocument();
   });
 });
+
+describe("CardStack in Today mode", () => {
+  function TodayHarness({
+    onLess,
+    onOpenBook,
+  }: {
+    onLess?: (k: string) => void;
+    onOpenBook?: (k: string) => void;
+  }) {
+    const [i, setI] = useState(0);
+    return (
+      <ToastProvider>
+        <MemoryRouter>
+          <div style={{ height: 600 }}>
+            <CardStack
+              mode="today"
+              items={items}
+              index={i}
+              onIndexChange={setI}
+              onFinish={() => {}}
+              isSaved={() => false}
+              onToggleSave={() => {}}
+              onLess={onLess ?? (() => {})}
+              onOpenBook={onOpenBook}
+            />
+          </div>
+        </MemoryRouter>
+      </ToastProvider>
+    );
+  }
+
+  it("shows thumbs-down and bookmark, with no ⋯ menu", () => {
+    render(<TodayHarness />);
+    expect(screen.getByLabelText("Less like this")).toBeInTheDocument();
+    expect(screen.getByLabelText("Save to Notebook")).toBeInTheDocument();
+    expect(screen.queryByLabelText("More options")).not.toBeInTheDocument();
+  });
+
+  it("thumbs-down records 'less' and advances", async () => {
+    const onLess = vi.fn();
+    render(<TodayHarness onLess={onLess} />);
+    await userEvent.click(screen.getByLabelText("Less like this"));
+    expect(onLess).toHaveBeenCalledWith("c0");
+    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
+  });
+
+  it("keeps screen-reader/keyboard access to next, previous and the book", async () => {
+    const onOpenBook = vi.fn();
+    render(<TodayHarness onOpenBook={onOpenBook} />);
+    await userEvent.click(screen.getByRole("button", { name: "Next card" }));
+    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
+    await userEvent.click(screen.getByRole("button", { name: "Previous card" }));
+    await waitFor(() => expect(screen.getByText("Hook number 0")).toBeInTheDocument());
+    await userEvent.click(screen.getByRole("button", { name: "Open the book" }));
+    expect(onOpenBook).toHaveBeenCalledWith("c0");
+  });
+
+  it("arrow keys move left and right", async () => {
+    render(<TodayHarness />);
+    fireEvent.keyDown(window, { key: "ArrowRight" });
+    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
+    fireEvent.keyDown(window, { key: "ArrowLeft" });
+    await waitFor(() => expect(screen.getByText("Hook number 0")).toBeInTheDocument());
+  });
+});
+
+describe("Today swipe-up hint", () => {
+  const renderStack = (showOpenHint: boolean, mode: "today" | "deck" = "today") =>
+    render(
+      <ToastProvider>
+        <MemoryRouter>
+          <div style={{ height: 600 }}>
+            <CardStack
+              mode={mode}
+              showOpenHint={showOpenHint}
+              items={items}
+              index={0}
+              onIndexChange={() => {}}
+              onFinish={() => {}}
+              isSaved={() => false}
+              onToggleSave={() => {}}
+              onLess={() => {}}
+            />
+          </div>
+        </MemoryRouter>
+      </ToastProvider>,
+    );
+  it("shows the hint when asked", () => {
+    renderStack(true);
+    expect(screen.getByText("Swipe up to read the book")).toBeInTheDocument();
+  });
+  it("hides it otherwise, and never in deck mode", () => {
+    renderStack(false);
+    expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
+    cleanup();
+    renderStack(true, "deck");
+    expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
+  });
+});

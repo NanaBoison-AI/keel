@@ -83,3 +83,10 @@ export const KeelMark = (p: P) => (
     <path d="M32 8v48" stroke="currentColor" strokeWidth="3.5" strokeLinecap="round" />
   </svg>
 );
+
+export const ThumbDown = (p: P) => (
+  <svg {...base} {...p}>
+    <path d="M17 14V4M17 4H7.2a2 2 0 0 0-1.97 1.66l-1.2 7A2 2 0 0 0 6 15h5l-.9 3.6A2 2 0 0 0 12.4 21l.1-.1L17 14" />
+    <path d="M17 4h2.5A1.5 1.5 0 0 1 21 5.5v7a1.5 1.5 0 0 1-1.5 1.5H17" />
+  </svg>
+);

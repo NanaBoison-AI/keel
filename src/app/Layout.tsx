@@ -45,7 +45,7 @@ export function Layout() {
       <header className="flex items-center justify-between px-5 py-2">
         <Link
           to="/"
-          className="flex min-h-[44px] items-center gap-2 font-serif text-lg font-semibold"
+          className="flex min-h-[44px] items-center gap-2 font-display text-lg font-semibold"
           aria-label="Keel, Today"
         >
           <KeelMark className="text-brass" width={22} height={22} />

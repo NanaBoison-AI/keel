@@ -2,7 +2,7 @@ import { useCallback, useEffect, useRef, useState } from "react";
 import { AnimatePresence, motion } from "motion/react";
 import { useDrag } from "@use-gesture/react";
 import { CardFace, type CardView } from "./Card";
-import { ArrowDown, ArrowUp, Bookmark, More } from "./icons";
+import { ArrowDown, ArrowUp, Bookmark, More, ThumbDown } from "./icons";
 import { useReducedMotion } from "../lib/hooks";
 
 export interface StackItem {
@@ -19,8 +19,17 @@ interface Props {
   isSaved: (key: string) => boolean;
   onToggleSave: (key: string) => void;
   onExpand?: (key: string) => void;
-  /** Left swipe / menu. Stack advances after calling. */
+  /** "Less like this". The stack advances after calling. */
   onLess: (key: string) => void;
+  /**
+   * "today": swipe left/right to move, swipe up opens the book (onOpenBook), thumbs-down button.
+   * "deck": swipe up/down to move, swipe left is "less like this", ⋯ menu.
+   */
+  mode?: "today" | "deck";
+  /** Today mode: swipe up on a card. */
+  onOpenBook?: (key: string) => void;
+  /** Today mode: show the "swipe up" hint under the card (first card only). */
+  showOpenHint?: boolean;
   /** Wrapper content shown above the card (progress dots, counters). */
   header?: React.ReactNode;
 }
@@ -36,8 +45,12 @@ export function CardStack({
   onToggleSave,
   onExpand,
   onLess,
+  mode = "deck",
+  onOpenBook,
+  showOpenHint = false,
   header,
 }: Props) {
+  const today = mode === "today";
   const reduced = useReducedMotion();
   const item = items[index];
   const [expandedKey, setExpandedKey] = useState<string | null>(null);
@@ -92,6 +105,10 @@ export function CardStack({
     next();
   }, [item, onLess, next]);
 
+  const openBook = useCallback(() => {
+    if (item) onOpenBook?.(item.key);
+  }, [item, onOpenBook]);
+
   useEffect(() => () => clearTimeout(tapTimer.current), []);
 
   const bind = useDrag(
@@ -114,11 +131,20 @@ export function CardStack({
       }
       if (!last) return;
       const horizontal = Math.abs(mx) > Math.abs(my);
-      if (horizontal) {
-        if (mx < -SWIPE_DIST || (mx < -30 && vx > 0.6)) less();
+      const swipedLeft = mx < -SWIPE_DIST || (mx < -30 && vx > 0.6);
+      const swipedRight = mx > SWIPE_DIST || (mx > 30 && vx > 0.6);
+      const swipedUp = my < -SWIPE_DIST || (my < -30 && vy > 0.6);
+      const swipedDown = my > SWIPE_DIST || (my > 30 && vy > 0.6);
+      if (today) {
+        if (horizontal) {
+          if (swipedLeft) next();
+          else if (swipedRight) prev();
+        } else if (!scrollable && swipedUp) openBook();
+      } else if (horizontal) {
+        if (swipedLeft) less();
       } else if (!scrollable) {
-        if (my < -SWIPE_DIST || (my < -30 && vy > 0.6)) next();
-        else if (my > SWIPE_DIST || (my > 30 && vy > 0.6)) prev();
+        if (swipedUp) next();
+        else if (swipedDown) prev();
       }
     },
     { filterTaps: true, axis: scrollable ? "x" : undefined, pointer: { touch: true } },
@@ -142,7 +168,9 @@ export function CardStack({
     const onEnd = (e: TouchEvent) => {
       if (!edge) return;
       const dy = e.changedTouches[0].clientY - startY;
-      if (edge === "bottom" && dy < -SWIPE_DIST) next();
+      if (today) {
+        if (edge === "bottom" && dy < -SWIPE_DIST) openBook();
+      } else if (edge === "bottom" && dy < -SWIPE_DIST) next();
       else if (edge === "top" && dy > SWIPE_DIST) prev();
       edge = null;
     };
@@ -152,7 +180,7 @@ export function CardStack({
       el.removeEventListener("touchstart", onStart);
       el.removeEventListener("touchend", onEnd);
     };
-  }, [scrollable, next, prev]);
+  }, [scrollable, today, next, prev, openBook]);
 
   // use-gesture swallows clicks that weren't clean taps; let real controls through.
   const { onClickCapture, ...gestureRest } = bind();
@@ -179,11 +207,17 @@ export function CardStack({
 
   const variants = reduced
     ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
-    : {
-        initial: (d: number) => ({ y: d > 0 ? "40%" : "-40%", opacity: 0 }),
-        animate: { y: 0, opacity: 1 },
-        exit: (d: number) => ({ y: d > 0 ? "-30%" : "30%", opacity: 0 }),
-      };
+    : today
+      ? {
+          initial: (d: number) => ({ x: d > 0 ? "35%" : "-35%", opacity: 0 }),
+          animate: { x: 0, opacity: 1 },
+          exit: (d: number) => ({ x: d > 0 ? "-30%" : "30%", opacity: 0 }),
+        }
+      : {
+          initial: (d: number) => ({ y: d > 0 ? "40%" : "-40%", opacity: 0 }),
+          animate: { y: 0, opacity: 1 },
+          exit: (d: number) => ({ y: d > 0 ? "-30%" : "30%", opacity: 0 }),
+        };
 
   return (
     <div className="flex h-full min-h-0 flex-col">
@@ -229,65 +263,117 @@ export function CardStack({
         </AnimatePresence>
       </div>
 
+      {today && showOpenHint && (
+        <p
+          className="flex select-none items-center justify-center gap-1.5 pb-1 font-sans text-sm font-semibold text-sea dark:text-sea-light"
+          data-testid="open-hint"
+        >
+          <motion.span
+            aria-hidden
+            animate={reduced ? undefined : { y: [0, -4, 0] }}
+            transition={{ duration: 1.6, repeat: Infinity, ease: "easeInOut" }}
+            className="inline-flex"
+          >
+            <ArrowUp width={18} height={18} />
+          </motion.span>
+          Swipe up to read the book
+        </p>
+      )}
+
       {/* Controls live in the bottom third for one-handed use. */}
-      <div
-        className="relative flex select-none items-center justify-between gap-2 px-4 pb-2 pt-1 font-sans"
-        role="toolbar"
-        aria-label="Card controls"
-      >
-        <div className="flex items-center gap-1">
-          <button className="ctl" onClick={prev} disabled={index === 0} aria-label="Previous card">
-            <ArrowUp />
+      {today ? (
+        <div
+          className="relative flex select-none items-center justify-center gap-8 px-4 pb-3 pt-1 font-sans"
+          role="toolbar"
+          aria-label="Card controls"
+        >
+          <button className="ctl ctl-lg" onClick={less} aria-label="Less like this">
+            <ThumbDown width={28} height={28} />
           </button>
           <button
-            className="ctl"
-            onClick={() => setMenuKey(menu ? null : item.key)}
-            aria-label="More options"
-            aria-expanded={menu}
+            className={`ctl ctl-lg ${isSaved(item.key) ? "text-brass" : ""}`}
+            onClick={save}
+            aria-label={isSaved(item.key) ? "Remove from Notebook" : "Save to Notebook"}
+            aria-pressed={isSaved(item.key)}
           >
-            <More />
+            <Bookmark width={28} height={28} filled={isSaved(item.key)} />
+          </button>
+          {/* Swipes have no on-screen buttons; these keep keyboard and screen-reader access. */}
+          <button className="sr-only" onClick={prev} disabled={index === 0}>
+            Previous card
+          </button>
+          <button className="sr-only" onClick={next}>
+            {index >= items.length - 1 ? "Finish" : "Next card"}
+          </button>
+          <button className="sr-only" onClick={openBook}>
+            Open the book
           </button>
         </div>
-        <button
-          className={`ctl ${isSaved(item.key) ? "text-brass" : ""}`}
-          onClick={save}
-          aria-label={isSaved(item.key) ? "Remove from Notebook" : "Save to Notebook"}
-          aria-pressed={isSaved(item.key)}
+      ) : (
+        <div
+          className="relative flex select-none items-center justify-between gap-2 px-4 pb-2 pt-1 font-sans"
+          role="toolbar"
+          aria-label="Card controls"
         >
-          <Bookmark filled={isSaved(item.key)} />
-        </button>
-        <button
-          className="ctl ctl-primary"
-          onClick={next}
-          aria-label={index >= items.length - 1 ? "Finish" : "Next card"}
-        >
-          <ArrowDown />
-        </button>
-        {menu && (
-          <div className="absolute bottom-full left-4 mb-2 min-w-[200px] rounded-xl border border-ink/10 bg-paper p-1 shadow-lg dark:border-paper/15 dark:bg-ink-800">
+          <div className="flex items-center gap-1">
             <button
-              className="menu-item"
-              onClick={() => {
-                setMenuKey(null);
-                less();
-              }}
+              className="ctl"
+              onClick={prev}
+              disabled={index === 0}
+              aria-label="Previous card"
             >
-              Less like this
+              <ArrowUp />
             </button>
-            {item.view.card.deeper && (
+            <button
+              className="ctl"
+              onClick={() => setMenuKey(menu ? null : item.key)}
+              aria-label="More options"
+              aria-expanded={menu}
+            >
+              <More />
+            </button>
+          </div>
+          <button
+            className={`ctl ${isSaved(item.key) ? "text-brass" : ""}`}
+            onClick={save}
+            aria-label={isSaved(item.key) ? "Remove from Notebook" : "Save to Notebook"}
+            aria-pressed={isSaved(item.key)}
+          >
+            <Bookmark filled={isSaved(item.key)} />
+          </button>
+          <button
+            className="ctl ctl-primary"
+            onClick={next}
+            aria-label={index >= items.length - 1 ? "Finish" : "Next card"}
+          >
+            <ArrowDown />
+          </button>
+          {menu && (
+            <div className="absolute bottom-full left-4 mb-2 min-w-[200px] rounded-xl border border-ink/10 bg-paper p-1 shadow-lg dark:border-paper/15 dark:bg-ink-800">
               <button
                 className="menu-item"
                 onClick={() => {
                   setMenuKey(null);
-                  toggleExpand();
+                  less();
                 }}
               >
-                {expanded ? "Show less" : "Read more"}
+                Less like this
               </button>
-            )}
-          </div>
-        )}
-      </div>
+              {item.view.card.deeper && (
+                <button
+                  className="menu-item"
+                  onClick={() => {
+                    setMenuKey(null);
+                    toggleExpand();
+                  }}
+                >
+                  {expanded ? "Show less" : "Read more"}
+                </button>
+              )}
+            </div>
+          )}
+        </div>
+      )}
     </div>
   );
 }

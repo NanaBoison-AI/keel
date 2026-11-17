@@ -27,17 +27,17 @@ function DeckRow({
           {pack.estMinutes} min
         </span>
       </div>
-      <h3 className="mt-2 font-serif text-lg font-semibold leading-snug">{pack.title}</h3>
+      <h3 className="mt-2 font-display text-lg font-semibold leading-snug">{pack.title}</h3>
       {(pack.origin === "ai" || pack.author) && (
         <p className="font-sans text-xs text-ink/70 dark:text-paper/70">
           {pack.origin === "ai" ? "Written by Claude" : pack.author}
         </p>
       )}
-      <p className="mt-1 font-serif text-sm text-ink/75 dark:text-paper/75">
+      <p className="mt-1 font-reading text-sm text-ink/75 dark:text-paper/75">
         {note ?? pack.summary}
       </p>
       {progress !== undefined && <Bar value={progress} className="mt-3" />}
-      <span className="mt-3 inline-block font-sans text-sm font-semibold text-brass-dark dark:text-brass-light">
+      <span className="mt-3 inline-block font-sans text-sm font-semibold text-sea dark:text-sea-light">
         {cta} →
       </span>
     </Link>
@@ -96,7 +96,7 @@ export function Journey() {
           progress={(current.cardIndex + 1) / currentPack.cards.length}
         />
       ) : (
-        <p className="font-serif text-ink/70 dark:text-paper/70">
+        <p className="font-reading text-ink/70 dark:text-paper/70">
           Nothing in progress. Pick a deck below.
         </p>
       )}
@@ -105,7 +105,7 @@ export function Journey() {
       {briefing ? (
         <DeckRow pack={briefing} cta="Read the briefing" />
       ) : (
-        <div className="card-surface font-serif text-ink/75 dark:text-paper/75">
+        <div className="card-surface font-reading text-ink/75 dark:text-paper/75">
           Your first weekly briefing arrives Sunday evening.
         </div>
       )}
@@ -118,7 +118,7 @@ export function Journey() {
           ))}
         </div>
       ) : (
-        <p className="font-serif text-ink/70 dark:text-paper/70">
+        <p className="font-reading text-ink/70 dark:text-paper/70">
           You've started every deck available. New ones arrive regularly.
         </p>
       )}

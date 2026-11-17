@@ -27,7 +27,7 @@ export function useSettings(): Settings {
   return resolveSettings(rows ?? []);
 }
 
-const TEXT_SIZES = [17, 19, 21, 23];
+const TEXT_SIZES = [16, 18, 20, 22];
 
 /** Applies theme class, text size and theme-color meta. */
 export function useAppearance(settings: Settings) {
@@ -49,7 +49,7 @@ export function useAppearance(settings: Settings) {
     root.style.setProperty("--reader-size", `${TEXT_SIZES[settings.textSize] ?? 19}px`);
     document
       .querySelector('meta[name="theme-color"]')
-      ?.setAttribute("content", dark ? "#0e1b2c" : "#f6f1e7");
+      ?.setAttribute("content", dark ? "#18304a" : "#fff8ec");
   }, [dark, settings.textSize]);
 }
 

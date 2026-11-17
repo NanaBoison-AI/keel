@@ -40,14 +40,14 @@ export function Settings() {
     <div className="screen">
       <Link
         to="/"
-        className="mb-4 inline-flex min-h-[44px] items-center font-sans text-sm text-brass-dark dark:text-brass-light"
+        className="mb-4 inline-flex min-h-[44px] items-center font-sans text-sm text-sea dark:text-sea-light"
       >
         ← Back
       </Link>
-      <h1 className="mb-6 font-serif text-2xl font-semibold">Settings</h1>
+      <h1 className="mb-6 font-display text-2xl font-semibold">Settings</h1>
 
       <Section title="Pillar mix">
-        <p className="mb-3 font-serif text-sm text-ink/70 dark:text-paper/70">
+        <p className="mb-3 font-reading text-sm text-ink/70 dark:text-paper/70">
           Each pillar is set on its own: tap + or − and nothing else moves. The percentage is the
           share of your daily stack, worked out from all of them. Set a pillar to 0 to leave it out.
         </p>
@@ -135,7 +135,7 @@ export function Settings() {
             </button>
           </div>
         </div>
-        <p className="mt-1 font-serif text-xs text-ink/70 dark:text-paper/70">
+        <p className="mt-1 font-reading text-xs text-ink/70 dark:text-paper/70">
           Applies to tomorrow's stack.
         </p>
       </Section>
@@ -147,7 +147,7 @@ export function Settings() {
               key={label}
               aria-pressed={s.textSize === i}
               onClick={() => void setSetting("textSize", i)}
-              className={`min-h-[44px] flex-1 rounded-xl border font-serif ${s.textSize === i ? "border-brass bg-brass/15" : "border-ink/20 dark:border-paper/25"}`}
+              className={`min-h-[44px] flex-1 rounded-xl border font-reading ${s.textSize === i ? "border-brass bg-brass/15" : "border-ink/20 dark:border-paper/25"}`}
               style={{ fontSize: 14 + i * 2 }}
             >
               Aa
@@ -182,7 +182,7 @@ export function Settings() {
       </Section>
 
       <Section title="Backup">
-        <p className="mb-3 font-serif text-sm text-ink/70 dark:text-paper/70">
+        <p className="mb-3 font-reading text-sm text-ink/70 dark:text-paper/70">
           Your progress and Notebook live only on this device. Export them to a file, and restore
           them on another device.
         </p>
@@ -217,7 +217,7 @@ export function Settings() {
         )}
         {pending && (
           <div role="alertdialog" aria-label="Confirm restore" className="card-surface mt-4">
-            <p className="font-serif">
+            <p className="font-reading">
               Restoring replaces your current progress, saves and settings on this device. Continue?
             </p>
             <div className="mt-3 flex gap-3">
@@ -240,12 +240,12 @@ export function Settings() {
       </Section>
 
       <Section title="About">
-        <p className="font-serif text-sm text-ink/70 dark:text-paper/70">
+        <p className="font-reading text-sm text-ink/70 dark:text-paper/70">
           Keel is a quiet reading app. No accounts, no analytics, no trackers. Everything you do
           stays on this device. All reading is written ahead of time and shipped as plain files; the
           app makes no AI calls.
         </p>
-        <p className="mt-3 font-serif text-sm text-ink/70 dark:text-paper/70">
+        <p className="mt-3 font-reading text-sm text-ink/70 dark:text-paper/70">
           The Mentor pillar contains original lessons written by Claude (AI). Everything else
           summarizes real books.
         </p>
