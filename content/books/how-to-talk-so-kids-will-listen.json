@@ -1,0 +1,213 @@
+{
+  "schemaVersion": 1,
+  "id": "how-to-talk-so-kids-will-listen",
+  "type": "book",
+  "title": "How to Talk So Kids Will Listen & Listen So Kids Will Talk",
+  "author": "Adele Faber & Elaine Mazlish",
+  "year": 1980,
+  "pillar": "family",
+  "publicDomain": false,
+  "summary": "The classic parenting toolkit: simple phrases that help kids handle feelings, cooperate without nagging and grow more independent.",
+  "estMinutes": 12,
+  "version": 1,
+  "createdAt": "2026-11-16",
+  "updatedAt": "2026-11-16",
+  "cards": [
+    {
+      "id": "how-to-talk-so-kids-will-listen-01",
+      "pillar": "family",
+      "format": "hook",
+      "hook": "You already know what to say to your kids. The trouble is it comes out as a lecture, and they stop hearing you.",
+      "body": "Adele Faber and Elaine Mazlish were two mothers who learned a different way of talking in workshops with the child psychologist Haim Ginott, then spent years teaching it to other parents. This book is the result: a handful of plain, specific phrases for the moments that usually go wrong. Feelings, chores, misbehavior, praise, labels. None of it needs a personality transplant. It needs you to swap a few habits for better ones.",
+      "source": {
+        "ref": "Chs. 1–7 (overview)"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-02",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Your child says he's hungry an hour after lunch. 'You can't be, you just ate' is the start of an argument.",
+      "body": "Faber and Mazlish start with how adults routinely brush off children's feelings: denying them ('you're not tired'), arguing with them, giving instant advice, asking a string of questions, or turning it into a lesson. Each response is well meant. Each one tells the child that what they feel is wrong or doesn't count. The authors' point: how children feel drives how they behave, and the fastest way to change the feeling is to take it seriously.",
+      "deeper": "The book makes this vivid by asking you to picture it from the other side: you've had a bad day and someone you love answers with logic, advice or a pep talk. Most of us don't feel better. We feel unheard, and we stop telling them things. Children react the same way, only louder.",
+      "source": {
+        "ref": "Ch. 1: Helping Children Deal with Their Feelings"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-03",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "You don't need wise words to comfort an upset kid. Often a quiet 'Oh... I see' does more.",
+      "body": "The first chapter offers four ways to help a child with feelings. **Listen** with full attention, and put down what you're doing. **Acknowledge** with a word or a sound: 'Oh', 'Mmm', 'I see'. **Name the feeling**: 'That sounds frustrating.' **Give the wish in fantasy**: say what you'd give them if you could. None of these fixes the problem. That's deliberate: a child who feels understood often finds their own way to the solution.",
+      "deeper": "The authors note that naming a feeling won't plant the feeling in a child's head. Hearing a word for what they're going through is comforting, because it means someone noticed. A grunt of acknowledgement also leaves room for the child to keep talking, where a question or a piece of advice tends to close the conversation down.",
+      "source": {
+        "ref": "Ch. 1: Helping Children Deal with Their Feelings"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-04",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "When you can't give a child what they want, you can still give it to them in imagination.",
+      "body": "Say your son is furious there's no more of his favorite cereal. Explaining why the box is empty rarely helps. Faber and Mazlish suggest joining the wish instead: 'I wish I could make a giant box appear right now, big enough to last a year.' It sounds silly, but it works because the child hears that you get how much he wanted it. The 'no' stays a no. It just stops being a fight.",
+      "source": {
+        "ref": "Ch. 1: Helping Children Deal with Their Feelings"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-05",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Every feeling is allowed. Not every action is.",
+      "body": "Accepting feelings doesn't mean permitting everything. A central line in the book is that feelings can be accepted while certain actions must be limited. 'You're so angry at your sister you want to hit her. I won't let you hit. Tell her with words how mad you are.' The child gets both messages at once: what you feel is fine, and here is the line on what you do.",
+      "source": {
+        "ref": "Ch. 1: Helping Children Deal with Their Feelings"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-06",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "'How many times do I have to tell you?' has never once made a child pick up a towel.",
+      "body": "Chapter 2 lists the ways parents usually try to get cooperation: blaming, name-calling, threats, orders, lectures, warnings, sarcasm, comparisons. They tend to produce resentment, not compliance. The alternatives start with two skills. **Describe what you see**: 'There's a wet towel on the bed.' **Give information**: 'Wet towels make the blanket damp.' A description with no accusation in it leaves the child room to work out what to do and do it himself.",
+      "source": {
+        "ref": "Ch. 2: Engaging Cooperation"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-07",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "One word can do the work of a whole speech.",
+      "body": "Three more tools from Chapter 2. **Say it with a word**: 'Towel.' 'Shoes.' Children dislike long speeches, and a single word is a reminder, not a lecture. **Describe your feelings**: 'I don't like being tugged at' says something honest without attacking the child's character. **Write a note**: a short, light note on the fridge or the door can get through when a spoken reminder no longer does.",
+      "deeper": "The common thread is that each of these hands the child responsibility. You point at the problem and step back. The authors are candid that none of these tools works every time, and that a tired parent will still snap. The aim is to reach for these more often than for the old lines, not to become a saint.",
+      "source": {
+        "ref": "Ch. 2: Engaging Cooperation"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-08",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Punishment can stop a behavior for the moment. It rarely teaches the child what to do instead.",
+      "body": "Faber and Mazlish argue that punishment tends to distract a child from the real issue. Instead of thinking about what they did, the child thinks about how unfair you are, and sometimes about getting even. That makes punishment a poor teacher, even when it gets you short-term quiet. The authors don't suggest letting things slide. They offer firmer, more useful tools that keep the focus on fixing the problem.",
+      "source": {
+        "ref": "Ch. 3: Alternatives to Punishment"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-09",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "There's a lot of room between 'let it go' and 'you're grounded'.",
+      "body": "Alternatives to punishment from Chapter 3: point out a way the child can be helpful. Express strong disapproval without attacking character ('I'm upset that the new saw was left out in the rain'). State your expectations. Show the child how to make amends. Give a choice. If the behavior continues, take action: remove the item, end the outing. Then let the child feel the natural consequence. Each one is firm, but none of them makes the child out to be bad.",
+      "source": {
+        "ref": "Ch. 3: Alternatives to Punishment"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-10",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "For problems that keep coming back, stop deciding for your child and start solving with them.",
+      "body": "When the same fight repeats every week, the book suggests sitting down at a calm moment and working through it together: talk about the child's feelings and needs, then talk about yours. Brainstorm solutions together and write down every idea, even the silly ones, without judging them yet. Then go through the list, cross off what either of you can't live with, and agree how you'll follow through.",
+      "deeper": "Writing the ideas down matters. It shows the child their suggestions are taken seriously, and children tend to stick with a plan they helped build. The approach takes time, which is why the authors save it for recurring problems rather than every spill or squabble.",
+      "source": {
+        "ref": "Ch. 3: Alternatives to Punishment"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-11",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Every time you jump in to help, you take away a small chance for your child to manage on his own.",
+      "body": "Chapter 4 is about raising children who can stand on their own. The skills: let children make choices, even small ones. Respect their struggle ('Jars can be hard to open'). Don't ask too many questions. Don't rush to answer theirs: turn it back to them first. Point them to sources outside the home, like a librarian or a coach. And don't take away hope: let them dream big, even when you doubt it, and let experience do the teaching.",
+      "source": {
+        "ref": "Ch. 4: Encouraging Autonomy"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-12",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "'Great job!' feels kind, but it tells a child almost nothing.",
+      "body": "Faber and Mazlish point out that evaluative praise like 'good', 'great' or 'you're a genius' can make children uneasy or defensive, and doesn't show them what they did well. Their alternative is descriptive praise. **Describe what you see**: 'You cleaned the whole room and lined up the books by size.' **Describe what you feel**: 'It's a pleasure to walk in here.' Then **sum it up in a word**: 'That's what I call organized.' The child reaches the verdict himself, and believes it.",
+      "source": {
+        "ref": "Ch. 5: Praise"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-13",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Call a child 'the clumsy one' often enough and he'll start living up to it.",
+      "body": "Chapter 6 looks at the roles children get stuck in: the bully, the lazy one, the whiner, even the 'smart one'. Once a label sticks, everyone, including the child, starts seeing it everywhere. The authors suggest ways to show a child a new picture of himself: put him in situations where he can act differently, let him overhear you say something positive about him, model the behavior you want, remind him of times he did better, and when he slips into the old role, state your feelings and expectations instead of the label.",
+      "source": {
+        "ref": "Ch. 6: Freeing Children from Playing Roles"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-14",
+      "pillar": "family",
+      "format": "challenge",
+      "hook": "Next time you're about to give a five-sentence reminder, try a single word.",
+      "body": "Pick one recurring nag this week: shoes by the door, a coat on the floor, a plate on the table. Instead of the usual speech, say one word in a neutral voice: 'Shoes.' Then wait and see what happens. And the next time your child is upset, before you fix or explain anything, try only naming the feeling: 'That sounds really disappointing.' Notice whether they calm down faster.",
+      "source": {
+        "ref": "Ch. 2: Engaging Cooperation"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-15",
+      "pillar": "family",
+      "format": "conversation",
+      "hook": "Ask your partner: what label did you get as a kid, and does it still follow you?",
+      "body": "Most of us were cast in a role early on: the responsible one, the troublemaker, the shy one. Talk with your partner about the labels you each carried, how they felt, and whether they turned out to be true. Then ask the harder question together: what labels might we be giving our own kids without meaning to?",
+      "source": {
+        "ref": "Ch. 6: Freeing Children from Playing Roles"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "how-to-talk-so-kids-will-listen-16",
+      "pillar": "family",
+      "format": "recap",
+      "hook": "Three things to remember from How to Talk So Kids Will Listen.",
+      "body": "1. **Feelings first.** Listen, acknowledge, name the feeling. Accept the feeling even when you limit the action.\n2. **Describe, don't attack.** Describe the problem, give information, use one word, say how you feel. Swap punishment for firm alternatives and problem-solving together.\n3. **Build the child up for real.** Let them choose and struggle, praise by describing, and free them from the labels they get stuck with.",
+      "source": {
+        "ref": "Ch. 7: Putting It All Together"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
