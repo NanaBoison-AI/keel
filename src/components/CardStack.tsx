@@ -3,7 +3,8 @@ import { AnimatePresence, motion } from "motion/react";
 import { useDrag } from "@use-gesture/react";
 import { CardFace, type CardView } from "./Card";
 import { ArrowUp, Bookmark, ThumbDown } from "./icons";
-import { useReducedMotion } from "../lib/hooks";
+import { useReducedMotion, useSettingsState } from "../lib/hooks";
+import { useKeepAwake } from "../lib/wakelock";
 
 export interface StackItem {
   key: string;
@@ -51,6 +52,8 @@ export function CardStack({
   header,
 }: Props) {
   const today = mode === "today";
+  const { settings, loaded } = useSettingsState();
+  useKeepAwake(loaded && settings.keepScreenOn);
   const reduced = useReducedMotion();
   const item = items[index];
   const [expandedKey, setExpandedKey] = useState<string | null>(null);

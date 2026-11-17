@@ -12,7 +12,7 @@ import {
   toggleSave,
   undoLess,
 } from "../lib/db";
-import { localDate, useLivePacks, useSettings } from "../lib/hooks";
+import { localDate, useLivePacks, useSettingsState } from "../lib/hooks";
 import { buildDailyStack } from "../lib/mix";
 import { cardIndex, useAffinity, useSavedIds } from "../lib/session";
 
@@ -50,7 +50,7 @@ export function DoneScreen({
 
 export function Today() {
   const packs = useLivePacks();
-  const settings = useSettings();
+  const { settings, loaded: settingsLoaded } = useSettingsState();
   const affinity = useAffinity();
   const saved = useSavedIds();
   const toast = useToast();
@@ -61,7 +61,8 @@ export function Today() {
   const [index, setIndex] = useState(0);
   const built = useRef(false);
   const [isBuilt, setIsBuilt] = useState(false);
-  const ready = packs !== undefined && affinity !== undefined;
+  // Wait for the saved settings too, so the stack uses the reader's own weights and size.
+  const ready = settingsLoaded && packs !== undefined && affinity !== undefined;
 
   useEffect(() => {
     if (!ready || built.current) return;

@@ -85,6 +85,8 @@ export interface Settings {
   lastSync: number;
   /** True once the reader has opened a book with a swipe up (stops the first-card hint). */
   hintOpenBook: boolean;
+  /** Keep the screen on while reading (Screen Wake Lock). */
+  keepScreenOn: boolean;
 }
 
 export const DEFAULT_SETTINGS: Settings = {
@@ -94,6 +96,7 @@ export const DEFAULT_SETTINGS: Settings = {
   theme: "system",
   lastSync: 0,
   hintOpenBook: false,
+  keepScreenOn: true,
 };
 
 /** Merge stored rows over the defaults, migrating weights saved before the newest pillar existed. */

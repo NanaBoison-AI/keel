@@ -22,9 +22,14 @@ export function useLivePacks(): Pack[] | undefined {
   return all?.filter((p) => !isExpired(p, today));
 }
 
-export function useSettings(): Settings {
+/** `loaded` is false until the first read of the settings table finishes (settings are defaults until then). */
+export function useSettingsState(): { settings: Settings; loaded: boolean } {
   const rows = useLiveQuery(() => db.settings.toArray(), []);
-  return resolveSettings(rows ?? []);
+  return { settings: resolveSettings(rows ?? []), loaded: rows !== undefined };
+}
+
+export function useSettings(): Settings {
+  return useSettingsState().settings;
 }
 
 const TEXT_SIZES = [16, 18, 20, 22];
