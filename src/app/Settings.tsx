@@ -6,6 +6,7 @@ import { resetLessSignals, setSetting, type ThemeSetting } from "../lib/db";
 import { useSettings } from "../lib/hooks";
 import { downloadFile, exportBackup, importBackup, parseBackup } from "../lib/backup";
 import { useToast } from "../components/Toast";
+import { wakeLockSupported } from "../lib/wakelock";
 
 const Section = ({ title, children }: { title: string; children: React.ReactNode }) => (
   <section className="mb-8">
@@ -166,6 +167,35 @@ export function Settings() {
               {t}
             </button>
           ))}
+        </div>
+        <div className="mt-4 flex items-center justify-between gap-4">
+          <div>
+            <div className="font-sans text-sm">Keep screen on while reading</div>
+            <div className="font-sans text-xs text-ink/70 dark:text-paper/70">
+              {wakeLockSupported()
+                ? "Lets go after 10 minutes without a touch."
+                : "Not supported by this browser."}
+            </div>
+          </div>
+          <button
+            role="switch"
+            aria-checked={s.keepScreenOn && wakeLockSupported()}
+            aria-label="Keep screen on while reading"
+            disabled={!wakeLockSupported()}
+            onClick={() => void setSetting("keepScreenOn", !s.keepScreenOn)}
+            className={`relative h-8 w-14 shrink-0 rounded-full transition-colors disabled:opacity-40 ${
+              s.keepScreenOn && wakeLockSupported()
+                ? "bg-sea dark:bg-brass"
+                : "bg-ink/25 dark:bg-paper/30"
+            }`}
+          >
+            <span
+              aria-hidden
+              className={`absolute left-1 top-1 h-6 w-6 rounded-full bg-white shadow transition-transform ${
+                s.keepScreenOn && wakeLockSupported() ? "translate-x-6" : ""
+              }`}
+            />
+          </button>
         </div>
       </Section>
 
