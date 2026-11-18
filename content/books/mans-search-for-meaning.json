@@ -1,0 +1,239 @@
+{
+  "schemaVersion": 1,
+  "id": "mans-search-for-meaning",
+  "type": "book",
+  "title": "Man's Search for Meaning",
+  "author": "Viktor Frankl",
+  "year": 1946,
+  "pillar": "psychology",
+  "origin": "source",
+  "publicDomain": false,
+  "summary": "A psychiatrist who survived Auschwitz on what kept people going, and why a reason to live matters more than comfort.",
+  "estMinutes": 14,
+  "version": 1,
+  "createdAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "cards": [
+    {
+      "id": "mans-search-for-meaning-01",
+      "pillar": "psychology",
+      "format": "hook",
+      "hook": "If you knew why you were enduring something, how much more could you bear?",
+      "body": "Viktor Frankl was a Viennese psychiatrist who spent the Second World War in Nazi concentration camps, including Auschwitz. Soon after liberation he wrote this short book: first what he saw happen inside prisoners' minds, then the approach to therapy it led him to. It isn't really a book about horror. It's about the one thing that kept some people standing when everything else was gone: a reason.",
+      "source": {
+        "ref": "Preface"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-02",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Frankl set out to describe not the famous horrors, but the small daily torments of the ordinary prisoner.",
+      "body": "Part One asks a narrow question: how did everyday camp life show up in the mind of an average prisoner? Frankl deliberately writes about the anonymous majority rather than heroes or the notorious, and he treats his own reactions as data, as a psychiatrist would. That is why the book travels so well. Most of us will never face anything like it, but the mental moves he describes, numbness, false hope, the search for something to hold on to, are ones everyone makes.",
+      "deeper": "Frankl wrote the book quickly after the war and first published it in Vienna in 1946. It reached English readers later; the 1959 American edition was eventually retitled *Man's Search for Meaning*. Today's editions pair the camp memoir with Part Two, a compact introduction to his therapy, and a 1984 postscript.",
+      "source": {
+        "ref": "Part One: Experiences in a Concentration Camp"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-03",
+      "pillar": "psychology",
+      "format": "story",
+      "hook": "On arrival at Auschwitz, many prisoners clung to the hope that it couldn't really be that bad.",
+      "body": "Frankl calls this the first phase: shock. He compares it to the 'delusion of reprieve', the belief of a condemned man that he'll be spared at the last minute. He arrived carrying a scientific manuscript, his life's work, hidden in his coat. Within hours it was gone, along with his clothes, his hair and his name. What remained, he says, was his bare existence, and the question of whether that was still worth living for.",
+      "deeper": "Losing the manuscript became one of the threads of his survival. Much later, sick with typhus, he scribbled notes on scraps of paper to rebuild it, and the wish to rewrite it gave him something ahead of him to reach for.",
+      "source": {
+        "ref": "Part One: The first phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-04",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "After a few weeks in the camp, prisoners stopped feeling much at all. Frankl says that was the point.",
+      "body": "The second phase was apathy. Men who had flinched at the first beatings they saw could later watch others beaten, or a body dragged past, without reacting. Frankl saw this numbness as a protective shell: when every emotion costs energy you don't have, the mind shuts down all but what helps you survive. Hunger crowded out almost every other thought. It's a useful idea outside the camp, too. When you feel strangely flat in a hard season, it may be your mind protecting you, not a sign that something in you has broken.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-05",
+      "pillar": "psychology",
+      "format": "story",
+      "hook": "On a freezing march to a worksite, Frankl found something the guards couldn't reach.",
+      "body": "Stumbling through the dark, a fellow prisoner muttered that he hoped their wives were better off than they were. Frankl began to picture his wife: her face, her smile, a conversation with her. He realised, he writes, that love is the highest goal a person can aspire to, and that it reaches far beyond the physical presence of the one you love. He didn't even know whether she was still alive. In that moment, it didn't change what he felt.",
+      "deeper": "He later learned she had died in the camps. The point of the passage isn't comfort that things turned out well; they didn't. It's that an inner life, memory, love, imagination, gave some prisoners a refuge that hunger and cruelty couldn't fully reach.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-06",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "In a place built to strip away dignity, some prisoners still stopped to watch the sunset.",
+      "body": "Frankl describes men, exhausted from labour, being called outside just to look at a sunset over the camp. He describes humour too: he and a friend, a surgeon, agreed to invent at least one funny story every day about life after liberation. None of this was frivolous. Beauty and laughter put a little distance between a person and his situation, and that distance was a kind of strength. Your hard days have room for this as well.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-07",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Some prisoners gave away their last piece of bread. Frankl saw that as proof of something.",
+      "body": "Most prisoners became, understandably, focused on their own survival. But Frankl remembered men who walked through the huts comforting others and sharing what little food they had. There may have been few of them, he says, but they were enough to show that the camp could take everything except a person's inner stance towards it. How the prisoner behaved was shaped by conditions, but in the end it was still his decision.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-08",
+      "pillar": "psychology",
+      "format": "fact",
+      "hook": "In the week between Christmas 1944 and New Year 1945, the camp's death rate jumped beyond anything seen before.",
+      "body": "Frankl reports that the camp's chief doctor did not blame harder work, worse food or the weather. His explanation was hope. Many prisoners had lived on the belief that they'd be home by Christmas. When the date passed and nothing changed, they lost heart, and their bodies' resistance seemed to go with it. Hope tied to a date is fragile. Hope tied to a purpose holds up better.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-09",
+      "pillar": "psychology",
+      "format": "story",
+      "hook": "Two prisoners told Frankl they had nothing left to expect from life. He changed the question.",
+      "body": "Instead of arguing that life would get better, Frankl tried to show each man that life still expected something from him. For one, it was a child he adored, waiting for him in another country. For the other, a scientist, it was a series of books that only he could finish. Once each saw that someone or something was counting on him, he couldn't simply throw his life away. Frankl, borrowing from Nietzsche, put it simply: with a *why*, people can bear almost any *how*.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-10",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Frankl refused to sort people by which side of the wire they were on.",
+      "body": "He noticed decency and cruelty in both places. Some prisoners who were given power over others, the Capos, were harsher than the guards. Yet one Capo protected Frankl, and he tells of a camp commander who quietly paid out of his own pocket for medicine for prisoners. His conclusion was that there are only two kinds of people everywhere: the decent and the indecent. No group is made up entirely of either. It's an uncomfortable idea, and a fair one.",
+      "source": {
+        "ref": "Part One: The second phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-11",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Freedom didn't feel like freedom at first. Many survivors felt nothing at all.",
+      "body": "The third phase came after liberation. Frankl describes walking through meadows and being unable to feel glad; he had to learn it again. Some freed prisoners turned bitter or felt entitled to do wrong because wrong had been done to them. Others came home to find no one waiting. Recovery, he says, took time. It's a reminder that the end of a hard thing isn't always the end of its effects, and that's normal, not a failure.",
+      "source": {
+        "ref": "Part One: The third phase"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-12",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Freud said we chase pleasure; Adler said power. Frankl said we're driven by something else.",
+      "body": "From what he saw, Frankl built logotherapy, a therapy centred on meaning. Its starting point is that our main drive is the will to meaning. When that drive is frustrated, people fall into what he calls an existential vacuum: boredom, emptiness, a sense that nothing matters. He saw it as widespread in comfortable societies, and noticed a 'Sunday neurosis', the low mood that arrives when the working week stops and a person is left facing the emptiness.",
+      "source": {
+        "ref": "Part Two: Logotherapy in a Nutshell"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-13",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "Stop asking what the meaning of life is. Frankl says the question is pointed the other way.",
+      "body": "Meaning, in his view, isn't a general answer you discover once. It's specific to you, to this day, to this situation, and life is the one asking. You answer by taking responsibility for what's in front of you. He thought responsibility mattered so much that he once suggested America's Statue of Liberty on the East Coast should be matched by a Statue of Responsibility on the West. Freedom without it, he argued, slides into arbitrariness.",
+      "deeper": "He describes three broad routes to meaning: creating a work or doing a deed; experiencing something, or loving someone; and, when suffering truly can't be avoided, the attitude you take towards it. He is clear that suffering isn't required for meaning. If it can be removed, the meaningful thing is to remove it.",
+      "source": {
+        "ref": "Part Two: The Meaning of Life"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-14",
+      "pillar": "psychology",
+      "format": "story",
+      "hook": "A doctor came to Frankl crushed by grief two years after his wife's death. Frankl asked him one question.",
+      "body": "What would have happened, Frankl asked, if he had died first and his wife had survived him? The man said it would have been terrible for her; she would have suffered so much. Frankl pointed out that he had spared her that suffering, and that the price was that he now carried the grief instead. The man shook his hand and left. Nothing about the loss had changed. What changed was that his pain now had a meaning.",
+      "source": {
+        "ref": "Part Two: The Meaning of Suffering"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-15",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "The harder you chase sleep, happiness or calm, the further away they get.",
+      "body": "Frankl calls this hyperintention. To break the loop he used paradoxical intention: deliberately wish for the thing you fear. He tells of a young doctor terrified of sweating in public, which made him sweat more. Frankl told him, next time, to set out to show people just how much he could sweat. Wishing for it took the fear's power away, and the problem faded. Happiness works similarly, he argued: it can't be pursued directly. It follows from a cause worth serving.",
+      "source": {
+        "ref": "Part Two: Logotherapy as a Technique"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-16",
+      "pillar": "psychology",
+      "format": "idea",
+      "hook": "What you've done, loved and endured can't be taken from you. It's already safe in the past.",
+      "body": "Frankl faced what he called the tragic triad: pain, guilt and death. His answer is tragic optimism, staying hopeful without denying any of the three. Pain can be a chance for courage, guilt a push to change, and life's shortness a reason to act now. Above all, he saw the past not as something lost but as a storehouse: once something good has been done, nothing can undo the fact that it was.",
+      "source": {
+        "ref": "Postscript: The Case for a Tragic Optimism"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-17",
+      "pillar": "psychology",
+      "format": "challenge",
+      "hook": "Frankl offered a test for any decision: imagine you're living it for the second time.",
+      "body": "Picture that you've already lived today once and got it wrong, and now you're back for another go. Try it on one real choice this week: how you speak to your partner after a long day, whether to finish the thing you're avoiding, what you do with an empty evening. Ask what the second-time version of you would do, the one who already knows how the first version turned out. Then do that.",
+      "deeper": "This is Frankl's own exercise, which he called the categorical imperative of logotherapy. Its power is that it makes you feel how final each moment is, and that you are responsible for what you do with it.",
+      "source": {
+        "ref": "Part Two: The Essence of Existence"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "mans-search-for-meaning-18",
+      "pillar": "psychology",
+      "format": "recap",
+      "hook": "Three things to remember from Man's Search for Meaning.",
+      "body": "1. **Your response is yours.** Circumstances shape you, but the stance you take towards them is the last freedom nobody can take.\n2. **Meaning beats pleasure.** A purpose, a person or a task waiting for you lets you bear almost anything; ask what life is asking of you.\n3. **The past is safe.** What you've done, loved and endured can't be undone. Act today as if you're living it for the second time.",
+      "source": {
+        "ref": "Parts One and Two; Postscript"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
