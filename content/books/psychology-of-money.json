@@ -1,0 +1,243 @@
+{
+  "schemaVersion": 1,
+  "id": "psychology-of-money",
+  "type": "book",
+  "title": "The Psychology of Money",
+  "author": "Morgan Housel",
+  "year": 2020,
+  "pillar": "money",
+  "origin": "source",
+  "publicDomain": false,
+  "summary": "Why doing well with money is about behaviour, not brains: luck, enough, savings, room for error and the price of returns.",
+  "estMinutes": 14,
+  "version": 1,
+  "createdAt": "2026-11-20",
+  "updatedAt": "2026-11-20",
+  "cards": [
+    {
+      "id": "psychology-of-money-01",
+      "pillar": "money",
+      "format": "hook",
+      "hook": "Being good with money has surprisingly little to do with being good at maths.",
+      "body": "Morgan Housel, a former financial columnist, wrote this book around one idea: money is less about knowledge than behaviour. Ego, fear, envy and history shape your choices far more than spreadsheets do. That's good news. You don't need a finance degree to do well, but you do need to understand yourself. These cards walk through the book's short chapters in order.",
+      "source": {
+        "ref": "Introduction: The Greatest Show on Earth"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-02",
+      "pillar": "money",
+      "format": "story",
+      "hook": "A janitor died with millions. A Harvard-trained finance executive went bankrupt.",
+      "body": "Ronald Read worked for decades at a Vermont gas station and later as a janitor. When he died in 2014, he left an estate of more than $8 million, most of it to a local hospital and library. He had simply saved what he could and held good stocks for a very long time. Richard Fuscone, a former Merrill Lynch executive with a Harvard MBA, borrowed heavily to fund a lavish life and ended up in bankruptcy during the 2008 crisis.",
+      "deeper": "Housel's point is not that education is useless. It's that finance is one of the few fields where someone with no training can beat a professional, because the deciding factor is often patience and restraint, not skill. In medicine or engineering that would never happen. In money it happens all the time.",
+      "source": {
+        "ref": "Introduction"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-03",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Your money choices feel obvious to you because of what you lived through, not because they're right.",
+      "body": "Someone who grew up during high inflation sees the world differently from someone who grew up with cheap mortgages and rising stocks. Each person's experience is a tiny slice of history, but it feels like how the world works. So people who seem reckless or overcautious with money usually aren't crazy. They're acting sensibly on the slice they've seen.",
+      "deeper": "Housel adds that many of today's money decisions are newer than we assume. Widespread retirement saving through personal accounts and cheap index investing are only a few decades old. We're all, to some degree, still working out how to do this.",
+      "source": {
+        "ref": "Ch. 1: No One's Crazy"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-04",
+      "pillar": "money",
+      "format": "story",
+      "hook": "Bill Gates had one of the few school computers in the world. His best friend had the same access.",
+      "body": "As a teenager, Gates went to Lakeside School in Seattle, which unusually had a computer terminal in the late 1960s. That luck helped shape everything that followed. His close friend and computing partner Kent Evans was also brilliant and ambitious, but died in a mountaineering accident before finishing school. Similar start, similar promise; one became famous, the other never got the chance.",
+      "deeper": "Housel uses the pair to show that luck and risk are twins: both are forces outside your control that can push an outcome far from what effort alone would predict. The practical lesson is humility in both directions. Be careful about worshipping the very successful, and careful about writing off people whose bets didn't work out. Judge decisions by their reasoning, not only by how they turned out.",
+      "source": {
+        "ref": "Ch. 2: Luck & Risk"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-05",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "The hardest financial skill is getting the goalposts to stop moving.",
+      "body": "If your expectations rise every time your income does, you'll never feel you have enough, no matter how much you earn. Housel argues that some wealthy people have wrecked their lives chasing more money they didn't need, risking what they had for a little extra. 'Enough' isn't settling. It's recognising that the alternative is a race with no finish line.",
+      "deeper": "Social comparison is the engine. There will always be someone with more, so measuring yourself against the people above you guarantees dissatisfaction. Housel's line of thinking: some things, like your reputation, freedom, family and happiness, are never worth risking for money you don't need.",
+      "source": {
+        "ref": "Ch. 3: Never Enough"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-06",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "You can be wrong most of the time and still come out far ahead.",
+      "body": "Housel calls this the power of tails: a small number of events produce most of the results. A handful of companies drive most stock market returns. A few hits pay for many misses in business, art and careers. So a run of failures doesn't mean you're doing it wrong, and a strategy that looks unimpressive day to day can win big over decades.",
+      "deeper": "The flip side: what you do on the rare days when everyone else is panicking can matter more than everything you do on ordinary days. Staying invested and calm through a crash is one of those tail moments.",
+      "source": {
+        "ref": "Ch. 6: Tails, You Win"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-07",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "The most valuable thing money can buy isn't a thing. It's your time.",
+      "body": "Housel argues that the strongest link between money and happiness is control: deciding for yourself how you spend your days and who you spend them with. A cushion of savings means you can leave a bad job, wait for the right opportunity or take a sick child to the doctor without panic. That freedom is worth more than most purchases.",
+      "deeper": "Many modern jobs pay well but take control away, through long hours and constant availability. Money that buys back some of your time and choice tends to make people happier than money spent on bigger things.",
+      "source": {
+        "ref": "Ch. 7: Freedom"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-08",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Real wealth is invisible: it's the things you could have bought and didn't.",
+      "body": "You can see someone's car, house and holidays. You can't see their savings. That's why we mix up being rich (spending a lot now) with being wealthy (assets you haven't spent). A person can look very well off and be one bad month from trouble. Wealth is the money left unspent, quietly giving you options.",
+      "source": {
+        "ref": "Ch. 9: Wealth Is What You Don't See"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-09",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "You can't control market returns. You can control how much you save.",
+      "body": "Building wealth depends more on your savings rate than on your income or investment returns. Much of saving is simply not letting your ego spend every raise, so wanting a little less is often the fastest way to have more. Housel adds that you don't need a specific goal to save. Savings protect you against the surprises life will certainly bring.",
+      "deeper": "He also notes that saving gives you flexibility, which is becoming more valuable as the world changes faster. A cushion lets you wait, think and take chances others can't.",
+      "source": {
+        "ref": "Ch. 10: Save Money"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-10",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "A plan you'll actually stick with beats a perfect plan you'll abandon.",
+      "body": "Housel argues for being reasonable rather than coldly rational. A strategy that looks optimal on paper is worthless if it lets you lose sleep and bail out at the worst moment. Liking your investments, or holding more cash than a textbook would advise, can be sensible if it keeps you in the game for decades.",
+      "source": {
+        "ref": "Ch. 11: Reasonable > Rational"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-11",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "The most important part of any money plan is the part for when it goes wrong.",
+      "body": "Housel builds on Benjamin Graham's idea of a margin of safety: leave room for things to be worse than you expect. Spare savings, modest debt and realistic assumptions let you survive bad luck and wait for good outcomes. The point isn't to be pessimistic about everything. It's to be optimistic about the long run while being careful about the short-term events that could knock you out first.",
+      "deeper": "Room for error matters because the biggest risks are usually the ones nobody saw coming. You can't prepare for a specific surprise, but you can make sure a surprise doesn't ruin you.",
+      "source": {
+        "ref": "Ch. 13: Room for Error"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-12",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "The person who will live with your plan in twenty years is a stranger to you.",
+      "body": "Psychologists call it the End of History Illusion: we admit we've changed a lot in the past, yet assume we'll stay the same from now on. That makes extreme long-term plans risky, like a career, budget or lifestyle built entirely around who you are today. Housel suggests avoiding the extreme ends of planning and accepting that changing your mind is normal, not failure.",
+      "deeper": "He also warns against sunk costs: sticking with a path only because you've already invested years in it. Letting go of a past self's goals can be the wise move.",
+      "source": {
+        "ref": "Ch. 14: You'll Change"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-13",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Market crashes aren't a punishment. They're the price of admission.",
+      "body": "Every good return comes with a cost that isn't printed on a label. In investing, that cost is volatility, fear and the occasional painful drop. Housel's framing is to treat it as a fee you pay for long-term gains, not a fine for doing something wrong. If you see it as a fine, you'll try to dodge it and often end up missing the gains too.",
+      "source": {
+        "ref": "Ch. 15: Nothing's Free"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-14",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Before you copy someone's money move, ask what game they're playing.",
+      "body": "A day trader and a retirement saver can both buy the same stock at the same price for completely different reasons. Housel argues that bubbles do their worst damage when people saving for decades start following signals from people trading for days, and pay prices that only make sense if you plan to sell next week. Knowing your own time horizon protects you from other people's logic.",
+      "source": {
+        "ref": "Ch. 16: You & Me"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-15",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Doom sounds clever. Optimism sounds naive. Over the long run, optimism usually wins.",
+      "body": "Housel notes that pessimism grabs attention: it sounds smart, urgent and responsible. Progress is slow and easy to miss, while setbacks are sudden and loud. So bad news feels more real than good. Reasonable optimism isn't believing everything will be fine. It's expecting that, despite setbacks, things tend to improve over time.",
+      "source": {
+        "ref": "Ch. 17: The Seduction of Pessimism"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-16",
+      "pillar": "money",
+      "format": "challenge",
+      "hook": "Write down your number for 'enough' today, before it has a chance to move.",
+      "body": "Take ten minutes and answer three questions on paper: What monthly savings cushion would let me sleep well? What do I actually want money to give me (time, security, freedom)? Which spending is really for other people's eyes? Then pick one small change, like an automatic transfer to savings on payday. Keep the note and reread it the next time you get a pay rise.",
+      "source": {
+        "ref": "Ch. 3 & Ch. 19: All Together Now"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-17",
+      "pillar": "money",
+      "format": "conversation",
+      "hook": "Ask your partner: what did money feel like in the house you grew up in?",
+      "body": "Many couples argue about money without realising they are arguing about childhood. One grew up with scarcity and saves anxiously; the other saw money as something to enjoy. Neither is crazy. Ask the question, listen without correcting, then share your own answer. You'll understand each other's 'obvious' habits far better.",
+      "source": {
+        "ref": "Ch. 1: No One's Crazy"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "psychology-of-money-18",
+      "pillar": "money",
+      "format": "recap",
+      "hook": "Three things to remember from The Psychology of Money",
+      "body": "1. **Behaviour beats brilliance.** Saving, patience and avoiding ruin matter more than clever picks.\n2. **Know your enough.** Wealth is what you don't spend; its best use is control over your time.\n3. **Leave room for error.** Expect surprises, treat volatility as a fee, and stick to a plan you can live with.",
+      "source": {
+        "ref": "Ch. 19: All Together Now"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
