@@ -18,15 +18,13 @@ interface Props {
   view: CardView;
   expanded: boolean;
   onToggleExpand: () => void;
-  scrollRef?: React.Ref<HTMLDivElement>;
 }
 
-export function CardFace({ view, expanded, onToggleExpand, scrollRef }: Props) {
+export function CardFace({ view, expanded, onToggleExpand }: Props) {
   const { card, pillar, packId, packTitle, fromDeck, origin } = view;
   return (
     <article className="flex h-full min-h-0 flex-col" data-testid="card">
       <div
-        ref={scrollRef}
         tabIndex={0}
         aria-label="Card text"
         className="min-h-0 flex-1 overflow-y-auto px-5 pt-5 outline-none focus-visible:ring-2 focus-visible:ring-brass/60 [overscroll-behavior:contain]"
