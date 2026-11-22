@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "decisions-under-uncertainty",
+  "type": "series",
+  "title": "Deciding without all the facts",
+  "pillar": "mentor",
+  "origin": "ai",
+  "publicDomain": false,
+  "summary": "You will never have every fact. Here is how to decide well anyway, and how to stop second-guessing once you have.",
+  "estMinutes": 7,
+  "version": 1,
+  "createdAt": "2026-11-18",
+  "updatedAt": "2026-11-18",
+  "cards": [
+    {
+      "id": "decisions-under-uncertainty-01",
+      "pillar": "mentor",
+      "format": "hook",
+      "hook": "Every decision that really matters in your life will be made before you have all the facts.",
+      "body": "Which job to take. Whether to move. When to have the hard conversation. Whether this is the person. None of these arrive with complete information, and they never will.\n\nMost men handle that in one of two ways: they wait, hoping the fog will lift, or they lunge, just to make the discomfort stop. I'd like to give you a third way. A few simple tools for deciding well when you can't be sure, and then for living with the decision without chewing it over forever.",
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-02",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "You can make a good decision and still get a bad result. Learn to tell those apart, or you'll learn the wrong lessons.",
+      "body": "A decision is a bet made with what you knew at the time. An outcome is what the world did next, and the world includes luck. A careful driver can still be hit at a junction. A reckless one can get home fine every night for years.\n\nIf you judge your choices only by how they turned out, you'll drop good habits after one unlucky break and keep bad ones because they haven't bitten you yet. Judge the decision by the thinking behind it. Judge the outcome separately, and be honest about how much of it you controlled.",
+      "deeper": "This cuts both ways, and the second way is harder. When something goes well, it's tempting to take all the credit. Sometimes you were smart. Sometimes you were lucky, and the lesson you're about to absorb is \"that risk was fine\" when it wasn't.\n\nA useful question after any result, good or bad: *if I faced the same choice again, knowing only what I knew then, would I choose the same way?* If yes, the decision was sound, whatever happened. If no, there's a real lesson, and it's about how you decided, not about what fate did.\n\nThe limit: this can become an excuse. \"I decided well, I was just unlucky\" is sometimes true and sometimes a way of dodging a mistake. If the same \"bad luck\" keeps showing up, it probably isn't luck.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-03",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Before you agonise over a choice, ask one question: can I undo this?",
+      "body": "Most decisions can be reversed. You can return the thing, try the new routine for a month, take the course and drop it, rearrange the room again. Treat those lightly. Decide quickly, learn from what happens, adjust.\n\nA few decisions are hard or impossible to reverse: who you marry, having a child, signing a long commitment you can't exit, saying something cruel you can't take back. Those deserve your slow, careful thinking.\n\nThe common mistake is mixing them up: agonising for weeks over small reversible things, and drifting into the big permanent ones without really deciding at all.",
+      "deeper": "Sorting a decision into one of these two piles is often the most useful thing you can do with it. Many choices that feel heavy turn out to be reversible once you look closely. \"Should I change careers?\" can feel permanent. \"Should I spend three months doing evening work in that field to see if I like it?\" is not.\n\nSo when a decision feels stuck, try to find the reversible version of it: a trial, a smaller step, a test that teaches you something before you commit. You often can't remove the uncertainty, but you can buy information cheaply.\n\nAnd when a decision really is one-way, give it the respect it deserves: sleep on it, talk to someone who will disagree with you, and picture living with it in five years.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-04",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Not deciding feels safe. It is a decision too, usually a worse one, made by default.",
+      "body": "Waiting for more information is sometimes wise. But past a certain point, extra facts stop changing the answer and only delay it, while the cost of waiting keeps quietly growing: the opportunity closes, the problem gets bigger, other people decide for you.\n\nA rough rule I'd offer: once you know enough to be roughly right, and the remaining unknowns won't be cleared up by waiting, decide. Give yourself a deadline. If you can't name what new fact you're waiting for, you're not gathering information. You're hiding.",
+      "deeper": "One question helps a lot here: *what would I need to learn to change my mind?* If you can name it and get it soon, go and get it. If you can't name it, or it's something no one can know in advance (\"whether it will work out\"), then waiting won't help. That's the uncertainty you have to decide inside.\n\nI'll admit this is uncomfortable. Deciding means accepting that you might be wrong, with your name on it. Drifting lets you tell yourself it just happened. But a call you made and got wrong teaches you something. A call you dodged usually just leaves you resenting how things turned out.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-05",
+      "pillar": "mentor",
+      "format": "story",
+      "hook": "He waited for a forecast he could be certain of. That forecast never came.",
+      "body": "A parable: a farmer wanted to plant, but he wanted to be certain the weather would hold. The first week looked promising, but there was a chance of frost, so he waited. The next week the skies were clear, but a storm might be coming, so he waited. Each week he had a good reason.\n\nHis neighbour planted on the first reasonable day, lost a few rows to a cold night, and replanted them.\n\nAt harvest the neighbour's barn was full. The farmer's fields were bare, and the weather had never once been certain.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-06",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "The hardest part of a decision often comes after you've made it.",
+      "body": "Once you've chosen, doubt arrives. The road you didn't take starts to look better. Every small setback whispers that you got it wrong. If you keep reopening the question, you end up with the worst of both: you've given up the other option, and you're only half-committed to this one.\n\nSo once you've decided, commit properly. Give it your full effort for a set period, and pick a date when you'll honestly review it. Until then, when the doubt shows up, tell it: \"Noted. We'll talk on the review date.\"",
+      "deeper": "Committing isn't the same as being stubborn. The review date is real: when it comes, look at what you've learned and be willing to change course. What you're refusing is the daily re-litigation, which drains your energy and your follow-through without adding any new information.\n\nThere's an exception. If something genuinely new happens, a fact you didn't have and couldn't have had, you don't have to wait. That's not doubt; that's updating. The test is whether you've learned something, or whether you're just feeling uneasy again. Unease alone is not a reason to reverse a decision. It's mostly the price of having made one.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-07",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Your memory will lie to you about why you made a decision. Write it down before it gets the chance.",
+      "body": "Once you know how things turned out, your mind quietly rewrites the past. If it went well, you'll remember being confident. If it went badly, you'll remember the warning signs as obvious. Either way, you lose the real lesson.\n\nFor any decision that matters, take five minutes and write down three things: what you decided, why, and what you expect to happen. Later, compare. You'll learn more about your own judgment from a handful of those notes than from years of hazy hindsight.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-08",
+      "pillar": "mentor",
+      "format": "challenge",
+      "hook": "There's a decision you've been circling for a while. This week, make it.",
+      "body": "Pick the one you keep putting off.\n\n1. Ask: **can I undo this?** If yes, find the quickest small step and take it this week.\n2. If no, write down what you'd need to learn to change your mind. Go and learn it, or admit that waiting won't tell you.\n3. Set a deadline, and decide by then.\n4. Write a short note: what you chose, why, and what you expect.\n5. Put a review date in your calendar. Until then, give it your full effort.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "decisions-under-uncertainty-09",
+      "pillar": "mentor",
+      "format": "recap",
+      "hook": "Three things to take with you the next time the facts run out before the deadline does.",
+      "body": "1. **Judge decisions by the thinking, not the result.** Luck is in every outcome; separate the two, and be honest when the same bad luck keeps coming back.\n2. **Ask if you can undo it.** Move fast on reversible choices, slow down on permanent ones, and remember that not deciding is a decision too.\n3. **Decide, then commit.** Write down your reasons, give it your full effort, and save your doubts for a set review date.",
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
