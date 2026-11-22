@@ -83,8 +83,6 @@ export interface Settings {
   textSize: number; // 0–3
   theme: ThemeSetting;
   lastSync: number;
-  /** True once the reader has opened a book with a swipe up (stops the first-card hint). */
-  hintOpenBook: boolean;
   /** Keep the screen on while reading (Screen Wake Lock). */
   keepScreenOn: boolean;
 }
@@ -95,7 +93,6 @@ export const DEFAULT_SETTINGS: Settings = {
   textSize: 1,
   theme: "system",
   lastSync: 0,
-  hintOpenBook: false,
   keepScreenOn: true,
 };
 

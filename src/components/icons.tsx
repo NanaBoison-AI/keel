@@ -90,3 +90,10 @@ export const ThumbDown = (p: P) => (
     <path d="M17 4h2.5A1.5 1.5 0 0 1 21 5.5v7a1.5 1.5 0 0 1-1.5 1.5H17" />
   </svg>
 );
+
+export const OpenBook = (p: P) => (
+  <svg {...base} {...p}>
+    <path d="M12 7c-1.9-1.5-4.3-2-8-2v13c3.7 0 6.1.5 8 2 1.9-1.5 4.3-2 8-2V5c-3.7 0-6.1.5-8 2z" />
+    <path d="M12 7v13" />
+  </svg>
+);

@@ -153,132 +153,119 @@ describe("Mentor badge", () => {
   });
 });
 
-describe("CardStack in Today mode", () => {
-  function TodayHarness({
-    onLess,
-    onOpenBook,
-  }: {
-    onLess?: (k: string) => void;
-    onOpenBook?: (k: string) => void;
-  }) {
-    const [i, setI] = useState(0);
-    return (
-      <ToastProvider>
-        <MemoryRouter>
-          <div style={{ height: 600 }}>
-            <CardStack
-              mode="today"
-              items={items}
-              index={i}
-              onIndexChange={setI}
-              onFinish={() => {}}
-              isSaved={() => false}
-              onToggleSave={() => {}}
-              onLess={onLess ?? (() => {})}
-              onOpenBook={onOpenBook}
-            />
-          </div>
-        </MemoryRouter>
-      </ToastProvider>
-    );
-  }
+function Stack({
+  onOpenBook,
+  onLess,
+  onIndexChange,
+  index = 0,
+}: {
+  onOpenBook?: (k: string) => void;
+  onLess?: (k: string) => void;
+  onIndexChange?: (i: number) => void;
+  index?: number;
+}) {
+  return (
+    <ToastProvider>
+      <MemoryRouter>
+        <div style={{ height: 600 }}>
+          <CardStack
+            items={items}
+            index={index}
+            onIndexChange={onIndexChange ?? (() => {})}
+            onFinish={() => {}}
+            isSaved={() => false}
+            onToggleSave={() => {}}
+            onLess={onLess ?? (() => {})}
+            onOpenBook={onOpenBook}
+          />
+        </div>
+      </MemoryRouter>
+    </ToastProvider>
+  );
+}
 
-  it("shows thumbs-down and bookmark, with no ⋯ menu", () => {
-    render(<TodayHarness />);
+describe("Today controls (stack with an open-book button)", () => {
+  it("shows thumbs-down, open book and bookmark: no arrows, no ⋯ menu, no swipe-up hint", () => {
+    render(<Stack onOpenBook={() => {}} />);
     expect(screen.getByLabelText("Less like this")).toBeInTheDocument();
+    expect(screen.getByLabelText("Open the book")).toBeInTheDocument();
     expect(screen.getByLabelText("Save to Notebook")).toBeInTheDocument();
     expect(screen.queryByLabelText("More options")).not.toBeInTheDocument();
+    expect(screen.queryByText(/swipe up/i)).not.toBeInTheDocument();
   });
 
-  it("thumbs-down records 'less' and advances", async () => {
-    const onLess = vi.fn();
-    render(<TodayHarness onLess={onLess} />);
-    await userEvent.click(screen.getByLabelText("Less like this"));
-    expect(onLess).toHaveBeenCalledWith("c0");
-    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
-  });
-
-  it("keeps screen-reader/keyboard access to next, previous and the book", async () => {
+  it("the open-book button opens the book for the current card", async () => {
     const onOpenBook = vi.fn();
-    render(<TodayHarness onOpenBook={onOpenBook} />);
-    await userEvent.click(screen.getByRole("button", { name: "Next card" }));
-    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
-    await userEvent.click(screen.getByRole("button", { name: "Previous card" }));
-    await waitFor(() => expect(screen.getByText("Hook number 0")).toBeInTheDocument());
-    await userEvent.click(screen.getByRole("button", { name: "Open the book" }));
+    render(<Stack onOpenBook={onOpenBook} />);
+    await userEvent.click(screen.getByLabelText("Open the book"));
     expect(onOpenBook).toHaveBeenCalledWith("c0");
   });
-
-  it("arrow keys move left and right", async () => {
-    render(<TodayHarness />);
-    fireEvent.keyDown(window, { key: "ArrowRight" });
-    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
-    fireEvent.keyDown(window, { key: "ArrowLeft" });
-    await waitFor(() => expect(screen.getByText("Hook number 0")).toBeInTheDocument());
-  });
 });
 
-describe("Today swipe-up hint", () => {
-  const renderStack = (showOpenHint: boolean, mode: "today" | "deck" = "today") =>
-    render(
-      <ToastProvider>
-        <MemoryRouter>
-          <div style={{ height: 600 }}>
-            <CardStack
-              mode={mode}
-              showOpenHint={showOpenHint}
-              items={items}
-              index={0}
-              onIndexChange={() => {}}
-              onFinish={() => {}}
-              isSaved={() => false}
-              onToggleSave={() => {}}
-              onLess={() => {}}
-            />
-          </div>
-        </MemoryRouter>
-      </ToastProvider>,
-    );
-  it("shows the hint when asked", () => {
-    renderStack(true);
-    expect(screen.getByText("Swipe up to read the book")).toBeInTheDocument();
-  });
-  it("hides it otherwise, and never in deck mode", () => {
-    renderStack(false);
-    expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
-    cleanup();
-    renderStack(true, "deck");
-    expect(screen.queryByText("Swipe up to read the book")).not.toBeInTheDocument();
-  });
-});
-
-describe("CardStack in deck mode", () => {
-  it("has thumbs-down and bookmark but no arrow buttons or ⋯ menu", () => {
-    render(<Harness />);
+describe("Deck controls (no open-book button)", () => {
+  it("has thumbs-down and bookmark only", () => {
+    render(<Stack />);
     expect(screen.getByLabelText("Less like this")).toBeInTheDocument();
     expect(screen.getByLabelText("Save to Notebook")).toBeInTheDocument();
+    expect(screen.queryByLabelText("Open the book")).not.toBeInTheDocument();
     expect(screen.queryByLabelText("More options")).not.toBeInTheDocument();
-    expect(screen.queryByLabelText("Next card")).not.toBeInTheDocument(); // only a screen-reader button remains
-    expect(screen.queryByText("Open the book")).not.toBeInTheDocument();
   });
 });
 
-describe("vertical touch swipes keep working after the first card change", () => {
-  const swipeUp = (surface: Element) => {
-    fireEvent.touchStart(surface, { touches: [{ clientX: 200, clientY: 400 }] });
-    fireEvent.touchMove(surface, { touches: [{ clientX: 200, clientY: 250 }] });
-    fireEvent.touchMove(surface, { touches: [{ clientX: 200, clientY: 150 }] });
-    fireEvent.touchEnd(surface, { changedTouches: [{ clientX: 200, clientY: 150 }] });
+describe("Navigation is left/right only", () => {
+  // use-gesture reads targetTouches (changedTouches on touchend) and tracks touches by identifier.
+  const swipe = (surface: Element, from: [number, number], to: [number, number]) => {
+    const t = ([x, y]: [number, number]) => [{ identifier: 1, clientX: x, clientY: y }];
+    const mid: [number, number] = [(from[0] + to[0]) / 2, (from[1] + to[1]) / 2];
+    fireEvent.touchStart(surface, { touches: t(from), targetTouches: t(from) });
+    fireEvent.touchMove(surface, { touches: t(mid), targetTouches: t(mid) });
+    fireEvent.touchMove(surface, { touches: t(to), targetTouches: t(to) });
+    fireEvent.touchEnd(surface, { touches: [], targetTouches: [], changedTouches: t(to) });
   };
-  it("swipe up moves to the next card, then to the one after (the leaving card must not clear the scroll ref)", async () => {
-    const { container } = render(<Harness />);
+
+  it("swiping left goes to the next card and swiping right goes back", async () => {
+    const onIndexChange = vi.fn();
+    const { container, rerender } = render(<Stack onIndexChange={onIndexChange} index={1} />);
     const surface = container.querySelector(".stack-surface")!;
-    expect(screen.getByText("Hook number 0")).toBeInTheDocument();
-    swipeUp(surface);
-    await waitFor(() => expect(screen.getByText("Hook number 1")).toBeInTheDocument());
-    // let the outgoing card finish its exit animation and unmount
-    await waitFor(() => expect(screen.queryByText("Hook number 0")).not.toBeInTheDocument());
-    swipeUp(surface);
-    await waitFor(() => expect(screen.getByText("Hook number 2")).toBeInTheDocument());
+    swipe(surface, [320, 300], [40, 300]);
+    expect(onIndexChange).toHaveBeenLastCalledWith(2);
+    swipe(surface, [40, 300], [320, 300]);
+    expect(onIndexChange).toHaveBeenLastCalledWith(0);
+    rerender(<Stack onIndexChange={onIndexChange} index={1} />);
+  });
+
+  it("swiping up or down does nothing (the card text just scrolls)", () => {
+    const onIndexChange = vi.fn();
+    const onOpenBook = vi.fn();
+    const onLess = vi.fn();
+    const { container } = render(
+      <Stack onIndexChange={onIndexChange} onOpenBook={onOpenBook} onLess={onLess} index={1} />,
+    );
+    const surface = container.querySelector(".stack-surface")!;
+    swipe(surface, [200, 500], [200, 100]);
+    swipe(surface, [200, 100], [200, 500]);
+    expect(onIndexChange).not.toHaveBeenCalled();
+    expect(onOpenBook).not.toHaveBeenCalled();
+    expect(onLess).not.toHaveBeenCalled();
+  });
+
+  it("swiping left no longer means 'less like this'", () => {
+    const onLess = vi.fn();
+    const { container } = render(<Stack onLess={onLess} index={0} />);
+    swipe(container.querySelector(".stack-surface")!, [320, 300], [40, 300]);
+    expect(onLess).not.toHaveBeenCalled();
+  });
+
+  it("arrow keys and the screen-reader buttons still move", async () => {
+    const onIndexChange = vi.fn();
+    render(<Stack onIndexChange={onIndexChange} index={1} />);
+    fireEvent.keyDown(window, { key: "ArrowRight" });
+    expect(onIndexChange).toHaveBeenLastCalledWith(2);
+    fireEvent.keyDown(window, { key: "ArrowLeft" });
+    expect(onIndexChange).toHaveBeenLastCalledWith(0);
+    await userEvent.click(screen.getByRole("button", { name: "Next card" }));
+    expect(onIndexChange).toHaveBeenLastCalledWith(2);
+    await userEvent.click(screen.getByRole("button", { name: "Previous card" }));
+    expect(onIndexChange).toHaveBeenLastCalledWith(0);
   });
 });

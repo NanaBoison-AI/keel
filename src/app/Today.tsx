@@ -3,15 +3,7 @@ import { Link, useNavigate } from "react-router";
 import { CardStack, type StackItem } from "../components/CardStack";
 import { useToast } from "../components/Toast";
 import { Dots } from "./Progress";
-import {
-  db,
-  addFeedback,
-  markSeen,
-  recentlySeenIds,
-  setSetting,
-  toggleSave,
-  undoLess,
-} from "../lib/db";
+import { db, addFeedback, markSeen, recentlySeenIds, toggleSave, undoLess } from "../lib/db";
 import { localDate, useLivePacks, useSettingsState } from "../lib/hooks";
 import { buildDailyStack } from "../lib/mix";
 import { cardIndex, useAffinity, useSavedIds } from "../lib/session";
@@ -204,14 +196,11 @@ export function Today() {
       onToggleSave={onToggleSave}
       onExpand={onExpand}
       onLess={onLess}
-      mode="today"
       onOpenBook={(key) => {
         const hit = lookup.get(key);
         if (!hit) return;
-        void setSetting("hintOpenBook", true);
         navigate(`/deck/${hit.pack.id}`);
       }}
-      showOpenHint={index === 0 && !settings.hintOpenBook}
       header={<Dots total={total} index={index} />}
     />
   );

@@ -284,28 +284,21 @@ Like `queue.json`, it is not shipped to the app.
 
 ### Card interaction
 
-**Today tab** (the stepper/dots at the top show position, so navigation is horizontal):
+Navigation is horizontal everywhere (Today and decks). There are no vertical swipes: a card whose
+text is long simply scrolls.
 
-| Gesture     | Action                                                                  | Button equivalent                    |
-| ----------- | ----------------------------------------------------------------------- | ------------------------------------ |
-| Swipe left  | Next card                                                               | none on screen (keyboard ←/→, screen-reader buttons) |
-| Swipe right | Previous card                                                           | none on screen                       |
-| Swipe up    | Open the book (the deck the card comes from)                            | footer link "From … → Continue"      |
-| Tap card    | Expand/collapse `deeper` (if present)                                   | "Read more"                          |
-| Double-tap  | Save to Notebook (brief bookmark animation)                             | Bookmark icon                        |
-| —           | "Less like this" (records feedback, advances, Undo toast for 4s)        | Thumbs-down icon beside the bookmark |
+| Gesture     | Action                                                           | Button equivalent                                             |
+| ----------- | ---------------------------------------------------------------- | ------------------------------------------------------------- |
+| Swipe left  | Next card                                                        | none on screen (keyboard ←/→, screen-reader buttons)          |
+| Swipe right | Previous card                                                    | none on screen (keyboard ←/→, screen-reader buttons)          |
+| Tap card    | Expand/collapse `deeper` (if present)                            | "Read more"                                                   |
+| Double-tap  | Save to Notebook (brief bookmark animation)                      | Bookmark icon                                                 |
+| —           | "Less like this" (records feedback, advances, Undo toast for 4s) | Thumbs-down icon beside the bookmark                          |
+| —           | **Today only:** open the book the card comes from                | Open-book icon between the thumbs-down and the bookmark; also the footer link "From … → Continue" |
 
-**Deck view** (Journey / Library / opened books) keeps vertical navigation:
-
-| Gesture    | Action                                                                 | Visible button equivalent |
-| ---------- | ---------------------------------------------------------------------- | ------------------------- |
-| Swipe up   | Next card                                                              | none on screen (keyboard ←/→, screen-reader buttons) |
-| Swipe down | Previous card                                                          | none on screen            |
-| Tap card   | Expand/collapse `deeper` (if present)                                  | "Read more"               |
-| Double-tap | Save to Notebook (brief bookmark animation)                            | Bookmark icon             |
-| Swipe left | "Less like this" (records feedback, advances, shows Undo toast for 4s) | Thumbs-down icon          |
-
-- Every gesture must have an accessible alternative: a visible control, or (Today swipes) keyboard
+- Today's controls are three round buttons in the bottom third: thumbs-down, open book, bookmark.
+  Decks have thumbs-down and bookmark (the open-book button would point at the deck you are in).
+- Every gesture must have an accessible alternative: a visible control, or (swipes) keyboard
   arrows and screen-reader-only buttons.
 - Card footer shows: pillar chip, pack title (tappable → opens deck), and `source.ref`.
 - Daily-mix cards from a book show "From _Deep Work_ → Continue the book".
