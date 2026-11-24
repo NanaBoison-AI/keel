@@ -1,0 +1,262 @@
+{
+  "schemaVersion": 1,
+  "id": "thinking-fast-and-slow",
+  "type": "book",
+  "title": "Thinking, Fast and Slow",
+  "author": "Daniel Kahneman",
+  "year": 2011,
+  "pillar": "mind",
+  "origin": "source",
+  "publicDomain": false,
+  "summary": "Your mind's two speeds, the shortcuts that trip them up, and simple habits for catching your own errors.",
+  "estMinutes": 14,
+  "version": 1,
+  "createdAt": "2026-11-23",
+  "updatedAt": "2026-11-23",
+  "cards": [
+    {
+      "id": "thinking-fast-and-slow-01",
+      "pillar": "mind",
+      "format": "hook",
+      "hook": "You trust your judgment. A Nobel-winning psychologist spent a career showing where it quietly fails.",
+      "body": "Daniel Kahneman, a psychologist who shared the 2002 Nobel prize in economics, wrote this book to give you a vocabulary for your own mistakes. Not because you're foolish, but because every mind takes the same shortcuts. You can't switch them off. You can learn to spot the situations where they lead you wrong, and slow down there. These cards follow the book's five parts in order.",
+      "source": {
+        "ref": "Introduction"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-02",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "Most of what you 'decide' each day, you never actually decided.",
+      "body": "Kahneman describes the mind as two characters. **System 1** is fast and automatic: it reads faces, finishes '2 + 2', and drives an empty road. **System 2** is slow and effortful: it does long multiplication, checks an argument, fills in a tax form. System 2 thinks it's in charge. In reality it mostly signs off on what System 1 has already suggested.",
+      "deeper": "Kahneman is clear that these are useful characters, not literal parts of the brain. System 1 is usually right, which is why we rely on it. The trouble starts when a problem looks easy but isn't, because System 1 produces a confident answer and System 2, which is lazy and easily tired, often accepts it without checking.",
+      "source": {
+        "ref": "Part I, Ch. 1: The Characters of the Story"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-03",
+      "pillar": "mind",
+      "format": "story",
+      "hook": "A bat and a ball cost $1.10. The bat costs $1 more than the ball. How much is the ball?",
+      "body": "The number that jumps to mind is 10 cents. It's wrong: then the bat would be $1.10 and the total $1.20. The ball costs 5 cents. Kahneman reports that more than half of students at Harvard, MIT and Princeton gave the intuitive wrong answer. They could easily have checked. They just didn't feel the need.",
+      "deeper": "That's the point of the puzzle. It isn't a test of maths ability; it's a test of whether you notice that your quick answer deserves a second look. Kahneman calls System 2 'the lazy controller': it can catch errors, but it only switches on when something feels off. When an answer arrives fluently, it rarely does.",
+      "source": {
+        "ref": "Part I, Ch. 3: The Lazy Controller"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-04",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "If something feels easy to take in, your brain quietly marks it as true.",
+      "body": "Kahneman calls this cognitive ease. A statement in clear print, a phrase you've heard many times, an idea that's simple to follow: all of these feel more familiar, and familiar feels true. Repetition alone makes claims more believable, even false ones. When you're in a good mood and things feel easy, you also become more gullible and less careful.",
+      "deeper": "The flip side is useful. When something feels hard to process, System 2 tends to wake up and you think more carefully. So the feeling of 'this obviously makes sense' is not evidence. It's worth asking whether you believe something because you've checked it, or because you've simply heard it a lot.",
+      "source": {
+        "ref": "Part I, Ch. 5: Cognitive Ease"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-05",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "When a question is hard, your mind swaps it for an easier one and doesn't tell you.",
+      "body": "Ask yourself 'How happy am I with my life?' and you may really be answering 'What's my mood right now?' Ask 'Is this candidate good for the job?' and you may be answering 'Do I like them?' Kahneman calls this substitution. The easy answer arrives so smoothly that you don't notice you changed the question.",
+      "deeper": "Substitution is one of the book's central ideas, because it explains many of the biases that follow. A useful habit: when you reach a quick verdict on something important, say the original question out loud and ask whether your answer actually addresses it.",
+      "source": {
+        "ref": "Part I, Ch. 9: Answering an Easier Question"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-06",
+      "pillar": "mind",
+      "format": "fact",
+      "hook": "The US counties with the lowest kidney cancer rates are mostly rural. So are the ones with the highest.",
+      "body": "Kahneman uses this example to show a trap. Hear only the first half and you invent a cause: clean country living. Hear only the second and you invent another: rural poverty. The real explanation is dull. Rural counties have small populations, and small samples produce extreme results, high and low, by chance alone.",
+      "deeper": "Kahneman calls our blindness to this 'the law of small numbers'. We treat small samples as if they were as reliable as large ones, and we see patterns and causes in what is really noise. Before you draw a lesson from a handful of cases, a few good months, three reviews, one bad hire, ask how big the sample really is.",
+      "source": {
+        "ref": "Part II, Ch. 10: The Law of Small Numbers"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-07",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "A number you know is random can still change your answer.",
+      "body": "In one experiment Kahneman describes, people spun a wheel rigged to stop on either 10 or 65, then estimated the share of African nations in the UN. Those who saw the higher number gave noticeably higher estimates. The number was meaningless, and they knew it. It pulled anyway. Experts, including estate agents valuing houses, show the same effect.",
+      "deeper": "Anchoring works partly by suggestion: the anchor makes compatible thoughts come to mind. Kahneman's advice for negotiation is not to argue with an outrageous first offer as if it were reasonable. Make clear you won't negotiate from that number, and deliberately think of arguments against it.",
+      "source": {
+        "ref": "Part II, Ch. 11: Anchors"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-08",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "You judge how common something is by how easily examples come to mind.",
+      "body": "That's the availability heuristic. Dramatic, recent or vivid events are easy to recall, so they feel more frequent than they are. A plane crash on the news makes flying feel dangerous; quiet, common risks feel small. Kahneman also notes that media coverage and public worry can feed each other until a minor risk feels like a crisis.",
+      "deeper": "Availability also distorts how you see yourself. Spouses asked what share of the housework they do tend to give answers that add up to more than 100%, because your own efforts come to mind far more easily than your partner's. Worth remembering before the next argument about who does more.",
+      "source": {
+        "ref": "Part II, Ch. 12–13: Availability"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-09",
+      "pillar": "mind",
+      "format": "story",
+      "hook": "Linda was a philosophy student who cared about justice. Is she more likely a bank teller, or a feminist bank teller?",
+      "body": "Most people, including students trained in statistics, pick 'feminist bank teller'. That's logically impossible: every feminist bank teller is also a bank teller, so the broader option must be at least as likely. The detailed description simply fits our picture of Linda better, and that feeling of fit overrides logic.",
+      "deeper": "Kahneman and Amos Tversky's Linda problem shows a pattern he calls 'less is more': adding plausible detail makes a story feel more likely even as it becomes less probable. Watch for this in forecasts and pitches. The more specific and convincing the scenario, the more conditions must all come true for it to happen.",
+      "source": {
+        "ref": "Part II, Ch. 15: Linda: Less Is More"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-10",
+      "pillar": "mind",
+      "format": "story",
+      "hook": "A flight instructor was sure praise made pilots worse and shouting made them better. He'd seen it happen.",
+      "body": "Kahneman was teaching Israeli Air Force instructors when one objected: whenever he praised a great manoeuvre, the next attempt was worse; whenever he yelled at a poor one, the next was better. The instructor was observing something real, but misreading it. An unusually good or bad attempt is partly luck, and the next one tends to drift back toward average whatever you say.",
+      "deeper": "This is regression to the mean, and Kahneman calls the moment one of the most satisfying of his career. It explains a lot: why a star rookie often has a weaker second season, why punishment seems to work, why a dramatic intervention gets credit for an improvement that would have happened anyway. Before crediting a cause, ask whether things were simply returning to normal.",
+      "source": {
+        "ref": "Part II, Ch. 17: Regression to the Mean"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-11",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "After something happens, you'll be sure you saw it coming. You probably didn't.",
+      "body": "Kahneman calls it the illusion of understanding. Once we know the outcome, we build a tidy story of why it was inevitable, and our memory of what we believed beforehand shifts to match. This hindsight makes us judge decisions by results: a good call that turned out badly looks foolish, and a reckless gamble that paid off looks brilliant.",
+      "deeper": "He extends this to business stories and confident professionals. Narratives of why one company succeeded and another failed usually underplay luck. In the next chapter he describes how people who evaluate others can feel sure of judgments that turn out to predict little. Confidence, he argues, reflects how coherent a story feels, not how likely it is to be right.",
+      "source": {
+        "ref": "Part III, Ch. 19–20: The Illusion of Understanding; The Illusion of Validity"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-12",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "Some gut feelings deserve your trust. You can tell which ones by asking two questions.",
+      "body": "Kahneman worked through this with psychologist Gary Klein, who studies experts like firefighters. Their conclusion: intuition is reliable when the environment is regular enough to be predictable, and when the person has had long practice with quick, clear feedback. A chess master or an experienced nurse qualifies. Someone forecasting stock prices or long-term politics usually doesn't.",
+      "deeper": "The trap is that a confident hunch feels the same either way. So don't judge an intuition by how strong it feels. Judge it by whether the person, possibly you, has had a real chance to learn the patterns of this specific kind of situation.",
+      "source": {
+        "ref": "Part III, Ch. 22: Expert Intuition: When Can We Trust It?"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-13",
+      "pillar": "mind",
+      "format": "story",
+      "hook": "Kahneman's own team guessed two years to write a textbook. It took about eight.",
+      "body": "Early in his career, Kahneman led a group of experts writing a school curriculum in Israel. When he asked each to estimate how long it would take, the answers clustered around two years. Then he asked the team's curriculum expert how long similar projects had taken. The honest answer: many never finished, and those that did took far longer. They carried on anyway. The book took roughly eight years.",
+      "deeper": "Kahneman calls this the planning fallacy, and the cure the **outside view**: before trusting your inside picture of a project, find a reference class of similar projects and look at how they actually went. Then adjust from there. It works for renovations, launches and career plans alike.",
+      "source": {
+        "ref": "Part III, Ch. 23: The Outside View"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-14",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "Losing $100 hurts more than winning $100 feels good, and that changes your choices.",
+      "body": "Offer most people a coin flip, lose $100 on tails, win $150 on heads, and they'll turn it down. Kahneman and Tversky's prospect theory explains why: we judge outcomes as gains or losses from a reference point, and losses weigh roughly twice as much as equal gains. That's loss aversion, one of the book's best-known ideas.",
+      "deeper": "It shows up everywhere: holding on to a losing investment to avoid 'locking in' the loss, demanding more to sell something than you'd pay to buy it (the endowment effect), fighting harder to avoid losing a privilege than to gain a new one. When a choice feels hard, try reframing which side is really the loss.",
+      "source": {
+        "ref": "Part IV, Ch. 26–27: Prospect Theory; The Endowment Effect"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-15",
+      "pillar": "mind",
+      "format": "idea",
+      "hook": "Same facts, different words, opposite decision.",
+      "body": "Kahneman describes doctors choosing between treatments. Told that one-month survival after surgery is 90%, far more of them favoured surgery than when told mortality was 10%. Those are the same fact. The word 'survival' feels like a gain; 'mortality' feels like a loss. Framing doesn't change reality, only which part of it your System 1 reacts to.",
+      "deeper": "His point is that our preferences are often less stable than we think: they're shaped by how a choice is described. A practical defence is to restate any important decision in the opposite frame and see whether you still feel the same way. If your answer flips, you've learned that the wording, not the substance, was driving you.",
+      "source": {
+        "ref": "Part IV, Ch. 34: Frames and Reality"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-16",
+      "pillar": "mind",
+      "format": "story",
+      "hook": "Patients who endured a longer painful procedure sometimes remembered it as less bad.",
+      "body": "Kahneman studied people undergoing colonoscopies. Their memory of the pain didn't track how long it lasted. It tracked the worst moment and how it ended, which he calls the peak-end rule. A procedure that finished gently was remembered more kindly, even if it ran longer. He describes two selves: one who lives each moment, and one who remembers and makes decisions.",
+      "deeper": "The remembering self is the one that chooses your next holiday, job or relationship, and it largely ignores duration. That's why a great trip with a bad last day can feel spoiled. Kahneman doesn't say which self is 'right'. He does suggest being aware that the self keeping score isn't the one doing the living.",
+      "source": {
+        "ref": "Part V, Ch. 35: Two Selves"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-17",
+      "pillar": "mind",
+      "format": "challenge",
+      "hook": "Before your next big decision, imagine it has already failed.",
+      "body": "This is the premortem, an idea Kahneman credits to Gary Klein. Gather the people involved, or just yourself, and say: 'It's a year from now. We went ahead, and it was a disaster. Write a short history of what went wrong.' It gives doubters permission to speak and pulls hidden risks into the open before you commit.",
+      "deeper": "Kahneman likes the premortem because it works against the overconfidence that builds once a group has settled on a plan. Try it today on something small, such as a purchase, a schedule or a project at work. Write down three plausible reasons it fails, and fix the easiest one.",
+      "source": {
+        "ref": "Part III, Ch. 24: The Engine of Capitalism"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-18",
+      "pillar": "mind",
+      "format": "reflection",
+      "hook": "Which of your firm beliefs have you actually checked, and which just feel familiar?",
+      "body": "Pick one strong opinion you hold about money, work, people or the news. Ask: where did it come from? Is it based on a large sample or a few memorable cases? Would I feel the same if it were framed the other way? You won't rebuild your mind overnight, but one honest check is how System 2 gets its job back.",
+      "source": {
+        "ref": "Conclusions"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "thinking-fast-and-slow-19",
+      "pillar": "mind",
+      "format": "recap",
+      "hook": "Three things to remember from Thinking, Fast and Slow.",
+      "body": "1. **Fast thinking is usually right, and confidently wrong in predictable ways.** When the stakes are high and the answer came easily, slow down and check.\n2. **Look outside the story.** Ask about sample size, base rates and how similar cases actually turned out, not how convincing the narrative feels.\n3. **Losses and frames move you more than facts.** Restate big decisions the other way round, and run a premortem before you commit.",
+      "source": {
+        "ref": "Conclusions"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
