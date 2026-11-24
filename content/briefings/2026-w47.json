@@ -1,0 +1,311 @@
+{
+  "schemaVersion": 1,
+  "id": "2026-w47",
+  "type": "briefing",
+  "title": "The Week: 16–22 November 2026",
+  "pillar": "world",
+  "origin": "source",
+  "publicDomain": false,
+  "summary": "AI stocks drag Wall Street into a correction, Nvidia beats but slides, Anthropic lists, and the Fed and UK eye higher rates.",
+  "estMinutes": 14,
+  "version": 1,
+  "createdAt": "2026-11-22",
+  "updatedAt": "2026-11-22",
+  "expiresAt": "2026-12-13",
+  "sources": [
+    {
+      "title": "AP via Yakima Herald — How major US stock indexes fared Friday 11/20/2026",
+      "url": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+    },
+    {
+      "title": "Investopedia via Yahoo Finance — Markets News, Nov. 20, 2026",
+      "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html"
+    },
+    {
+      "title": "Nvidia — Form 8-K: Q3 fiscal 2027 results",
+      "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm"
+    },
+    {
+      "title": "Yahoo Finance — Nvidia earnings live updates",
+      "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-interim-ceo-kress-prepares-for-q3-earnings-with-huang-reportedly-planning-comeback-153114076.html"
+    },
+    {
+      "title": "Anthropic — Anthropic prices initial public offering",
+      "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+    },
+    {
+      "title": "Fox Business — Anthropic begins trading on Nasdaq",
+      "url": "https://www.foxbusiness.com/markets/anthropic-begins-trading-nasdaq-record-breaking-ipo"
+    },
+    {
+      "title": "AP via ABC News — Fed minutes: Higher interest rates needed in December",
+      "url": "https://abcnews.com/US/wireStory/fed-minutes-higher-interest-rates-needed-december-inflation-138258781"
+    },
+    {
+      "title": "ONS — Consumer price inflation, UK: October 2026",
+      "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
+    },
+    {
+      "title": "RTÉ/Reuters — UK inflation rises to 1-year high, markets trim rate bets",
+      "url": "https://www.rte.ie/news/business/2026/1118/1599633-uk-inflation-figures/"
+    },
+    {
+      "title": "The Nation/Jiji — Japan's central bank plans to continue raising interest rates",
+      "url": "https://www.nationthailand.com/news/40073698"
+    },
+    {
+      "title": "Al-Monitor — Oil heads for third weekly loss",
+      "url": "https://www.al-monitor.com/originals/2026/11/oil-heads-third-weekly-loss-iran-tests-us-blockade-crude-transfer"
+    },
+    {
+      "title": "Al Jazeera — Ukraine holds peace talks with US, Europe as conflict escalates",
+      "url": "https://www.aljazeera.com/amp/news/2026/11/17/ukraine-holds-peace-talks-with-us-europe-as-conflict-escalates"
+    }
+  ],
+  "cards": [
+    {
+      "id": "2026-w47-01",
+      "pillar": "world",
+      "format": "hook",
+      "hook": "The week in 60 seconds: the AI trade cracked, and Wall Street gave back its whole year.",
+      "body": "- **US stocks had a brutal week:** the S&P 500 fell 8.6% and the Nasdaq 10%.\n- **Nvidia beat forecasts** with $115.8 billion in quarterly revenue, and its shares still kept sliding.\n- **Anthropic listed on the Nasdaq** after the largest IPO on record.\n- **Fed minutes** showed nearly all officials expect a December rate *rise*.\n- **UK inflation** climbed to 3.6%, a one-year high.",
+      "source": {
+        "url": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-02",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "On Friday the Nasdaq lost 5.3% in a single day. The Dow fell nearly 1,000 points.",
+      "body": "On Friday 20 November the S&P 500 fell 3.7% to 6,910.39. The Dow dropped 949.73 points (1.9%) to 48,147.33, and the tech-heavy Nasdaq sank 5.3% to 22,617.73.\n\nAP blamed a bruising sell-off in artificial intelligence stocks. Technology was the worst of the S&P 500's 11 sectors, down about 5%, while consumer staples, the shops-and-groceries end of the market, actually rose.",
+      "source": {
+        "ref": "Market close, 20 Nov 2026",
+        "url": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-03",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Almost a whole year of stock market gains, nearly wiped out in five trading days.",
+      "body": "Over the week the S&P 500 lost 8.6%, the Dow 8% and the Nasdaq 10%. That left the S&P up just 0.9% for 2026 and the Dow up 0.2%, while the Nasdaq is now down 2.7% on the year.\n\nFriday was the S&P 500's seventh losing session in a row. The VIX, often called Wall Street's fear gauge, jumped about 26% to near 36.",
+      "deeper": "Other assets fell too. Gold futures dropped about 4% on Friday and Bitcoin slid to around $59,000, its lowest since June. Not every analyst read it as the start of something worse: one quoted by Investopedia described it as a pullback within a longer-term rising market rather than a sign of recession.",
+      "source": {
+        "ref": "Week to 20 Nov 2026",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-04",
+      "pillar": "world",
+      "format": "story",
+      "hook": "Why do investors care so much whether a fall is 9% or 10%?",
+      "body": "Because 10% is the line professionals use for a **correction**: a drop of at least that much from a recent high. This week the S&P 500 crossed it, having fallen more than 10% from its record close on 6 October. AP notes its last correction was in March 2025.\n\nThe next line is 20%, which marks a **bear market**. The Nasdaq was already in a correction and, per Investopedia, is down about 18% since 6 October.",
+      "deeper": "These thresholds are conventions, not laws of nature. Nothing mechanical happens at exactly 10% or 20%. But they shape headlines and how investors talk about a slide, which is why crossing one can itself become a news story.",
+      "source": {
+        "ref": "Context: market terms",
+        "url": "https://www.yakimaherald.com/news/nation_and_world/business/how-major-us-stock-indexes-fared-friday-11-20-2026/article_963ce6d2-85a3-5fd6-981d-e60b72a58fbb.html"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-05",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Nvidia's revenue doubled in a year. Its share price fell anyway.",
+      "body": "Nvidia reported revenue of $115.8 billion for the quarter ending 25 October, up 103% from a year earlier. Its data centre business, which sells the chips that power AI, brought in $107.6 billion.\n\nIt guided to about $130 billion next quarter. Interim chief executive Colette Kress told investors: \"Our momentum is real.\"",
+      "deeper": "Analysts surveyed by Bloomberg had expected about $109 billion in revenue before the release, according to Yahoo Finance. Nvidia's forecast for next quarter assumes no data centre compute revenue from China, and that quarter includes an extra week.",
+      "source": {
+        "ref": "Q3 fiscal 2027 results, 17 Nov 2026",
+        "url": "https://www.sec.gov/Archives/edgar/data/0001045810/000104581026000088/q3fy27pr.htm"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-06",
+      "pillar": "world",
+      "format": "story",
+      "hook": "A company with no permanent CEO just posted record results. Investors weren't reassured.",
+      "body": "Nvidia's board accepted Jensen Huang's resignation on 11 November and named CFO Colette Kress interim CEO. Its results release refers to a search for a new chief executive and an ongoing investigation by an independent board committee.\n\nEven after beating forecasts, Nvidia's shares fell by more than 10% on Friday. Investopedia reports the stock has lost about a third of its value over the past two weeks as investors weigh Huang's departure.",
+      "deeper": "Before the results, Yahoo Finance reported that at least ten analysts had cut the stock to the equivalent of Hold. Nvidia's size means its swings move the whole market: it led Friday's decliners in the Dow, and fellow chipmakers such as AMD, Broadcom and Micron fell by double digits.",
+      "source": {
+        "ref": "Week of 16 Nov 2026",
+        "url": "https://finance.yahoo.com/technology/live/nvidia-live-updates-interim-ceo-kress-prepares-for-q3-earnings-with-huang-reportedly-planning-comeback-153114076.html"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-07",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "The biggest share sale in history happened in the middle of a market rout.",
+      "body": "Anthropic, the AI company behind the Claude models, priced its IPO on 18 November at $83 a share, above its initial range of $70–78. It sold 980 million shares, raising about $81.3 billion, according to Fox Business. That beats SpaceX's $75 billion IPO in June.\n\nThe shares began trading on the Nasdaq on 19 November under the ticker ANT.",
+      "deeper": "Fox Business put the company's implied valuation at about $1.5 trillion. Anthropic's filings, as reported by Fox, show revenue of $33.2 billion and a net loss of $104 billion for the first nine months of 2026. *Note: Keel's Mentor lessons are written by Claude, Anthropic's AI; this card reports the IPO as news only.*",
+      "source": {
+        "ref": "IPO pricing, 18 Nov 2026",
+        "url": "https://www.anthropic.com/news/anthropic-prices-initial-public-offering"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-08",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Anthropic's shares opened 34% above the IPO price. A day later, much of that was gone.",
+      "body": "The first trade on Thursday was at $111.50, against the $83 offer price. Investopedia reports the stock closed that day around $97, then fell nearly 9% on Friday to around $89 as the wider AI sell-off deepened.\n\nThe record listing, it notes, did not lift the rest of the market.",
+      "source": {
+        "ref": "Trading, 19–20 Nov 2026",
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-09",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Nearly every Fed official now expects to raise rates in December.",
+      "body": "Minutes of the Federal Reserve's 27–28 October meeting, released on 18 November, showed nearly all officials expect a quarter-point increase in December. Two floated a bigger half-point move.\n\nThe Fed raised rates in September for the first time in three years, then held at 3.9% in October. Futures markets put the odds of a December hike at nearly 95%, per CME FedWatch.",
+      "deeper": "A \"vast majority\" of policymakers worried inflation could persist even if gas prices fall and the effects of tariffs and the AI building boom fade. Governor Lisa Cook and Cleveland Fed president Beth Hammack dissented in October because they wanted a hike then.",
+      "source": {
+        "ref": "FOMC minutes, 18 Nov 2026",
+        "url": "https://abcnews.com/US/wireStory/fed-minutes-higher-interest-rates-needed-december-inflation-138258781"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-10",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "The Fed agrees rates must rise. It's arguing about how fast.",
+      "body": "Governor Christopher Waller backs a half-point hike in December and says several more may be needed. He points to core inflation running at about a 3.5% annual pace over three months, against a 2% target.\n\nNew York Fed president John Williams pushed back: \"I don't think the situation calls for dramatic action.\" St. Louis Fed president Alberto Musalem expects several increases before spring 2027.",
+      "deeper": "Chairman Kevin Warsh has given little forward guidance, arguing that signalling a path would lock the Fed in. Waller has criticised that approach, saying markets need to know where rates are heading.",
+      "source": {
+        "ref": "Fed officials, week of 16 Nov 2026",
+        "url": "https://abcnews.com/US/wireStory/fed-minutes-higher-interest-rates-needed-december-inflation-138258781"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-11",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Diesel in Britain just hit its highest price since records began in 1996.",
+      "body": "UK consumer prices rose 3.6% in the year to October, up from 3.5% and the highest in a year. The biggest push came from motor fuels, up 33.2% on the year.\n\nDiesel averaged 199.5p a litre, a record, and petrol 174.7p, the highest since August 2022. Restaurants and hotels pulled the other way, and food inflation eased to 0.9%.",
+      "deeper": "Core inflation, which strips out energy, food, alcohol and tobacco, held at 2.8%. Electricity prices dipped 0.8% in the month after VAT on electricity was cut to zero from 1 October, while a tobacco duty rise pushed tobacco prices up 5.2%.",
+      "source": {
+        "ref": "ONS CPI, October 2026",
+        "url": "https://www.ons.gov.uk/economy/inflationandpriceindices/bulletins/consumerpriceinflation/october2026"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-12",
+      "pillar": "world",
+      "format": "idea",
+      "hook": "UK inflation rose, yet bets on a December rate rise fell. Here's why.",
+      "body": "The 3.6% figure matched economists' forecasts and came in below the Bank of England's own 3.7% projection. Services inflation, which the Bank watches closely, held at 3.7%, a touch under expectations.\n\nSo markets cut the odds of a December rise to about 80% from 90%. The Bank raised rates earlier this month for the first time in three years, and it expects inflation near 5% in spring 2027, driven by energy costs from the Iran war.",
+      "deeper": "Markets still expect three or four quarter-point rises by the end of 2027, according to Reuters. Governor Andrew Bailey noted that a roughly 20% rise in regulated energy bills due in January came too late to be offset.",
+      "source": {
+        "ref": "Markets, 18 Nov 2026",
+        "url": "https://www.rte.ie/news/business/2026/1118/1599633-uk-inflation-figures/"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-13",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Japan's central bank says it will keep raising rates, and it's watching the yen.",
+      "body": "On 19 November Bank of Japan governor Kazuo Ueda told parliament the bank will continue to raise its policy rate and reduce support for the economy.\n\nHe warned that a weak yen could push up the prices businesses charge. Data released on 16 November showed private consumption fell 0.3% in real terms in July–September, which Ueda said was expected.",
+      "source": {
+        "ref": "Diet testimony, 19 Nov 2026",
+        "url": "https://www.nationthailand.com/news/40073698"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-14",
+      "pillar": "world",
+      "format": "fact",
+      "hook": "Oil fell for a third straight week, even with fighting around the Gulf.",
+      "body": "Brent crude slipped below $91 a barrel on Friday and was on track to lose about 5% for the week, its third weekly decline, per Al-Monitor. Recovering Gulf supplies outweighed the risk of new US strikes on Iran.\n\nUS crude (WTI) ended Friday around $84 a barrel, according to Investopedia.",
+      "deeper": "On Thursday President Trump told Axios he was not rushing into any decision on Iran until after the new year.",
+      "source": {
+        "ref": "Oil markets, week to 20 Nov 2026",
+        "url": "https://www.al-monitor.com/originals/2026/11/oil-heads-third-weekly-loss-iran-tests-us-blockade-crude-transfer"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-15",
+      "pillar": "world",
+      "format": "story",
+      "hook": "The fight for the Strait of Hormuz is nearing its ninth month. Here's what happened this week.",
+      "body": "Iran said it struck US military assets in Kuwait and Bahrain. US forces again hit Iran's Qeshm Island in the Strait of Hormuz. Yemen's Houthis targeted Riyadh's financial district on Thursday, and Iran's Revolutionary Guards issued new threats against the US and Israel on Friday.\n\nNone of this has yet reversed the slide in oil prices, but the conflict's energy shock is already feeding into inflation forecasts, as the Bank of England's outlook this week showed.",
+      "source": {
+        "ref": "Iran conflict, week of 16 Nov 2026",
+        "url": "https://www.al-monitor.com/originals/2026/11/oil-heads-third-weekly-loss-iran-tests-us-blockade-crude-transfer"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-16",
+      "pillar": "world",
+      "format": "story",
+      "hook": "Ukraine talked peace this week. Russia says it also faced its biggest drone attack since 2022.",
+      "body": "On 16 November Ukraine held online talks with US envoys Steve Witkoff and Jared Kushner and European representatives. Zelenskyy called them \"not easy\"; participants agreed to meet next in Berlin, with no date set. Russia said it had not agreed to widen talks beyond Russia, Ukraine and the US.\n\nMeanwhile Russia's defence ministry called a Ukrainian strike on bridges and oil refineries the biggest overnight drone attack on Russia since 2022.",
+      "deeper": "The talks followed a 10–11 November meeting in Abu Dhabi, the first time US, Ukrainian and Russian officials had met together in nine months. It produced a prisoner exchange agreement but no breakthrough. Kremlin spokesman Dmitry Peskov said Moscow wants a lasting peace rather than a temporary ceasefire.",
+      "source": {
+        "ref": "Diplomacy, 16–17 Nov 2026",
+        "url": "https://www.aljazeera.com/amp/news/2026/11/17/ukraine-holds-peace-talks-with-us-europe-as-conflict-escalates"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-17",
+      "pillar": "money",
+      "format": "idea",
+      "hook": "Falling shares and rising rates in the same week. Here's what that means for your money.",
+      "body": "Rate rises in the US and UK mean borrowing stays expensive: AP notes US mortgage rates have topped 7% in recent months. If you're on a variable rate or refinancing soon, it's worth knowing your numbers.\n\nIf you hold shares through a pension or fund, a week like this shows up in your balance. Corrections have happened before, including in March 2025. This isn't advice, but it's a reminder to know your own time horizon before reacting.",
+      "deeper": "Savers are the other side of the coin: when central banks raise rates, interest on cash savings tends to follow, though banks don't always pass increases on quickly. Check what your account actually pays.",
+      "source": {
+        "ref": "Rates and markets, Nov 2026",
+        "url": "https://abcnews.com/US/wireStory/fed-minutes-higher-interest-rates-needed-december-inflation-138258781"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "2026-w47-18",
+      "pillar": "world",
+      "format": "recap",
+      "hook": "Three things to watch as markets head into the last week of November.",
+      "body": "1. **Can the market steady?** The Nasdaq is about 18% below its October high; 20% is bear-market territory.\n2. **Fed signals.** Officials agree on a December rise; watch whether talk of a half-point move grows or fades.\n3. **Ukraine and Iran.** A date for the Berlin talks, and whether Gulf oil supplies keep recovering.",
+      "source": {
+        "url": "https://finance.yahoo.com/markets/stocks/articles/stock-market-today-futures-plunge-131303598.html"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
