@@ -273,7 +273,8 @@ Like `queue.json`, it is not shipped to the app.
    - **This week** — latest non-expired briefing, if any.
    - **Up Next** — 3 suggested unstarted decks, ranked by pillar weight × affinity,
      favoring pillars underrepresented in recent reading.
-   - In-deck view: same card UI, "Card 7 of 16", finish screen with recap and "Next deck".
+   - In-deck view: same card UI and the same progress stepper (dots) as Today, with a "← deck title"
+     link above it (no "Card 7 of 16" count), finish screen with recap and "Next deck".
 3. **Library** — browse all packs, grouped/filterable by pillar and type.
    Show title, author, year, minutes, progress bar, "Public domain" badge where true.
 4. **Notebook** — saved cards, grouped by pack, filterable by pillar. Saved cards store a

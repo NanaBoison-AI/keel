@@ -1,7 +1,11 @@
+/** Progress stepper. Long decks (briefings run to 25 cards) get smaller dots so they fit narrow phones. */
 export function Dots({ total, index }: { total: number; index: number }) {
+  const compact = total > 14;
+  const dot = compact ? "w-1" : "w-1.5";
+  const current = compact ? "w-4" : "w-5";
   return (
     <div
-      className="flex items-center justify-center gap-1.5 px-6 py-2"
+      className={`flex items-center justify-center px-6 py-2 ${compact ? "gap-1" : "gap-1.5"}`}
       role="progressbar"
       aria-valuemin={0}
       aria-valuemax={total}
@@ -13,10 +17,10 @@ export function Dots({ total, index }: { total: number; index: number }) {
           key={i}
           className={`h-1.5 rounded-full transition-all ${
             i === index
-              ? "w-5 bg-brass"
+              ? `${current} bg-brass`
               : i < index
-                ? "w-1.5 bg-sea/60 dark:bg-paper/60"
-                : "w-1.5 bg-ink/20 dark:bg-paper/20"
+                ? `${dot} bg-sea/60 dark:bg-paper/60`
+                : `${dot} bg-ink/20 dark:bg-paper/20`
           }`}
         />
       ))}

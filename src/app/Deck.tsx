@@ -5,6 +5,7 @@ import { CardStack, type StackItem } from "../components/CardStack";
 import { useToast } from "../components/Toast";
 import { db, addFeedback, markSeen, saveProgress, toggleSave, undoLess } from "../lib/db";
 import { useAllPacks, useLivePacks, useSettings } from "../lib/hooks";
+import { Dots } from "./Progress";
 import { suggestDecks } from "../lib/suggest";
 import { useAffinity, useSavedIds } from "../lib/session";
 
@@ -185,13 +186,13 @@ export function Deck() {
       onExpand={onExpand}
       onLess={onLess}
       header={
-        <div className="flex items-center justify-between px-5 py-2 font-sans text-xs text-ink/70 dark:text-paper/70">
-          <Link to="/journey" className="flex min-h-[32px] items-center truncate">
-            ← {pack.title}
-          </Link>
-          <span>
-            Card {index + 1} of {pack.cards.length}
-          </span>
+        <div>
+          <div className="px-5 pt-1 font-sans text-xs text-ink/70 dark:text-paper/70">
+            <Link to="/journey" className="flex min-h-[32px] items-center truncate">
+              ← {pack.title}
+            </Link>
+          </div>
+          <Dots total={pack.cards.length} index={index} />
         </div>
       }
     />
