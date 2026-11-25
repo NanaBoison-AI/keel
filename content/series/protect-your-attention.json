@@ -1,0 +1,101 @@
+{
+  "schemaVersion": 1,
+  "id": "protect-your-attention",
+  "type": "series",
+  "title": "Your attention is your life",
+  "pillar": "mentor",
+  "origin": "ai",
+  "publicDomain": false,
+  "summary": "Your attention is the one thing you can't earn back. Here is how to see where it goes and arrange your life to protect it.",
+  "estMinutes": 7,
+  "version": 1,
+  "createdAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "cards": [
+    {
+      "id": "protect-your-attention-01",
+      "pillar": "mentor",
+      "format": "hook",
+      "hook": "Years from now, your life will turn out to have been whatever you paid attention to.",
+      "body": "Not what you intended. Not what you said mattered. What you actually looked at, thought about and gave your mind to, hour by hour.\n\nThat's why I'd put attention near the top of what I'd teach you. Money can be earned back and skills can be rebuilt, but the hours you spent half-present are gone. This lesson is about noticing where your attention goes, what feeds it and what drains it, and how to arrange your surroundings so that protecting it takes less willpower.",
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-02",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "We say \"pay attention\" for a reason. It's the one currency you can't earn back.",
+      "body": "Every hour, you spend your attention on something. You don't get to skip the spending; you only get to choose where it goes. And unlike money, there's no saving it for later and no way to win it back.\n\nOnce you see attention as something you *spend*, a lot of small choices look different. Twenty minutes scrolling isn't nothing. It's twenty minutes you didn't give to your kids, your work, your rest, or your own thoughts.",
+      "deeper": "I'm not saying every minute has to be productive. Rest is a fine thing to spend attention on, and so is play, and so is doing nothing at all while you look out of a train window. Those can be some of the best uses of it.\n\nThe question isn't \"was this useful?\" It's \"did I choose this?\" A lazy Sunday you decided on is time well spent. An evening that vanished into a screen while you meant to do something else is the kind of spending I'd want you to notice. The difference is rarely the activity. It's whether you were steering.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-03",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Here's a simple test for anything that takes your attention: how do you feel when you stop?",
+      "body": "Some things leave you calmer, clearer or more capable than before: a good conversation, a walk, a book, making something with your hands, a hard piece of work you finished. Those *feed* your attention.\n\nOther things leave you more restless than when you started. You put the phone down and feel slightly worse, and somehow want to pick it up again. Those *drain* it.\n\nYou don't need anyone to sort your life into good and bad for you. Just notice how you feel afterwards, honestly, for a week. Your own experience will tell you most of what you need to know.",
+      "deeper": "It helps to understand why the draining things are so hard to put down. Many of the apps and feeds on your phone are free because they earn money from the time you spend on them. Keeping you there is their job, and a lot of capable people work on doing it well.\n\nThat isn't a conspiracy, and it doesn't make the people who build them villains. But it does mean that when you struggle to stop, it isn't simply weakness. You're up against something designed to be hard to stop. That's worth knowing, because it changes the strategy: you won't beat it by trying harder in the moment. You beat it by changing the setup, which is where this lesson goes next.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-04",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Checking your phone takes ten seconds. Getting your mind back takes a good deal longer.",
+      "body": "When you break off from something to glance at a message, the glance is short. But part of your mind stays with what you just saw, and it takes a while before you're fully back in the thing you were doing. Do that a dozen times an hour and you never get deep into anything.\n\nThis is why a morning of constant small interruptions can leave you tired with nothing to show for it. You weren't idle. You were restarting, over and over.",
+      "deeper": "The fix isn't to never be interrupted. That's not realistic for most jobs, and certainly not for a father. It's to make some protected stretches where you're not available to the small stuff, and to batch the small stuff together the rest of the time.\n\nEven one protected hour a day changes things. That's often where the work you're proud of gets done, and where your own thinking finally gets room to finish a thought. People around you adjust faster than you'd expect, especially if you tell them when you'll be reachable again.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-05",
+      "pillar": "mentor",
+      "format": "story",
+      "hook": "A parable: a man complained that his house was always cold. He kept buying bigger heaters.",
+      "body": "Each winter he bought a stronger one, and each winter he was still cold, and he blamed himself for not running them longer. A friend came to visit, walked from room to room, and quietly closed every window.\n\nMost of us treat our attention the same way. We try to push through with more willpower, more discipline, more effort, while the windows stay open: the phone on the table, the alerts switched on, the screen in the bedroom. Willpower is the heater. Your surroundings are the windows. Close a few, and you'll need far less heat.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-06",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Don't rely on resisting temptation. Rearrange things so it shows up less often.",
+      "body": "Willpower runs low when you're tired, stressed or bored, which is exactly when distraction finds you. So build your defences in advance, while you're calm.\n\n- **Distance:** keep the phone in another room when you want to focus, eat, or sleep.\n- **Friction:** move the apps that drain you off your home screen, or log out so getting in takes effort.\n- **Defaults:** turn off every notification that isn't from a real person who needs you.\n- **Replacements:** leave a book where the phone usually sits.\n\nNone of this is dramatic. That's the point. Small changes to your surroundings work every day without you having to win the same fight again.",
+      "deeper": "A word of honesty: this won't work perfectly. You'll undo some of it, slide back, and have to set it up again. That's normal, and it isn't failure. The goal isn't a life with no distraction; it's a life where distraction has to work a bit harder to reach you.\n\nStart with one change, not ten. The easiest one for most people is notifications, because it costs nothing and you notice the quiet within a day. Then add another when the first has stuck.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-07",
+      "pillar": "mentor",
+      "format": "idea",
+      "hook": "Your children can tell the difference between you being in the room and you being there.",
+      "body": "Of everything you give your attention to, the people you love are where it matters most and where it's easiest to shortchange. Your partner telling you about their day, a kid showing you a drawing, a friend who called because something's wrong: they can all see whether your eyes are on them or drifting to a screen.\n\nYou can't give full attention all the time, and nobody expects you to. But in the moments that count, putting the phone face down, turning towards someone and actually listening is one of the clearest ways to say *you matter to me*. People remember being listened to. So do children.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-08",
+      "pillar": "mentor",
+      "format": "challenge",
+      "hook": "For one week, notice where your attention goes. Then close one window.",
+      "body": "1. For the next three days, each time you put your phone down or finish something, ask: **do I feel better or worse than before?** Make a quick note.\n2. On day four, look at your notes. Pick the one thing that drains you most.\n3. Make **one** change to your surroundings that puts distance or friction between you and it: move the app, switch off its alerts, or charge the phone outside the bedroom.\n4. Choose one daily moment, such as dinner or bedtime with the kids, where the phone stays in another room.\n5. At the end of the week, notice what you got back.",
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "protect-your-attention-09",
+      "pillar": "mentor",
+      "format": "recap",
+      "hook": "Three things to remember next time your hand reaches for the phone without asking you first.",
+      "body": "1. **Attention is spent, not saved.** Your life is made of what you pay attention to, so choose where it goes, rest and play included.\n2. **Notice what feeds and what drains.** How you feel afterwards is the honest test. Interruptions cost more than the glance itself.\n3. **Change the setup, not just your willpower.** Close the windows: distance, friction, fewer alerts. And save your fullest attention for the people you love.",
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
