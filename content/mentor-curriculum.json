@@ -1,7 +1,7 @@
 [
   {"id":"learn-anything","title":"How to learn anything","group":"think","brief":"Learning as a skill: deliberate practice, being bad first, teaching to learn, spaced repetition","status":"done"},
   {"id":"decisions-under-uncertainty","title":"Deciding without all the facts","group":"think","brief":"Reversible vs irreversible decisions, good decisions vs good outcomes, deciding then committing","status":"done"},
-  {"id":"protect-your-attention","title":"Your attention is your life","group":"think","brief":"Attention as the scarcest resource; what feeds and what drains it; designing your environment","status":"queued"},
+  {"id":"protect-your-attention","title":"Your attention is your life","group":"think","brief":"Attention as the scarcest resource; what feeds and what drains it; designing your environment","status":"done"},
   {"id":"changing-your-mind","title":"The strength to change your mind","group":"think","brief":"Holding beliefs loosely, updating on evidence, the cost of needing to be right","status":"queued"},
   {"id":"owning-mistakes","title":"Owning your mistakes","group":"self","brief":"Why fast, clean ownership builds trust; how to apologize properly; separating guilt from shame","status":"queued"},
   {"id":"handling-anger","title":"What to do with anger","group":"self","brief":"Anger as information, not instruction; the pause; saying hard things without wrecking things","status":"queued"},
