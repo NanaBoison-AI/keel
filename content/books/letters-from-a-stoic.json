@@ -1,0 +1,246 @@
+{
+  "schemaVersion": 1,
+  "id": "letters-from-a-stoic",
+  "type": "book",
+  "title": "Letters from a Stoic (Moral Letters to Lucilius)",
+  "author": "Seneca",
+  "year": 65,
+  "pillar": "character",
+  "publicDomain": true,
+  "translation": "Richard Mott Gummere (1917–25)",
+  "summary": "A Roman statesman's letters to a friend on time, fear, friendship and keeping your head.",
+  "estMinutes": 12,
+  "version": 1,
+  "createdAt": "2026-11-25",
+  "updatedAt": "2026-11-25",
+  "cards": [
+    {
+      "id": "letters-from-a-stoic-01",
+      "pillar": "character",
+      "format": "hook",
+      "hook": "A rich, powerful man stepped back from Nero's court and spent his last years writing letters to a friend.",
+      "body": "Seneca had been Nero's tutor and adviser and one of the wealthiest men in Rome. Late in life he withdrew and wrote to his friend Lucilius about how to live: time, friends, fear, money, noise, other people. The letters are short, practical and often funny. Read them like advice from an older friend who has seen power up close and isn't impressed by it.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-02",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "You guard your wallet carefully. You hand out your hours to anyone who asks.",
+      "body": "The very first letter is about time. Seneca's complaint is that people are stingy with property and generous with the one thing that can never be paid back. Some of your time is taken from you, some slips away quietly, and much of it you simply waste without noticing. His advice: treat each hour as yours, and take hold of today instead of leaning on tomorrow.",
+      "deeper": "Seneca doesn't pretend he has mastered this. He admits he still wastes time, but says he can at least account for where it goes. That's a modest and useful starting point: you don't need to fix your days, only to see them clearly. Most people can't say where last Tuesday afternoon went.",
+      "quote": {
+        "text": "Nothing, Lucilius, is ours, except time.",
+        "attribution": "Seneca, Moral Letters to Lucilius 1.3 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 1, On Saving Time"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-03",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Reading fifty books a year can leave you knowing less than reading five well.",
+      "body": "In Letter 2, Seneca warns Lucilius against restless reading: dipping into one author after another, never staying long with any. He compares it to a traveller who meets many people but makes no friends, and to a plant moved so often it never grows strong. Pick a few good minds, stay with them, and take one idea from each day's reading to chew on.",
+      "quote": {
+        "text": "Everywhere means nowhere.",
+        "attribution": "Seneca, Moral Letters to Lucilius 2.2 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 2, On Discursiveness in Reading"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-04",
+      "pillar": "character",
+      "format": "quote",
+      "hook": "Poverty, Seneca says, has less to do with how much you have than you think.",
+      "body": "Near the end of Letter 2, Seneca adds his own comment on contented poverty. The point is simple and uncomfortable: a man with plenty who keeps wanting more is worse off than a man with little who is content. The question isn't only how much you earn, but whether there is any number that would ever feel like enough.",
+      "quote": {
+        "text": "It is not the man who has too little, but the man who craves more, that is poor.",
+        "attribution": "Seneca, Moral Letters to Lucilius 2.6 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 2, On Discursiveness in Reading"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-05",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Be slow to call someone a friend. Then hold nothing back.",
+      "body": "Letter 3 sets out an order that most of us get backwards. We trust quickly and judge later, once we've been burned. Seneca says: judge first, take your time, watch how someone behaves. But once you've decided he is a friend, trust him fully and speak as freely with him as you would with yourself. Half-trust is the worst of both worlds.",
+      "quote": {
+        "text": "When friendship is settled, you must trust; before friendship is formed, you must pass judgment.",
+        "attribution": "Seneca, Moral Letters to Lucilius 3.2 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 3, On True and False Friendship"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-06",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Seneca admitted that an afternoon in a crowd made him a worse man.",
+      "body": "Asked what to avoid above all, Seneca answers: crowds. Not because people are bad, but because we soak up whatever is around us, and a crowd is full of loose habits and easy vices. He confesses he comes home from them changed for the worse. Spend your time with people who will make you better, and with people you can make better.",
+      "deeper": "He gives an example: dropping in on the games at midday, hoping for some light entertainment, and finding plain slaughter put on for the crowd's amusement. His point is not to feel superior to the audience. It's that he felt himself being pulled along with them. The modern crowd is often a screen, not a stadium, and it works the same way.",
+      "quote": {
+        "text": "I come home more greedy, more ambitious, more voluptuous, and even more cruel and inhuman, because I have been among human beings.",
+        "attribution": "Seneca, Moral Letters to Lucilius 7.3 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 7, On Crowds"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-07",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Most of what you dread never happens. You suffer it anyway.",
+      "body": "Letter 13 is about fear. Seneca notices that many things frighten us without ever arriving, and that we often suffer in advance over things that are uncertain, exaggerated or entirely imagined. His advice: before you grieve over a disaster, ask whether it has actually happened, and whether it surely will. Don't be unhappy before the time comes.",
+      "quote": {
+        "text": "There are more things, Lucilius, likely to frighten us than there are to crush us; we suffer more often in imagination than in reality.",
+        "attribution": "Seneca, Moral Letters to Lucilius 13 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 13, On Groundless Fears"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-08",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Philosophy that only lives in your head is just a hobby.",
+      "body": "In Letter 16 Seneca insists that philosophy isn't decoration or clever talk. It is meant to shape how you act: to steady you, to guide your choices, to tell you what to do and what to avoid. The test of whether you've learned something is not whether you can explain it, but whether your behaviour has changed.",
+      "quote": {
+        "text": "Philosophy is no trick to catch the public; it is not devised for show.",
+        "attribution": "Seneca, Moral Letters to Lucilius 16 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 16, On Philosophy, the Guide of Life"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-09",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "Seneca's cure for fear of losing everything: rehearse having nothing.",
+      "body": "Writing during a city-wide festival, Seneca suggests an odd exercise. Every so often, set aside a few days to live on the plainest food and roughest clothes. Not as a punishment, but as a test. You learn that the thing you've been afraid of is survivable, and the fear loosens its grip. A man who has tried poverty on is harder to frighten.",
+      "quote": {
+        "text": "Set aside a certain number of days, during which you shall be content with the scantiest and cheapest fare,",
+        "attribution": "Seneca, Moral Letters to Lucilius 18 (trans. Richard Mott Gummere)"
+      },
+      "source": {
+        "ref": "Letter 18, On Festivals and Fasting"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-10",
+      "pillar": "character",
+      "format": "story",
+      "hook": "A man complained that travel hadn't cured his gloom. Socrates had a one-line answer.",
+      "body": "Lucilius has been travelling to shake off a restless, low mood, and it isn't working. Seneca isn't surprised. He passes on a story: when someone complained to Socrates that travel did him no good, Socrates replied, in effect, that of course it didn't, since he took himself along. A new place can't fix what you carry inside. What needs changing is the mind, not the scenery.",
+      "source": {
+        "ref": "Letter 28, On Travel as a Cure for Discontent"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-11",
+      "pillar": "character",
+      "format": "idea",
+      "hook": "How you treat people who can't push back tells you who you are.",
+      "body": "In Letter 47, Seneca writes about how Romans treated their slaves, and argues against the contempt of his time: these are human beings, made of the same stuff as their masters, who could just as easily have fallen into slavery themselves. His rule of thumb still works anywhere there is a ladder: treat those below you as you would want to be treated by those above you.",
+      "deeper": "Read this with clear eyes. Seneca does not call for ending slavery; he argues for treating enslaved people humanely and as companions, which was still a challenge to the attitudes around him. Take the principle, not the world it was written in. Waiters, junior colleagues, your kids: the way you speak to them is the honest measure of your character.",
+      "source": {
+        "ref": "Letter 47, On Master and Slave"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-12",
+      "pillar": "character",
+      "format": "story",
+      "hook": "Seneca lived above a noisy public bath, and used it to train his mind.",
+      "body": "Letter 56 opens with a comic list of the racket coming up from the baths below: grunting men exercising, slaps from a masseur, splashing, people shouting, sellers calling out their wares. Seneca claims he can work through it. His argument: outside noise is not the real enemy. A mind full of its own clamour will find no peace even in silence, and a settled mind can think anywhere.",
+      "deeper": "He's honest that this is harder than it sounds, and he doesn't claim noise is good for you. At the end he even admits it can make sense to move somewhere quieter. The lesson isn't to tolerate everything. It's to notice that much of what you blame on your surroundings is coming from inside, and to work on that part first.",
+      "source": {
+        "ref": "Letter 56, On Quiet and Study"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-13",
+      "pillar": "character",
+      "format": "fact",
+      "hook": "The man who wrote calmly about death was ordered to die by his former pupil.",
+      "body": "Seneca wrote these letters in his final years, after stepping away from Nero's court. In 65 AD, accused of involvement in a conspiracy against Nero, he was ordered to take his own life, and did. One hundred and twenty-four letters survive. Knowing how close the end was gives his steady words about time and fear real weight: he was writing about things he would soon have to face.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-14",
+      "pillar": "character",
+      "format": "challenge",
+      "hook": "Try Seneca's poverty test this weekend, just for one day.",
+      "body": "Pick one day. Eat the plainest food you have, skip anything you'd call a treat, wear old clothes, and spend nothing that isn't necessary. At the end of the day, ask yourself Seneca's question: was this the condition I feared? Notice what you missed and what you didn't. Most men are surprised by how much of their spending was protection against a fear, not a need.",
+      "source": {
+        "ref": "Letter 18, On Festivals and Fasting"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-15",
+      "pillar": "character",
+      "format": "reflection",
+      "hook": "Who are you becoming by spending time with the people around you?",
+      "body": "Think about the three people, groups or feeds you spend the most hours with each week. After time with each, do you come home calmer, kinder and clearer, or more anxious, greedy and irritable? Seneca's advice was to keep company with those who make you better and those you can help become better. Which one would you spend more time with, and which one less?",
+      "source": {
+        "ref": "Letter 7, On Crowds"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "letters-from-a-stoic-16",
+      "pillar": "character",
+      "format": "recap",
+      "hook": "Three things to take from Seneca's letters.",
+      "body": "1. **Your time is the only thing truly yours.** Account for it, and don't wait for tomorrow to start living.\n2. **Most fear is rehearsal of things that never come.** Ask whether it has happened yet, and practise the worst so it loses its grip.\n3. **You become your company.** Choose friends slowly, trust them fully, and treat people below you as you'd want to be treated.",
+      "source": {
+        "ref": "Overview"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
