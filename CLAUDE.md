@@ -288,6 +288,11 @@ Like `queue.json`, it is not shipped to the app.
 Navigation is horizontal everywhere (Today and decks). There are no vertical swipes: a card whose
 text is long simply scrolls.
 
+The card follows the finger while you drag it. Released past a threshold (or flicked) it slides off
+in the swipe direction while the next card slides in from the other side, like turning a page; a
+short drag springs back. Cards never fade in or out (that read as a blink); with
+`prefers-reduced-motion` they crossfade instead.
+
 | Gesture     | Action                                                           | Button equivalent                                             |
 | ----------- | ---------------------------------------------------------------- | ------------------------------------------------------------- |
 | Swipe left  | Next card                                                        | none on screen (keyboard ←/→, screen-reader buttons)          |

@@ -5,6 +5,7 @@ import { CardFace, type CardView } from "./Card";
 import { Bookmark, OpenBook, ThumbDown } from "./icons";
 import { useReducedMotion, useSettingsState } from "../lib/hooks";
 import { useKeepAwake } from "../lib/wakelock";
+import { swipeDirection } from "../lib/swipe";
 
 export interface StackItem {
   key: string;
@@ -27,8 +28,6 @@ interface Props {
   /** Wrapper content shown above the card (progress dots, counters). */
   header?: React.ReactNode;
 }
-
-const SWIPE_DIST = 70;
 
 export function CardStack({
   items,
@@ -89,7 +88,7 @@ export function CardStack({
   useEffect(() => () => clearTimeout(tapTimer.current), []);
 
   const bind = useDrag(
-    ({ tap, last, movement: [mx, my], velocity: [vx], event }) => {
+    ({ tap, event }) => {
       const target = event.target as HTMLElement | null;
       if (target?.closest("[data-nogesture]")) return;
       if (tap) {
@@ -106,11 +105,6 @@ export function CardStack({
         }
         return;
       }
-      if (!last) return;
-      // Swipe left/right to move. Vertical drags are left to the card, whose text scrolls natively.
-      if (Math.abs(mx) <= Math.abs(my)) return;
-      if (mx < -SWIPE_DIST || (mx < -30 && vx > 0.6)) next();
-      else if (mx > SWIPE_DIST || (mx > 30 && vx > 0.6)) prev();
     },
     { filterTaps: true, pointer: { touch: true } },
   );
@@ -138,12 +132,17 @@ export function CardStack({
 
   if (!item) return null;
 
+  // Far enough to be fully off screen from either side.
+  const travel = (typeof window === "undefined" ? 400 : window.innerWidth) + 24;
+
   const variants = reduced
     ? { initial: { opacity: 0 }, animate: { opacity: 1 }, exit: { opacity: 0 } }
     : {
-        initial: (d: number) => ({ x: d > 0 ? "35%" : "-35%", opacity: 0 }),
-        animate: { x: 0, opacity: 1 },
-        exit: (d: number) => ({ x: d > 0 ? "-30%" : "30%", opacity: 0 }),
+        // The cards slide fully across the screen, like turning a page: the old one leaves in the
+        // swipe direction while the next arrives from the other side. No fading, so nothing blinks.
+        initial: (d: number) => ({ x: d > 0 ? travel : -travel, scale: 0.96 }),
+        animate: { x: 0, scale: 1 },
+        exit: (d: number) => ({ x: d > 0 ? -travel : travel, scale: 0.96 }),
       };
 
   return (
@@ -162,7 +161,22 @@ export function CardStack({
             initial="initial"
             animate="animate"
             exit="exit"
-            transition={{ duration: reduced ? 0.15 : 0.28, ease: [0.25, 0.8, 0.25, 1] }}
+            transition={
+              reduced
+                ? { duration: 0.15 }
+                : { type: "spring", stiffness: 260, damping: 30, mass: 0.9 }
+            }
+            // The card follows the finger. Released past the threshold it slides away (next/prev);
+            // otherwise it springs back to the middle. Vertical drags scroll the card text.
+            drag="x"
+            dragDirectionLock
+            dragConstraints={{ left: 0, right: 0 }}
+            dragElastic={0.85}
+            onDragEnd={(_, info) => {
+              const d = swipeDirection(info.offset.x, info.velocity.x);
+              if (d === "next") next();
+              else if (d === "prev") prev();
+            }}
             className="card-face absolute inset-3"
           >
             <CardFace view={item.view} expanded={expanded} onToggleExpand={toggleExpand} />
