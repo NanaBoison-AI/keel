@@ -27,7 +27,7 @@ export function CardFace({ view, expanded, onToggleExpand }: Props) {
       <div
         tabIndex={0}
         aria-label="Card text"
-        className="min-h-0 flex-1 overflow-y-auto px-5 pt-5 outline-none focus-visible:ring-2 focus-visible:ring-brass/60 [overscroll-behavior:contain]"
+        className="min-h-0 flex-1 touch-pan-y overflow-y-auto px-5 pt-5 outline-none focus-visible:ring-2 focus-visible:ring-brass/60 [overscroll-behavior:contain]"
       >
         <div className="mx-auto max-w-[38em]">
           <h2 className="font-display text-[1.4em] font-semibold leading-snug text-ink dark:text-paper">

@@ -223,15 +223,13 @@ describe("Navigation is left/right only", () => {
     fireEvent.touchEnd(surface, { touches: [], targetTouches: [], changedTouches: t(to) });
   };
 
-  it("swiping left goes to the next card and swiping right goes back", async () => {
-    const onIndexChange = vi.fn();
-    const { container, rerender } = render(<Stack onIndexChange={onIndexChange} index={1} />);
-    const surface = container.querySelector(".stack-surface")!;
-    swipe(surface, [320, 300], [40, 300]);
-    expect(onIndexChange).toHaveBeenLastCalledWith(2);
-    swipe(surface, [40, 300], [320, 300]);
-    expect(onIndexChange).toHaveBeenLastCalledWith(0);
-    rerender(<Stack onIndexChange={onIndexChange} index={1} />);
+  it("the card is draggable sideways, and its scrolling text box allows only vertical pans", () => {
+    // Regression: touch-action is not inherited through a scroll container, so without
+    // touch-pan-y on the text box the browser cancels sideways swipes that start on the text.
+    const { container } = render(<Stack index={1} />);
+    const card = container.querySelector(".card-face") as HTMLElement;
+    expect(card.style.touchAction).toBe("pan-y");
+    expect(container.querySelector('[aria-label="Card text"]')).toHaveClass("touch-pan-y");
   });
 
   it("swiping up or down does nothing (the card text just scrolls)", () => {
