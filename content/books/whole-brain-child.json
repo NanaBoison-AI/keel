@@ -1,0 +1,229 @@
+{
+  "schemaVersion": 1,
+  "id": "whole-brain-child",
+  "type": "book",
+  "title": "The Whole-Brain Child",
+  "author": "Daniel Siegel & Tina Payne Bryson",
+  "year": 2011,
+  "pillar": "family",
+  "publicDomain": false,
+  "summary": "How a child's developing brain works, and twelve practical ways to turn meltdowns and everyday struggles into chances to help them grow.",
+  "estMinutes": 13,
+  "version": 1,
+  "createdAt": "2026-11-27",
+  "updatedAt": "2026-11-27",
+  "cards": [
+    {
+      "id": "whole-brain-child-01",
+      "pillar": "family",
+      "format": "hook",
+      "hook": "The worst moments with your kids, the meltdowns and the slammed doors, are also the best chances you'll get to shape how they grow.",
+      "body": "Daniel Siegel, a psychiatrist, and Tina Payne Bryson, a psychotherapist, wrote this book for the ordinary hard moments of raising children. Their argument: a child's brain is still being built, and the way you respond in a tough moment helps decide how it gets wired. The book turns that into twelve practical strategies. The aim is not only to get through the day, but to help your kids become calmer, kinder and more resilient over time.",
+      "source": {
+        "ref": "Introduction: Survive and Thrive"
+      },
+      "mixable": false,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-02",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Every parent has two jobs in a hard moment: get through it, and help the child grow from it. They're usually the same job.",
+      "body": "The authors call this **survive and thrive**. When your daughter melts down in the supermarket, you just want it to stop. But the moment that tests your patience is also a chance to teach her how to handle big feelings. The key word in the book is **integration**: the different parts of the brain learning to work together as a team. A child who is struggling is usually a child whose brain parts aren't cooperating yet.",
+      "deeper": "Think of integration like a choir: each voice is distinct, but they sing together. A brain that isn't integrated gets swept away by one part, usually raw emotion. Siegel and Bryson argue that the brain changes with experience throughout life, so the way you talk to a child, again and again, helps build the connections that let those parts cooperate.",
+      "source": {
+        "ref": "Ch. 1: Parenting with the Brain in Mind"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-03",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "A happy kid isn't one who never struggles. It's one who stays between two riverbanks: chaos on one side, rigidity on the other.",
+      "body": "The book pictures well-being as a river. Near one bank is **chaos**: tantrums, panic, feeling out of control. Near the other is **rigidity**: refusing to budge, insisting on one way of doing things, shutting down. Children (and adults) drift toward one bank or the other all day. Integration is what keeps them in the flowing middle, flexible and calm. When your child is stuck, a useful question is simply: which bank are they on right now?",
+      "source": {
+        "ref": "Ch. 1: Parenting with the Brain in Mind"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-04",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Young children live mostly in the right side of the brain. That's why logic bounces off a crying five-year-old.",
+      "body": "Siegel and Bryson simplify brain science into a working model. The **left brain** is logical, literal and verbal; it likes order and lists. The **right brain** is emotional, nonverbal and attuned to the body and to other people. Very young children are right-brain dominant, which is why they live so much in the moment. A healthy mind needs both sides connected, so that feelings can be put into words and logic doesn't lose touch with feeling.",
+      "source": {
+        "ref": "Ch. 2: Two Brains Are Better Than One"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-05",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "When your child is upset, answering with reasons is like answering a song with a spreadsheet.",
+      "body": "Strategy #1 is **Connect and Redirect**. First, meet the child where they are: get down to their eye level, use a gentle tone, a touch, a hug, and acknowledge what they feel. This is right brain to right brain. Only once they feel understood and calmer do you **redirect**: talk about what happened, the rules, what to do next. Logic and limits come second, not never. Try to skip the connection and you'll usually get a louder child, not a wiser one.",
+      "deeper": "Connecting first isn't giving in. The limit can stay exactly where it was. What changes is the order: a child who feels heard is far more able to hear you. The same order tends to work on adults, too: try it the next time your partner comes home upset.",
+      "source": {
+        "ref": "Ch. 2: Two Brains Are Better Than One, Strategy #1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-06",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "A scary experience that's never talked about stays raw. Telling the story helps a child tame it.",
+      "body": "Strategy #2 is **Name It to Tame It**. When a child is shaken, by a fall, a frightening dog, a nasty moment at school, the big feelings sit in the right brain. Helping them tell the story of what happened brings the left brain in: words, order, sense. You don't force it; you help them retell it, filling in gaps, and let them stop when they need to. Making sense of an experience is what takes its sting out.",
+      "deeper": "With small children, you can do much of the telling yourself and let them add details. Kids often ask to hear the story of a bad moment again and again; that's the healing at work, not a sign that you're making it worse.",
+      "source": {
+        "ref": "Ch. 2: Two Brains Are Better Than One, Strategy #2"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-07",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Your child's 'upstairs brain', the part that plans, calms and empathizes, is under construction until their mid-twenties.",
+      "body": "The book's second model is a house. The **downstairs brain** handles basic functions and strong reactions like anger and fear; it works from birth. The **upstairs brain** handles decisions, self-control, empathy and morality, and develops slowly. When emotions surge, the downstairs can take over completely. Siegel calls this **flipping your lid**. Knowing this changes your expectations: you can't demand self-control that the brain hasn't built yet. You can help build it.",
+      "deeper": "Siegel illustrates it with the 'hand model': make a fist with your thumb tucked inside. The thumb is the emotional downstairs, the fingers curled over it the upstairs. Lift your fingers and the lid has flipped. It's simple enough to show a child, so they have words for what happens when they lose it.",
+      "source": {
+        "ref": "Ch. 3: Building the Staircase of the Mind"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-08",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Some tantrums are a strategy. Others are a storm. Treat them the same and you'll get both wrong.",
+      "body": "Siegel and Bryson distinguish two kinds. An **upstairs tantrum** is deliberate: the child is choosing to push for what they want, and can stop if they decide to. That needs a calm, firm limit and clear consequences. A **downstairs tantrum** is a child whose lid has flipped; they can't reason or bargain right now. That calls for comfort and calm first. Strategy #3, **Engage, Don't Enrage**, means appealing to the upstairs brain (asking, negotiating, problem-solving) instead of triggering the downstairs with commands and threats.",
+      "deeper": "The 'enrage' part is about us. 'Because I said so' and raised voices hit a child's downstairs brain and pull them into fight mode. Asking 'What do you think we should do here?' asks their upstairs brain to show up and get some practice.",
+      "source": {
+        "ref": "Ch. 3: Building the Staircase of the Mind, Strategy #3"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-09",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "The upstairs brain is like a muscle. It gets stronger when your kid has to use it.",
+      "body": "Strategy #4, **Use It or Lose It**, means giving children chances to exercise judgment: let them make choices, solve small problems, weigh what someone else feels, decide what's fair. Don't hand them every answer. Strategy #5, **Move It or Lose It**, uses the body: when a child is stuck in anger or anxiety, getting them moving, jumping, walking, playing, can shift their state and help them get back in control.",
+      "source": {
+        "ref": "Ch. 3: Building the Staircase of the Mind, Strategies #4–5"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-10",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "A child can be terrified of something without remembering why. That's memory working below the surface.",
+      "body": "Chapter 4 separates two kinds of memory. **Implicit memory** shapes us without our noticing: feelings, fears and expectations from past experiences, felt as if they were happening now. **Explicit memory** is what we consciously recall as a story. Unprocessed implicit memories can drive anxiety. Strategy #6, **Use the Remote of the Mind**, lets a child replay a hard memory like a film they can pause, rewind and fast-forward. Strategy #7, **Remember to Remember**, means helping kids recall and talk about their experiences often.",
+      "deeper": "Remembering doesn't need to be a session. Ask about the day over dinner, look through photos together, retell family stories. The habit of recalling and telling builds a child's ability to make sense of their own life.",
+      "source": {
+        "ref": "Ch. 4: Kill the Butterflies!, Strategies #6–7"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-11",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "'I am sad' and 'I feel sad right now' sound almost the same. To a child, they're very different.",
+      "body": "Strategy #8 is **Let the Clouds of Emotion Roll By**. Kids often believe that a feeling will last forever and that it says who they are. Teach them that feelings are passing states, like weather, not fixed parts of them. Strategy #9 is **SIFT**: helping children notice the **S**ensations, **I**mages, **F**eelings and **T**houghts going on inside them. A stomachache before school may be worry. Naming what's happening inside gives a child some distance from it, and some choice.",
+      "source": {
+        "ref": "Ch. 5: The United States of Me, Strategies #8–9"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-12",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "You can teach a seven-year-old something many adults never learn: you are not your thoughts.",
+      "body": "Strategy #10 is **Exercise Mindsight**, Siegel's word for seeing and understanding your own mind and the minds of others. The book uses the **wheel of awareness**: picture a wheel whose rim holds everything you can notice, your thoughts, feelings, senses, memories. The hub is the calm center from which you notice them. A child caught on one point of the rim (a fear, a grudge) can learn to step back to the hub and choose where to focus next.",
+      "deeper": "The idea isn't to suppress feelings. It's to notice them without being taken over. Even young children can grasp it: 'You're paying a lot of attention to the scary thought. What else is on your wheel right now?'",
+      "source": {
+        "ref": "Ch. 5: The United States of Me, Strategy #10"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-13",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Kids learn to be good with people mostly from how it feels to be with you, and fun counts more than you'd think.",
+      "body": "The last chapter is about the 'me-we' connection: helping a child see themselves as part of relationships. Strategy #11, **Increase the Family Fun Factor**, is exactly what it sounds like: play, jokes, games and shared adventures. These aren't extras. Enjoyable time together teaches children that relationships are rewarding, and makes them want to stay connected, including when things get hard.",
+      "source": {
+        "ref": "Ch. 6: The Me-We Connection, Strategy #11"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-14",
+      "pillar": "family",
+      "format": "idea",
+      "hook": "Sibling fights aren't a failure of parenting. They're the training ground for every relationship your kids will have.",
+      "body": "Strategy #12 is **Connect Through Conflict**. Instead of seeing conflict only as something to end, use it to teach relationship skills: seeing the other person's point of view, reading nonverbal signals, and making repair after a rupture. Help each child understand what the other felt, and how to make things right. Repair matters most; every relationship breaks sometimes, and children need to learn it can be mended.",
+      "deeper": "This applies to you as well. When you lose your temper, coming back to apologize and reconnect shows your child that conflict doesn't end love. No parent gets it right all the time; what counts is the repair.",
+      "source": {
+        "ref": "Ch. 6: The Me-We Connection, Strategy #12"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-15",
+      "pillar": "family",
+      "format": "challenge",
+      "hook": "Next time your child melts down, try this order: connection first, lesson later. Just once.",
+      "body": "Pick the next meltdown, big or small. Before any reasoning: get down to eye level, lower your voice, and name what you see ('You're really angry the game had to stop.'). Wait until the storm has passed and their body has calmed. Then, and only then, talk about what happened and what to do next time. Afterwards, notice what changed, in them and in you.",
+      "source": {
+        "ref": "Ch. 2: Two Brains Are Better Than One, Strategy #1"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-16",
+      "pillar": "family",
+      "format": "conversation",
+      "hook": "Tonight at dinner, ask: 'What was the hardest part of your day, and what did it feel like in your body?'",
+      "body": "This blends two of the book's tools: remembering the day out loud and SIFT, noticing sensations, feelings and thoughts. Don't jump in to fix anything. Listen, ask what happened next, and help them tell it as a story. If you go first with your own hard moment, you show them it's normal to have one, and normal to talk about it.",
+      "source": {
+        "ref": "Ch. 5: The United States of Me, Strategy #9"
+      },
+      "mixable": true,
+      "version": 1
+    },
+    {
+      "id": "whole-brain-child-17",
+      "pillar": "family",
+      "format": "recap",
+      "hook": "Three things to remember from The Whole-Brain Child.",
+      "body": "1. **Connect, then redirect.** A child who feels understood can hear your limits; a child who doesn't, can't.\n2. **Their brain is under construction.** The upstairs brain develops into the mid-twenties. Hard moments are chances to help build it, not proof that something's wrong.\n3. **Help them tell the story.** Naming feelings and making sense of experiences turns chaos into something a child can handle.",
+      "source": {
+        "ref": "Ch. 1–6 (overview)"
+      },
+      "mixable": false,
+      "version": 1
+    }
+  ]
+}
